@@ -8,7 +8,9 @@ class Analysis < ApplicationRecord
   def self.watson_call(params)
     @response = {}
     @response[:data] = WATSON_DATA << params['url'] << WATSON_CLOSING << ENV['WATSON_KEY']
-    
+  #   uri = URI(url)
+  #  response = Net::HTTP.get(uri)
+  #  render json: JSON.parse(response)
   end
 
 end
