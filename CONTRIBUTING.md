@@ -11,3 +11,7 @@
 * Repeat #1-2 until teammate has no more changes that need to be made
 * *Reviewer should do merge request, notify team if conflicts.*
 
+### Style Guide:
+* For Ruby, please follow: [Airbnb Ruby Guide](https://github.com/airbnb/ruby)
+* For JavaScript, please follow: [Airbrb JavaScript Guide](https://github.com/airbnb/javascript)
+
