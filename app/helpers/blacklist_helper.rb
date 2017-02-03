@@ -27,12 +27,15 @@ module BlacklistHelper
     end
   end
 
-  def self.check_url(url_string)
-    BlackList.all.select do |domain|
-       url.include?(domain[:url])
-    end # return array with object if found
+  def shorten_url(url_string)
+    url_string.scan(
+    /^(((https|http)?:?\/{2})?w{3}?\.?)?([0-9a-zA-Z-%?]+\.\w{2,3})/).flatten.last
   end
 
-
+  def self.check_url(url_string)
+    BlackList.all.select do |domain|
+       url_string.include?(domain[:url])
+    end # return array with object if found
+  end
 
 end

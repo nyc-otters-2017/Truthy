@@ -5,7 +5,6 @@ class IndexController < ApplicationController
 
   def analyze
     puts params
-    # 
   end
 
   private
