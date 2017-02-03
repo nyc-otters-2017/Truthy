@@ -3,6 +3,10 @@ class IndexController < ApplicationController
   def index
   end
 
+  def analyze
+    puts params
+  end
+
   private
 
   def index_params

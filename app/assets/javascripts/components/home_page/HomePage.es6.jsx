@@ -9,7 +9,7 @@ class HomePage extends React.Component {
     $.ajax({
       method: 'POST',
       url: '/analyze',
-      data: this.refs.urlString.value
+      data: {urlString: this.refs.urlString.value}
     })
      .done(response=>{
        console.log('sending...', this.refs.urlString.value)
@@ -20,7 +20,7 @@ class HomePage extends React.Component {
   render(){
     return(
       <form onSubmit={this.handleSubmit}>
-        <input ref='urlString' type='text'/>
+        <input ref='urlString' type='text' name='urlString'/>
         <input type='submit'/>
       </form>
     )
