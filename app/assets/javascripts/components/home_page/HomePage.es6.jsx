@@ -6,13 +6,21 @@ class HomePage extends React.Component {
 
   handleSubmit(event){
     event.preventDefault()
-    console.log('success')
+    $.ajax({
+      method: 'POST',
+      url: '/analyze',
+      data: this.refs.urlString.value
+    })
+     .done(response=>{
+       console.log('sending...', this.refs.urlString.value)
+       console.log('success handler', response)
+     })
   }
 
   render(){
     return(
       <form onSubmit={this.handleSubmit}>
-        <input type='text'/>
+        <input ref='urlString' type='text'/>
         <input type='submit'/>
       </form>
     )
