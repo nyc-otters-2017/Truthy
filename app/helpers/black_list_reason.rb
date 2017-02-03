@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 module BlackList
   def self.reason_handle(reason)
     case reason
@@ -31,6 +32,7 @@ module BlackList
        url.include?(domain[:url])
     end # return array with object if found
   end
+
 
 
 end
