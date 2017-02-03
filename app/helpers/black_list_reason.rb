@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 module BlackList
   def self.reason_handle(reason)
     case reason
@@ -27,7 +27,7 @@ module BlackList
       end
   end
 
-  def check_url(url_string)
+  def self.check_url(url_string)
     BlackList.all.select do |domain|
        url.include?(domain[:url])
     end # return array with object if found
