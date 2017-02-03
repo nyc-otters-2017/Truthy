@@ -6,4 +6,10 @@ class AnalysisController < ApplicationController
   def output
   end
 
+  private
+
+  def analysis_params
+    params.require(:analysis).permit(:url)
+  end
+
 end
