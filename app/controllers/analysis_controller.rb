@@ -1,7 +1,8 @@
 class AnalysisController < ApplicationController
 
   def comprehend
-    render json: watson_call(analysis_params)
+    Analysis.watson_call(analysis_params)
+    render json: @watson_call
   end
 
   def output
