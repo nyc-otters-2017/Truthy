@@ -1,4 +1,4 @@
-module BlackListHelper
+module BlacklistHelper
 
   def reason_handle(reason)
     case reason
