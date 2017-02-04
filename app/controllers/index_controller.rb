@@ -13,6 +13,7 @@ class IndexController < ApplicationController
   end
 
   def result
+    @watson = Analysis.watson_call(session[:url])
     @blacklist = BlacklistHelper.check_domain(session[:url])
     @fullcontact = BlacklistHelper.request(session[:url])
     render :result, layout: false
