@@ -1,11 +1,16 @@
 class Quote extends React.Component {
-  constructor() {
-
-  }
-
   render(){
     return(
-      <h1>Quotes from Article:</h1>
+      <section className="quotes">
+        <h1>Quotes used in this Article:</h1>
+        <ul>
+          {
+            this.props.quotes.map((quote, i)=>{
+              return <li key={i}>"{quote}"</li>
+            })
+          }
+        </ul>
+      </section>
     )
   }
 }

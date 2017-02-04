@@ -18,7 +18,8 @@ class IndexController < ApplicationController
   end
 
   def quote
-
+    @quotes = QuotesHelper.extract_quotes(QuotesHelper::TEST)
+    render :quote
   end
 
   private
