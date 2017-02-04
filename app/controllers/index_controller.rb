@@ -12,7 +12,6 @@ class IndexController < ApplicationController
   end
 
   def results
-    
   end
 
   private
