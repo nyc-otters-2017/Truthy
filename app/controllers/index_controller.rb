@@ -15,6 +15,7 @@ class IndexController < ApplicationController
   def result
     @blacklist = BlacklistHelper.check_domain(session[:url])
     @fullcontact = BlacklistHelper.request(session[:url])
+    render :result, layout: false
   end
 
   private

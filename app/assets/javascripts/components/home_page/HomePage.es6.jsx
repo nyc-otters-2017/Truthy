@@ -9,10 +9,11 @@ class HomePage extends React.Component {
     event.preventDefault()
     $.ajax({
       method: 'POST',
-      url: '/analyze',
-      data: {urlString: this.refs.urlString.value}
+      url: 'analysis/comprehend',
+      data: {analysis: {url: this.refs.urlString.value}}
     })
      .done(response=>{
+       debugger
        console.log('sending...', this.refs.urlString.value)
        location.href = `/results`
      })

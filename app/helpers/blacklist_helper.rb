@@ -32,9 +32,7 @@ module BlacklistHelper
     end
     tag = REASONS[blacklist_reason]
   end
-
   # -- full contact--
-
   def self.request(domain_string)
     uri = URI.parse("https://api.fullcontact.com/v2/company/lookup.json?domain="+domain_string)
     request = Net::HTTP::Get.new(uri)
