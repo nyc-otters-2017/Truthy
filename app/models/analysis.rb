@@ -47,4 +47,7 @@ class Analysis < ApplicationRecord
    end
  end
 
+ def self.stage_render
+   @response = @opened_uri[:info] + @opened_uri[:text] + @opened_uri[:data]
+ end
 end
