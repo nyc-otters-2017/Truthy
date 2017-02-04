@@ -1,6 +1,6 @@
 module ApplicationHelper
 
   include AnalysisHelper
-  include BlackListHelper
+  include BlacklistHelper
 
 end
