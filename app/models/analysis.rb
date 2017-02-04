@@ -46,8 +46,4 @@ class Analysis < ApplicationRecord
      r['relevance'].to_f >= 0.6
    end
  end
-
- def self.stage_render
-   @response = @opened_uri[:info] + @opened_uri[:text] + @opened_uri[:data]
- end
 end
