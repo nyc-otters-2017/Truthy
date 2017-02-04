@@ -20,6 +20,7 @@ class ResultPage extends React.Component {
       <div className='result-container'>
         <input type="button" name="revealResults" onClick={this.handleClick} value="Article Status" />
         <BlackList fullContact={this.props.fullContact} />
+        <Watson data={this.props.watson} />
       </div>
     )
   }
