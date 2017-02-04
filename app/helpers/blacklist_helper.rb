@@ -1,4 +1,6 @@
 module BlacklistHelper
+  require 'net/http'
+  require 'uri'
 
   REASONS = {
     'bias' => "Extreme Bias: Sources that traffic in political propaganda and gross distortions of fact.",
@@ -29,6 +31,20 @@ module BlacklistHelper
       blacklist_reason = 'not_listed'
     end
     tag = REASONS[blacklist_reason]
+  end
+
+  def self.request(domain_string)
+    uri = URI.parse("https://api.fullcontact.com/v2/company/lookup.json?domain="+domain_string)
+    request = Net::HTTP::Get.new(uri)
+    request["X-Fullcontact-Apikey"] = "2cdecdbbf0be3679"
+    req_options = {
+      use_ssl: uri.scheme == "https",
+    }
+    response = Net::HTTP.start(uri.hostname, uri.port, req_options) do |http|
+      http.request(request)
+    end
+
+    JSON.parse(response.body)
   end
 
 end

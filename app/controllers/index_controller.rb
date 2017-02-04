@@ -7,6 +7,7 @@ class IndexController < ApplicationController
     # @watson_stuff
     # @reverse_image_info
     @blacklist = BlacklistHelper.check_domain(params[:urlString]).to_json
+    binding.pry
     render :result, layout: false
   end
 
