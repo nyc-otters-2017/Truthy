@@ -36,7 +36,7 @@ module BlacklistHelper
   def self.request(domain_string)
     uri = URI.parse("https://api.fullcontact.com/v2/company/lookup.json?domain="+domain_string)
     request = Net::HTTP::Get.new(uri)
-    request["X-Fullcontact-Apikey"] = "2cdecdbbf0be3679"
+    request["X-Fullcontact-Apikey"] = ENV['FULLCONTACT_KEY']
     req_options = {
       use_ssl: uri.scheme == "https",
     }
