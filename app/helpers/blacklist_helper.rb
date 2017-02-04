@@ -1,4 +1,3 @@
-
 module BlacklistHelper
   def self.reason_handle(reason)
     case reason
@@ -32,6 +31,4 @@ module BlacklistHelper
        url_string.include?(domain[:url])
     end # return array with object if found
   end
-
-
 end
