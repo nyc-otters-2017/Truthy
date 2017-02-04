@@ -5,11 +5,11 @@ class Analysis < ApplicationRecord
  WATSON_INFO = "/&outputMode=json&extract=title,author=1&maxRetrieve=3&"
  WATSON_CLOSING = "&outputMode=json&extract&apikey="
 
- def self.watson_call(params)
+ def self.watson_call(urlString)
    @opened_uri = {}
-   @data = WATSON_DATA + params['url'] + WATSON_CLOSING + ENV['WATSON_KEY']
-   @text = WATSON_TEXT + params['url'] + WATSON_CLOSING + ENV['WATSON_KEY']
-   @info = WATSON_DATA + params['url'] + WATSON_INFO + WATSON_CLOSING + ENV['WATSON_KEY']
+   @data = WATSON_DATA + urlString + WATSON_CLOSING + ENV['WATSON_KEY']
+   @text = WATSON_TEXT + urlString + WATSON_CLOSING + ENV['WATSON_KEY']
+   @info = WATSON_DATA + urlString + WATSON_INFO + WATSON_CLOSING + ENV['WATSON_KEY']
    @opened_uri[:data] = open(@data, 'Accept-Encoding' => '') {|f| f.read }
    @opened_uri[:text] = open(@text, 'Accept-Encoding' => '') {|f| f.read }
    @opened_uri[:info] = open(@info, 'Accept-Encoding' => '') {|f| f.read }

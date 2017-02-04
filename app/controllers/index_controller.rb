@@ -6,8 +6,6 @@ class IndexController < ApplicationController
   def analyze
     # @watson_stuff
     # @reverse_image_info
-    @blacklist = BlacklistHelper.check_domain(params[:urlString])
-    @fullcontact = BlacklistHelper.request(params[:urlString])
     session[:url] = params[:urlString]
     redirect_to "/results"
   end
@@ -16,7 +14,7 @@ class IndexController < ApplicationController
     @watson = Analysis.watson_call(session[:url])
     @blacklist = BlacklistHelper.check_domain(session[:url])
     @fullcontact = BlacklistHelper.request(session[:url])
-    render :result, layout: false
+    render :result
   end
 
   private
