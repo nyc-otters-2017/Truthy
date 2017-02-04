@@ -29,10 +29,9 @@ module BlacklistHelper
 
   def self.check_url(url_string)
     BlackList.all.select do |domain|
-       url.include?(domain[:url])
+       url_string.include?(domain[:url])
     end # return array with object if found
   end
-
 
 
 end

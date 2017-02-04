@@ -15,8 +15,7 @@ require 'uri'
     response = Net::HTTP.start(uri.hostname, uri.port, req_options) do |http|
       http.request(request)
     end
-    
+
   end
 
-  binding.pry
 end
