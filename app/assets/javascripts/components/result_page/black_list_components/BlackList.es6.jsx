@@ -1,6 +1,7 @@
 class BlackList extends React.Component {
   constructor() {
     super()
+    this.state = { bio: '' }
   }
 
   render(){
@@ -15,8 +16,8 @@ class BlackList extends React.Component {
       email
     } = this.props.fullContact
     return(
-      <article>
-        <header>
+      <article className="blacklist">
+        <header className="blacklist-header">
           <h1>{this.props.blackList}</h1>
         </header>
 
@@ -29,10 +30,7 @@ class BlackList extends React.Component {
           <p>email: {email}</p>
         </section>
 
-        <section className="company-bio">
-          <h1>Bio:</h1>
-          <p>{bio}</p>
-        </section>
+          <ArticleBio showBio={this.showBio} bio={bio} />
 
         <section>
           <h1>Social Media:</h1>
