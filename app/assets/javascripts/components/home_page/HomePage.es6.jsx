@@ -15,7 +15,7 @@ class HomePage extends React.Component {
      .done(response=>{
        debugger
        console.log('sending...', this.refs.urlString.value)
-       console.log('success handler', response)
+       location.href = `/results`
      })
   }
 
