@@ -61,5 +61,4 @@ module BlacklistHelper
     company_info['email'] = response['organization']['contactInfo']['emailAddresses'].first['value'] if response['organization']['contactInfo']['emailAddresses']
     company_info
   end
-
 end

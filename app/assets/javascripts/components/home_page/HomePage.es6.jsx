@@ -13,6 +13,7 @@ class HomePage extends React.Component {
       data: {urlString: this.refs.urlString.value}
     })
      .done(response=>{
+       debugger
        console.log('sending...', this.refs.urlString.value)
        location.href = `/results`
      })
@@ -20,10 +21,19 @@ class HomePage extends React.Component {
 
   render(){
     return(
-      <form onSubmit={this.handleSubmit}>
-        <input ref='urlString' type='text' name='urlString'/>
-        <input type='submit'/>
-      </form>
+
+      <div className="centerpage">
+        <img className="home_logo" src="/assets/logo2.png" alt="Logo"/>
+        <form className="form-group text-center" onSubmit={this.handleSubmit}>
+          <input className="form-control" ref='urlString' type='text' name='urlString' placeholder="Enter Url"/>
+
+          <br/>
+          <input className="btn btn-info" type='submit'/>
+        </form>
+        <div>
+          <p> -Our missionis to promote responsible consumption of news material. -Master Tonny Sensei </p>
+        </div>
+      </div>
     )
   }
 }
