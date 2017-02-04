@@ -5,14 +5,14 @@ class Analysis < ApplicationRecord
  WATSON_INFO = "/&outputMode=json&extract=title,author=1&maxRetrieve=3&"
  WATSON_CLOSING = "&outputMode=json&extract&apikey="
 
- def self.watson_call(urlString)
+ def self.watson_call(url)
    @opened_uri, @response = {}, {}
-   @data = WATSON_DATA + urlString + WATSON_CLOSING + ENV['WATSON_KEY']
-   @text = WATSON_TEXT + urlString + WATSON_CLOSING + ENV['WATSON_KEY']
-   @info = WATSON_DATA + urlString + WATSON_INFO + WATSON_CLOSING + ENV['WATSON_KEY']
-   @opened_uri[:data] = JSON.parse(open(@data, 'Accept-Encoding' => '') {|f| f.read })
-   @opened_uri[:text] = JSON.parse(open(@text, 'Accept-Encoding' => '') {|f| f.read })
-   @opened_uri[:info] = JSON.parse(open(@info, 'Accept-Encoding' => '') {|f| f.read })
+   data = WATSON_DATA + url + WATSON_CLOSING + ENV['WATSON_KEY']
+   text = WATSON_TEXT + url + WATSON_CLOSING + ENV['WATSON_KEY']
+   info = WATSON_DATA + url + WATSON_INFO + WATSON_CLOSING + ENV['WATSON_KEY']
+   @opened_uri[:data] = JSON.parse(open(data, 'Accept-Encoding' => '') {|f| f.read })
+   @opened_uri[:text] = JSON.parse(open(text, 'Accept-Encoding' => '') {|f| f.read })
+   @opened_uri[:info] = JSON.parse(open(info, 'Accept-Encoding' => '') {|f| f.read })
    stage_render
    @response
  end
