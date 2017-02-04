@@ -17,6 +17,11 @@ class IndexController < ApplicationController
     render :result
   end
 
+  def quote
+    @quotes = QuotesHelper.extract_quotes(QuotesHelper::TEST)
+    render :quote
+  end
+
   private
 
   def index_params
