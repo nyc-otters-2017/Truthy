@@ -17,6 +17,10 @@ class IndexController < ApplicationController
     render :result
   end
 
+  def quote
+
+  end
+
   private
 
   def index_params

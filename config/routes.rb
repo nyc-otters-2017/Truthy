@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   post '/analyze' => 'index#analyze'
   get '/results' => 'index#result'
   post 'analysis/comprehend' => 'analysis#comprehend'
+  get '/quotes' => 'index#quote'
 
 end
