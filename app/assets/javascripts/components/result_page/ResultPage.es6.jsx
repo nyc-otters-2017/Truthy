@@ -5,6 +5,7 @@ class ResultPage extends React.Component {
 
 
 
+
   render() {
     return(
       <div className='result-container'>
