@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   post '/analyze' => 'index#analyze'
   get '/results' => 'index#result'
 
+
 end

@@ -8,11 +8,13 @@ class IndexController < ApplicationController
     # @reverse_image_info
     @blacklist = BlacklistHelper.check_domain(params[:urlString])
     @fullcontact = BlacklistHelper.request(params[:urlString])
-    render :result, layout: false
+    session[:url] = params[:urlString]
+    redirect_to "/results"
   end
 
-  def results
-    
+  def result
+    @blacklist = BlacklistHelper.check_domain(session[:url])
+    @fullcontact = BlacklistHelper.request(session[:url])
   end
 
   private

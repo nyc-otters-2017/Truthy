@@ -33,6 +33,8 @@ module BlacklistHelper
     tag = REASONS[blacklist_reason]
   end
 
+  # -- full contact--
+
   def self.request(domain_string)
     uri = URI.parse("https://api.fullcontact.com/v2/company/lookup.json?domain="+domain_string)
     request = Net::HTTP::Get.new(uri)
@@ -44,7 +46,20 @@ module BlacklistHelper
       http.request(request)
     end
 
-    JSON.parse(response.body)
+    response = JSON.parse(response.body)
+    get_full_info(response)
+  end
+
+  def self.get_full_info(response)
+    company_info = {}
+    company_info['bio'] = response['socialProfiles'].last['bio'] || 'This company did not include a bio.'
+    company_info['website'] = response['website']
+    company_info['name'] = response['organization']['name'] || 'Company Name not found.'
+    company_info['founded'] = response['organization']['founded']
+    company_info['onlineSince'] = response['onlineSince']
+    company_info['socialMedia'] = response['socialProfiles'].to_json
+    company_info['email'] = response['organization']['contactInfo']['emailAddresses'].first['value'] if response['organization']['contactInfo']['emailAddresses']
+    company_info
   end
 
 end
