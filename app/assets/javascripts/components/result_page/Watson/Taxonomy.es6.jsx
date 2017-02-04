@@ -5,7 +5,9 @@ class Taxonomy extends React.Component {
       <ul>
         {
           this.props.labels.map((label) => {
-            <li>{label.label}</li>
+            return (
+              <li>{label.label}</li>
+            )
           })
         }
       </ul>
