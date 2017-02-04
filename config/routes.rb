@@ -3,5 +3,6 @@ Rails.application.routes.draw do
 
   root 'index#index'
   post '/analyze' => 'index#analyze'
+  get '/results' => 'index#result'
 
 end

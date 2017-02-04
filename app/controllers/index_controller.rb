@@ -4,7 +4,10 @@ class IndexController < ApplicationController
   end
 
   def analyze
-    puts params
+    # @watson_stuff
+    # @reverse_image_info
+    @blacklist = BlacklistHelper.check_domain(params[:urlString]).to_json
+    render :result, layout: false
   end
 
   private
