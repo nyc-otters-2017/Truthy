@@ -29,9 +29,9 @@ class Concept extends React.Component {
       var details = (
         <ul>
           {
-            links.map((link) => {
+            links.map((link, i) => {
               return (
-              <li><a href={link[1]}>{link[0]}</a></li>
+              <li key={i}><a href={link[1]}>{link[0]}</a></li>
               )
             })
           }
