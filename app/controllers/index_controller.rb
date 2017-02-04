@@ -6,9 +6,13 @@ class IndexController < ApplicationController
   def analyze
     # @watson_stuff
     # @reverse_image_info
-    @blacklist = BlacklistHelper.check_domain(params[:urlString]).to_json
-    binding.pry
+    @blacklist = BlacklistHelper.check_domain(params[:urlString])
+    @fullcontact = BlacklistHelper.request(params[:urlString])
     render :result, layout: false
+  end
+
+  def results
+    
   end
 
   private
