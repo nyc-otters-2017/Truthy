@@ -22,7 +22,7 @@ class HomePage extends React.Component {
     return(
 
       <div className="centerpage">
-        <img className="home_logo" src="/assets/logo2.png" alt="Logo"/>
+        <img className="home_logo" src="logo2.png" alt="Logo"/>
         <form className="form-group text-center" onSubmit={this.handleSubmit}>
           <input className="form-control" ref='urlString' type='text' name='urlString' placeholder="Enter Url"/>
 
