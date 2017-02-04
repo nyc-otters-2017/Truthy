@@ -4,6 +4,7 @@ class BlackList extends React.Component {
   }
 
   render(){
+    console.log(this.props)
     let {
       name,
       website,
