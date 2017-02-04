@@ -17,5 +17,4 @@ require 'uri'
     end
 
   end
-
 end

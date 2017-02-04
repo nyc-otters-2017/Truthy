@@ -2,6 +2,7 @@ class HomePage extends React.Component {
   constructor() {
     super()
     this.handleSubmit = this.handleSubmit.bind(this)
+    this.state = { results: [] }
   }
 
   handleSubmit(event){
