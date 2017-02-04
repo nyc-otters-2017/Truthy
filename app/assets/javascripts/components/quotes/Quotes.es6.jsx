@@ -3,13 +3,11 @@ class Quote extends React.Component {
     return(
       <section className="quotes">
         <h1>Quotes used in this Article:</h1>
-        <ul>
           {
             this.props.quotes.map((quote, i)=>{
-              return <li key={i}>"{quote}"</li>
+              return <blockquote key={i}>{quote}</blockquote>
             })
           }
-        </ul>
       </section>
     )
   }
