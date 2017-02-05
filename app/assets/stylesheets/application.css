@@ -36,6 +36,11 @@
   display: block;
   margin: auto;
 }
+
+.side_box_title {
+  background-color: rgba(72, 177, 245, 0.65);
+}
+
 body {
   background-color: rgba(242, 64, 77, 0)
 }

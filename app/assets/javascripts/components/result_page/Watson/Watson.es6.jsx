@@ -4,11 +4,20 @@ class Watson extends React.Component {
     console.log(this.props.data) // for testing and styling
     return (
       <div>
-        <Body data={this.props.data} />
-        <Taxonomy labels={this.props.data.taxonomy} />
-        <Concepts concepts={this.props.data.concepts} />
-        <Entities entities={this.props.data.entities} />
-        <Keywords keywords={this.props.data.keywords} />
+        
+        <div className="col-xs-6 col-sm-3">
+          <Taxonomy labels={this.props.data.taxonomy} />
+        </div>
+        <div className="col-xs-6 col-sm-3">
+          <Concepts concepts={this.props.data.concepts} />
+        </div>
+        <div className="col-xs-6 col-sm-3">
+          <Entities entities={this.props.data.entities} />
+        </div>
+        <div className="col-xs-6 col-sm-3">
+          <Keywords keywords={this.props.data.keywords} />
+        </div>
+
       </div>
     )
   }
