@@ -30,7 +30,7 @@ class BlackList extends React.Component {
           <p>email: {email}</p>
         </section>
 
-          <ArticleBio showBio={this.showBio} bio={bio} />
+        <ArticleBio showBio={this.showBio} bio={bio} />
 
         <section>
           <h1>Social Media:</h1>
