@@ -30,20 +30,27 @@ class Analysis < ApplicationRecord
  end
 
  def self.keep_relevant_concepts(result)
+   backup = result
    result.keep_if do |r|
      r['relevance'].to_f >= 0.8
    end
+   return backup[0..2] if result.length < 3
  end
 
  def self.keep_relevant_entities(result)
+   backup = result
    result.keep_if do |r|
      r['relevance'].to_f >= 0.7
    end
+   return backup[0..2] if result.length < 3
  end
 
  def self.keep_relevant_keywords(result)
+   backup = result
    result.keep_if do |r|
      r['relevance'].to_f >= 0.6
    end
+   return backup[0..2] if result.length < 3
  end
+ 
 end
