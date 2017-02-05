@@ -12,7 +12,6 @@ class Concept extends React.Component {
     event.preventDefault()
     let status = this.state.details
     this.setState({details: !status})
-    debugger
   }
 
   render() {

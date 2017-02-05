@@ -1,27 +1,49 @@
 class ResultPage extends React.Component {
  constructor(props) {
    super(props)
-   this.state = { main: true }
+   this.state = {
+     main: <Body data={this.props.watson} />
+   }
+  //  this.handleClick = this.handleClick.bind(this);
+    this.newRender = this.newRender.bind(this)
+  }
 
-   this.handleClick = this.handleClick.bind(this);
- }
+  newRender(newstuff) {
+   this.setState({main: newstuff } )
 
- handleClick(event){
-   this.state.main = this.props.fullContact
- }
+  }
 
+  render() {
 
+    return(
 
+      <div className='result-container'>
 
- render() {
+        <div className ="col-md-3">
+        </div>
 
-   return(
-     <div className='result-container'>
-       <main>
-         {this.state.main}
-       </main>
+        <div className="col-md-6">
+          <main>
+            <Main display={this.state.main}/>
+          </main>
+        </div>
 
-     </div>
-   )
- }
+        <div className ="col-md-3">
+          <div className="">
+            <FullContactSideBox onNewRender={this.newRender} data={this.props.fullContact}/>
+          </div>
+
+          <div className="">
+            <WatsonBodySideBox onNewRender={this.newRender} data={this.props.watson}/>
+          </div>
+
+          <div className="">
+            <WatsonEverythingElseSideBox onNewRender={this.newRender} data={this.props.watson}/>
+          </div>
+
+        </div>
+
+      </div>
+    )
+  }
 }

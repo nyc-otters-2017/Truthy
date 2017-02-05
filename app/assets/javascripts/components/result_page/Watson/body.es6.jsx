@@ -1,5 +1,8 @@
 class Body extends React.Component {
-
+  constructor() {
+    super()
+    this.state = {display: true}
+  }
   render() {
     return (
       <div>
