@@ -1,7 +1,7 @@
 class Watson extends React.Component {
 
   render() {
-    console.log(this.props.data)
+    console.log(this.props.data) // for testing and styling
     return (
       <div>
         <Body data={this.props.data} />
