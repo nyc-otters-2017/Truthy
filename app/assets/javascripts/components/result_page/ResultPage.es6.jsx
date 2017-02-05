@@ -1,5 +1,4 @@
 class ResultPage extends React.Component {
-
  constructor() {
    super()
  }
