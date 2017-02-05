@@ -6,7 +6,7 @@ class Concepts extends React.Component {
         {
           this.props.concepts.map((concept, i) => {
             return (
-            <Concept key={i} info={concept} />
+              <Concept key={i} info={concept} />
             )
           })
         }
