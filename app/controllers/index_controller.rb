@@ -20,6 +20,8 @@ class IndexController < ApplicationController
    {"confident"=>"no",
     "label"=>"/sports/hunting and shooting",
     "score"=>"0.302891"}],
+ "sentiment"=>"positive",
+ "subjectivity"=>"objective",
  "concepts"=>
   [{"text"=>"National Football League",
     "relevance"=>"0.951135",

@@ -9,7 +9,9 @@ class Analysis < ApplicationRecord
 
 # makes API request and stores each response into variable
  def self.watson_call(url) #url from user input
-   @opened_uri, @response = {}, {}
+   @opened_uri, @datum, @response = {}, {}, {}
+   datum = Datumbox.create(ENV['DATUM_KEY'])
+
    data = WATSON_DATA + url + WATSON_CLOSING + ENV['WATSON_KEY']
    text = WATSON_TEXT + url + WATSON_CLOSING + ENV['WATSON_KEY']
    info = WATSON_DATA + url + WATSON_INFO + WATSON_CLOSING + ENV['WATSON_KEY']
@@ -18,7 +20,9 @@ class Analysis < ApplicationRecord
    @opened_uri[:data] = JSON.parse(open(data, 'Accept-Encoding' => '') {|f| f.read })
    @opened_uri[:text] = JSON.parse(open(text, 'Accept-Encoding' => '') {|f| f.read })
    @opened_uri[:info] = JSON.parse(open(info, 'Accept-Encoding' => '') {|f| f.read })
-   
+   @datum['sentiment'] = JSON.parse(datum.sentiment_analysis(text: @opened_uri[:text]['text']))
+   @datum['subjectivity'] = JSON.parse(datum.subjectivity_analysis(text: @opened_uri[:text]['text']))
+
    stage_render # method call to grab only necessary data from calls
    @response # final output to controller
  end
@@ -31,6 +35,8 @@ class Analysis < ApplicationRecord
    @response['title'] = @opened_uri[:info]['title']
    @response['author'] = author_check(@opened_uri[:info]['author'])
    @response['taxonomy'] = @opened_uri[:data]['taxonomy'] # topics of article
+   @response['sentiment'] = @datum['sentiment']['output']['result'] #sentiment from response
+   @response['subjectivity'] = @datum['subjectivity']['output']['result'] #subjectivity from response
    @response['concepts'] = keep_relevant_concepts(@opened_uri[:data]['concepts'])
    @response['entities'] = keep_relevant_entities(@opened_uri[:data]['entities'])
    @response['keywords'] = keep_relevant_keywords(@opened_uri[:data]['keywords'])
@@ -56,14 +62,11 @@ class Analysis < ApplicationRecord
    return backup[0..2] if result.length < 3
  end
 
- # keeps keywords if their relevance is above 60%, unless that results in keeping
- # two or less keywords. Then it grabs the first three
+ # keeps keywords if their relevance is above 60%
  def self.keep_relevant_keywords(result)
-   backup = result
    result.keep_if do |r|
      r['relevance'].to_f >= 0.6
    end
-   return backup[0..2] if result.length < 3
  end
 
 # if no author is listed it gives default value
