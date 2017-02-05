@@ -4,8 +4,6 @@ class IndexController < ApplicationController
   end
 
   def analyze
-    # @watson_stuff
-    # @reverse_image_info
     session[:url] = params[:urlString]
     redirect_to "/results"
   end

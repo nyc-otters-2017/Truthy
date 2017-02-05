@@ -30,7 +30,7 @@ class HomePage extends React.Component {
           <input className="btn btn-info" type='submit'/>
         </form>
         <div>
-          <p> -Our mission is to promote responsible consumption of news material. -Master Tonny Sensei </p>
+          <p> -Our mission is to promote responsible consumption of news material. -Master Tony Sensei </p>
         </div>
       </div>
     )
