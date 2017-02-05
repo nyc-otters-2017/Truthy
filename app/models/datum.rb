@@ -1,6 +1,3 @@
-require 'rest_client'
-require 'json'
-
 # Datumbox Wrapper.
 # Before use it, you must register yourself at Datumbox site
 # and get your API Key.
