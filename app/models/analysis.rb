@@ -22,7 +22,7 @@ class Analysis < ApplicationRecord
  def self.stage_render
    @response['text'] = @opened_uri[:text]['text']
    @response['title'] = @opened_uri[:info]['title']
-   @response['author'] = @opened_uri[:info]['author'] || 'No author is listed'
+   @response['author'] = author_check(@opened_uri[:info]['author'])
    @response['taxonomy'] = @opened_uri[:data]['taxonomy']
    @response['concepts'] = keep_relevant_concepts(@opened_uri[:data]['concepts'])
    @response['entities'] = keep_relevant_entities(@opened_uri[:data]['entities'])
@@ -30,20 +30,38 @@ class Analysis < ApplicationRecord
  end
 
  def self.keep_relevant_concepts(result)
+   backup = result
    result.keep_if do |r|
      r['relevance'].to_f >= 0.8
    end
+   return backup[0..2] if result.length < 3
  end
 
  def self.keep_relevant_entities(result)
+   backup = result
    result.keep_if do |r|
      r['relevance'].to_f >= 0.7
    end
+   return backup[0..2] if result.length < 3
  end
 
  def self.keep_relevant_keywords(result)
+   backup = result
    result.keep_if do |r|
      r['relevance'].to_f >= 0.6
    end
+   return backup[0..2] if result.length < 3
  end
+
+ def self.author_check(input)
+   if input.include?('Name')
+     'No author is listed'
+   elsif input.empty?
+     'No author is listed'
+   else
+     input
+   end
+ end
+
+
 end
