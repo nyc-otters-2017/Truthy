@@ -9,10 +9,13 @@ class RelatedArticles extends React.Component {
       <div>
       {this.props.articles.map((article, i)=>{
         return (
+          <a href={article.link}>
           <div className='related-article' key={i}>
-            <a href={article.link}>{article.title}</a>
-            <p>source: {article.source}</p>
+            <img className='related-article' src={article.media}/>
+            <br/>
+            <span>{article.title}</span>
           </div>
+          </a>
         )
       })}
     </div>

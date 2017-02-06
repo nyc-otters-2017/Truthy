@@ -17,6 +17,7 @@ class ResultPage extends React.Component {
       <div className='result-container'>
 
         <div className ="col-md-3">
+          <Aylien aylien={this.props.aylien} />
         </div>
 
         <div className="col-md-6">

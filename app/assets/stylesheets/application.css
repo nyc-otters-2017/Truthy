@@ -199,6 +199,11 @@ html {
   background-position: center;
   background-size: cover;
 }
+
+img.related-article {
+  width: 200px;
+}
+
 /*hover type 2 */
 .hovereffect2 {
   width: 200px;
