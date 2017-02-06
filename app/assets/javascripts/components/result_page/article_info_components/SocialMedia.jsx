@@ -5,8 +5,6 @@ class SocialMedia extends React.Component {
   }
 
   render(){
-    debugger
-    console.log(this.props);
     let {
       name,
       website,
