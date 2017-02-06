@@ -17,10 +17,10 @@ class WatsonBodySideBox extends React.Component {
       <div className="hovereffect">
 
         <div className="overlay">
-          <h4 className="side_box_title text-center">Get Watson Body Stuff</h4>
-          <p>something something about this box</p>
+          <h4 className="side_box_title text-center">View the article</h4>
+          <p>Go back to {'"' + this.props.data.title + '"'}</p>
           <p className="text-right padding">
-            <a onClick={this.handleClick} className="btn btn-primary btn-sm" href="#" role="button">Learn more</a>
+            <a onClick={this.handleClick} className="btn btn-primary btn-sm" href="#" role="button">View article</a>
           </p>
 
         </div>
