@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   post '/analyze' => 'index#analyze'
   get '/results' => 'index#result'
   get '/quotes' => 'index#quote'
+  get '/aylien' => 'index#aylien'
 
 end
