@@ -4,7 +4,7 @@ class Watson extends React.Component {
     console.log(this.props.data) // for testing and styling
     return (
       <div>
-        
+
         <div className="col-xs-6 col-sm-3">
           <Taxonomy labels={this.props.data.taxonomy} />
         </div>
@@ -16,6 +16,12 @@ class Watson extends React.Component {
         </div>
         <div className="col-xs-6 col-sm-3">
           <Keywords keywords={this.props.data.keywords} />
+        </div>
+        <div className="col-xs-6 col-sm-3">
+          <Sentiment sentiment={this.props.data.sentiment} />
+        </div>
+        <div className="col-xs-6 col-sm-3">
+          <Subjectivity subjectivity={this.props.data.subjectivity} />
         </div>
 
       </div>
