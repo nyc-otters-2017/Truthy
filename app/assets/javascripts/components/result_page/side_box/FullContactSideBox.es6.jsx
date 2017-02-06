@@ -7,8 +7,7 @@ class FullContactSideBox extends React.Component {
 
   handleClick(event) {
     event.preventDefault()
-    this.props.onNewRender( <ArticleBio data= {this.props.data}/> )
-
+    this.props.onNewRender( <ArticleInfo data={this.props.data}/> )
   }
 
 

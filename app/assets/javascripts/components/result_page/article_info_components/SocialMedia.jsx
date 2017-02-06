@@ -1,11 +1,10 @@
-class BlackList extends React.Component {
+class SocialMedia extends React.Component {
   constructor() {
     super()
     this.state = { bio: '' }
   }
 
   render(){
-    console.log(this.props)
     let {
       name,
       website,
@@ -14,12 +13,9 @@ class BlackList extends React.Component {
       socialMedia,
       bio,
       email
-    } = this.props.fullContact
+    } = this.props.data
     return(
       <article className="blacklist">
-        <header className="blacklist-header">
-          <h1>{this.props.blackList}</h1>
-        </header>
 
         <section>
           <h1>
