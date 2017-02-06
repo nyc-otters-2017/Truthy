@@ -16,6 +16,37 @@ class SocialMedia extends React.Component {
       bio,
       email
     } = this.props.data
+    let socialMediaData = JSON.parse(socialMedia)
+
+    function checkCompanyName(name) {
+      if (name == "Facebook") {
+
+        var details = (
+          <div className="hovereffect2">
+            <img className="img-responsive company_background" src="/assets/companyinfo_facebook.png" alt=""/>
+            <div className="overlay">
+              <h2>Hover effect 2</h2>
+              <a className="info" href="#">link here</a>
+            </div>
+          </div>
+        )
+      } else {
+
+        var details = (
+          <div className="hovereffect2">
+            <img className="img-responsive company_background" src="/assets/companyinfo_default.png" alt=""/>
+            <div className="overlay">
+              <h2>Hover effect 2</h2>
+              <a className="info" href="#">link here</a>
+            </div>
+          </div>
+        )
+      }
+      return details
+    }
+
+
+
     return(
       <article className="blacklist">
 
@@ -34,26 +65,15 @@ class SocialMedia extends React.Component {
 
         <section>
           <h1>Social Media:</h1>
-          <table>
-            <tbody>
-              {
-                JSON.parse(socialMedia).map((media, i)=>{
-                  return (
+          <div>
+            {
+              socialMediaData.map(
+                (media, i)=>{
+                return checkCompanyName(media.typeName)}
+              )
+            }
+          </div>
 
-                    <tr key={i}>
-
-                      <td>{media.typeName}</td>
-                      <td>{media.url}</td>
-                      <td>{media.typeName}</td>
-                      <td>
-                        <a href={media.url}>{media.username}</a>
-                      </td>
-                    </tr>
-                  )
-                })
-              }
-            </tbody>
-          </table>
         </section>
       </article>
     )
