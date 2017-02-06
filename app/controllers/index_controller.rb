@@ -82,6 +82,13 @@ class IndexController < ApplicationController
     render :quote
   end
 
+  def aylien
+    # when combined with other api, aylien should incorporate
+    # @watson['keywords'] and @watson['entities']
+    @aylien = AylienHelper.aylien_call()
+    render :aylien
+  end
+
   private
 
   def index_params
