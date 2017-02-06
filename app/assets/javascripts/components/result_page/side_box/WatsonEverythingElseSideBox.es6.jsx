@@ -14,9 +14,9 @@ class WatsonEverythingElseSideBox extends React.Component {
       <div className="hovereffect">
 
         <div className="overlay">
-          <h4 className="side_box_title text-center">Get Watson Everything Else</h4>
-          <p>something something about this box</p>
-          <p className="text-right padding"><a onClick={this.handleClick} className="btn btn-primary btn-sm" href="#" role="button">Learn more</a></p>
+          <h4 className="side_box_title text-center">Article Data</h4>
+          <p>View the sentiment, subjectivity, emotions, and other important data about the article.</p>
+          <p className="text-right padding"><a onClick={this.handleClick} className="btn btn-primary btn-sm" href="#" role="button">View Data</a></p>
         </div>
 
         <i className="img-responsive material-icons orange600">donut_large</i>
