@@ -24,6 +24,7 @@ class Watson extends React.Component {
           <Subjectivity subjectivity={this.props.data.subjectivity} />
         </div>
 
+
       </div>
     )
   }
