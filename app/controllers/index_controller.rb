@@ -14,7 +14,7 @@ class IndexController < ApplicationController
  "title"=>
   "Watch Jimmy Fallon's 'Tonight Show' pups predict the Super Bowl winner",
  "author"=>"Randee Dawn",
- "publicationDate"=>"20170204",
+ "publicationDate"=>PublicationDateHelper.convert_date("20170204"),
  "taxonomy"=>
   [{"label"=>"/sports/football", "score"=>"0.510555"},
    {"label"=>"/pets/dogs", "score"=>"0.475452"},
@@ -90,10 +90,6 @@ class IndexController < ApplicationController
     @aylien = AylienHelper.aylien_call()
     render :aylien
   end
-
-  # def publication_date
-  #   @publication_date = PublicationDateHelper.convert_date
-  # end
 
   private
 
