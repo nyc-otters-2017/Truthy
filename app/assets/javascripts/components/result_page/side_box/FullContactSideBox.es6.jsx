@@ -22,7 +22,7 @@ class FullContactSideBox extends React.Component {
         <div className="overlay">
           <h4 className="side_box_title text-center">Get Company Bio</h4>
           <p>something something about this box</p>
-          <p className="text-right"><a onClick={this.handleClick} className="btn btn-primary btn-sm" href="#" role="button">Learn more</a></p>
+          <p className="text-right padding"><a onClick={this.handleClick} className="btn btn-primary btn-sm" href="#" role="button">Learn more</a></p>
         </div>
 
         <i className="img-responsive material-icons orange600">donut_large</i>
