@@ -7,7 +7,6 @@ class ArticleStatus extends React.Component {
 
   handleClick(event) {
     event.preventDefault()
-    console.log("yay")
     $.ajax({
       url: '/results'
     })
@@ -20,7 +19,10 @@ class ArticleStatus extends React.Component {
 
   render() {
     return(
-      <input type="button" className="reveal-results" onClick={this.handleClick} value="Article Status" />
+      <div>
+        <input type="button" className="reveal-results" onClick={this.handleClick} value="Article Status" />
+        <p>{this.state.articleStatus}</p>
+      </div>
     )
   }
 }

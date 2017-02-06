@@ -7,7 +7,7 @@ class ArticleBio extends React.Component {
   }
 
   handleMouseOver() {
-    this.setState({articleBio: this.props.data.bio})
+    this.setState({articleBio: this.props.bio})
   }
 
   handleMouseLeave() {
@@ -15,7 +15,7 @@ class ArticleBio extends React.Component {
   }
 
   render() {
-    
+
     return(
       <section id="article-bio">
         <h1 id="article-header" onMouseOver={this.handleMouseOver} onMouseLeave={this.handleMouseLeave}>Article Bio</h1>
