@@ -1,5 +1,6 @@
 class ResultPage extends React.Component {
  constructor(props) {
+   
    super(props)
    this.state = {
      main: <Body data={this.props.watson} />
