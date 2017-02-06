@@ -22,14 +22,20 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
     <div class="header">
-      <h1 class="header_logo"><a href="/">TRUTHY</a></h1>
-
+      <img class="header_logo" src="/assets/logo2.png" alt="Logo"/>
+      <h1 class="header_title"><a href="/">TRUTHY</a></h1>
+    </div>
+    <div class="slider_div">
+      <span> Text Size: </span>
+      <input type="range" min="12" max="42" id="slider"/>
     </div>
     <br><br>
     <%= yield %>
     <script>
-    $(document).ready(function(){
-        $('[data-toggle="popover"]').popover();
+    $('input').on('change', function () {
+        var v = $(this).val();
+        $('p').css('font-size', v + 'px')
+        $('span').html(v);
     });
     </script>
   </body>

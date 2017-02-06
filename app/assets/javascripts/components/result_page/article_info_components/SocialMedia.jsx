@@ -14,38 +14,64 @@ class SocialMedia extends React.Component {
       bio,
       email
     } = this.props.data
+    let socialMediaData = JSON.parse(socialMedia)
+
+    function checkCompanyName(name) {
+      if (name == "Facebook") {
+
+        var details = (
+          <div className="hovereffect2">
+            <img className="img-responsive company_background" src="/assets/companyinfo_facebook.png" alt=""/>
+            <div className="overlay">
+              <h2>Hover effect 2</h2>
+              <a className="info" href="#">link here</a>
+            </div>
+          </div>
+        )
+      } else {
+
+        var details = (
+          <div className="hovereffect2">
+            <img className="img-responsive company_background" src="/assets/companyinfo_default.png" alt=""/>
+            <div className="overlay">
+              <h2>Hover effect 2</h2>
+              <a className="info" href="#">link here</a>
+            </div>
+          </div>
+        )
+      }
+      return details
+    }
+
+
+
     return(
       <article className="blacklist">
 
         <section>
-          <h1>
+          <h1> Company Info: </h1>
+          <h3>
             <a href={website}>{name}</a>
-          </h1>
-          <p>founded: {founded}</p>
-          <p>online since: {onlineSince}</p>
-          <p>email: {email}</p>
+          </h3>
+            <ul>
+              <li>Founded: {founded}</li>
+              <li>Email: {email}</li>
+              <li>Online Since: {onlineSince}</li>
+              <li>Webpage Bio:  {this.props.data.bio}</li>
+            </ul>
         </section>
-
-        <ArticleBio showBio={this.showBio} bio={bio} />
 
         <section>
           <h1>Social Media:</h1>
-          <table>
-            <tbody>
-              {
-                JSON.parse(socialMedia).map((media, i)=>{
-                  return (
-                    <tr key={i}>
-                      <td>{media.typeName}</td>
-                      <td>
-                        <a href={media.url}>{media.username}</a>
-                      </td>
-                    </tr>
-                  )
-                })
-              }
-            </tbody>
-          </table>
+          <div>
+            {
+              socialMediaData.map(
+                (media, i)=>{
+                return checkCompanyName(media.typeName)}
+              )
+            }
+          </div>
+
         </section>
       </article>
     )
