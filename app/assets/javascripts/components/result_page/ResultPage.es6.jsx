@@ -1,5 +1,6 @@
 class ResultPage extends React.Component {
  constructor(props) {
+   
    super(props)
    this.state = {
      main: <Body data={this.props.watson} />
@@ -16,6 +17,7 @@ class ResultPage extends React.Component {
       <div className='result-container'>
 
         <div className ="col-md-3">
+          <Aylien aylien={this.props.aylien} />
         </div>
 
         <div className="col-md-6">
