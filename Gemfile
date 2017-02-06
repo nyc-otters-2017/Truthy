@@ -25,6 +25,8 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 2.5'
 # interact with Aylien API
 gem 'aylien_news_api'
+# ML learning model
+gem 'classifier-reborn'
 
 gem 'react-rails'
 

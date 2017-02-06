@@ -2,7 +2,7 @@ class Subjectivity extends React.Component {
   render() {
     return(
       <div className="Subjectivity-container">
-        <h2>Subjectivity Analysis</h2>
+        <h3>Subjectivity Analysis</h3>
         <ul>
           {this.props.subjectivity}
         </ul>
