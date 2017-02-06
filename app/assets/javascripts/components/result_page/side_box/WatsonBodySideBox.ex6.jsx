@@ -14,10 +14,6 @@ class WatsonBodySideBox extends React.Component {
 
   render(){
     return (
-      // <div class="container">
-      //   <i className="img-responsive material-icons orange600" data-toggle="popover" data-placement="left" data-trigger="hover" data-content="Conteonreoneroivneoivnernt">donut_large</i>
-      //
-      // </div>
       <div className="hovereffect">
 
         <div className="overlay">
