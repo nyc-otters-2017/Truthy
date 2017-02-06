@@ -26,8 +26,8 @@ class SocialMedia extends React.Component {
           </h3>
             <ul>
               <li>Founded: {founded}</li>
-              <li>Online Since: {onlineSince}</li>
               <li>Email: {email}</li>
+              <li>Online Since: {onlineSince}</li>
               <li>Webpage Bio:  {this.props.data.bio}</li>
             </ul>
         </section>

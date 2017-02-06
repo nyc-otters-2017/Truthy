@@ -1,5 +1,5 @@
 class ArticleBio extends React.Component {
-  constructor(props) { 
+  constructor(props) {
     super(props)
 
     // this.handleMouseOver = this.handleMouseOver.bind(this)
@@ -19,7 +19,7 @@ class ArticleBio extends React.Component {
 
     return(
       <section id="article-bio">
-        <h1 id="article-header">Article Bio</h1>
+        <h1 id="article-header">Article Bio:</h1>
         <p>{this.state.articleBio}</p>
 
       </section>

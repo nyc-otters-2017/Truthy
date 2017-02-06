@@ -37,11 +37,20 @@
   margin: auto;
   /*font-family: 'Ubuntu', sans-serif;*/
 }
-
+.slider_div {
+  position: relative;
+  left: 17px;
+}
+#slider {
+  width: 200px;
+  display: inline-block;
+  width: 200px;
+  position: relative;
+  top: 3px;
+  left: 8px;
+}
 
 .header {
-  padding-bottom: 9px;
-
   border-bottom: 1px solid #eee;
 }
 
@@ -154,6 +163,19 @@
 p {
     line-height: 220%;
     font.size: 1.2em;
+}
+
+.header_logo {
+  position: relative;
+  display: inline-block;
+  width: 68px;
+  top: -12px;
+  right: -14px;
+}
+
+.header_title {
+  display: inline-block;
+
 }
 
 section {
