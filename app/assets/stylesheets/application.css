@@ -151,6 +151,14 @@
   -webkit-transition-delay: 0.3s;
   transition-delay: 0.3s;
 }
+p {
+    line-height: 220%;
+    font.size: 1.2em;
+}
+
+section {
+  border-style: double;
+}
 
 body {
   background-color: rgba(242, 64, 77, 0);

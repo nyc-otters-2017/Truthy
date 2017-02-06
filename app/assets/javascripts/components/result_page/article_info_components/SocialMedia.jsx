@@ -5,6 +5,8 @@ class SocialMedia extends React.Component {
   }
 
   render(){
+    debugger
+    console.log(this.props);
     let {
       name,
       website,
@@ -18,15 +20,17 @@ class SocialMedia extends React.Component {
       <article className="blacklist">
 
         <section>
-          <h1>
+          <h1> Company Info: </h1>
+          <h3>
             <a href={website}>{name}</a>
-          </h1>
-          <p>founded: {founded}</p>
-          <p>online since: {onlineSince}</p>
-          <p>email: {email}</p>
+          </h3>
+            <ul>
+              <li>Founded: {founded}</li>
+              <li>Online Since: {onlineSince}</li>
+              <li>Email: {email}</li>
+              <li>Webpage Bio:  {this.props.data.bio}</li>
+            </ul>
         </section>
-
-        <ArticleBio showBio={this.showBio} bio={bio} />
 
         <section>
           <h1>Social Media:</h1>
@@ -35,7 +39,11 @@ class SocialMedia extends React.Component {
               {
                 JSON.parse(socialMedia).map((media, i)=>{
                   return (
+
                     <tr key={i}>
+
+                      <td>{media.typeName}</td>
+                      <td>{media.url}</td>
                       <td>{media.typeName}</td>
                       <td>
                         <a href={media.url}>{media.username}</a>
