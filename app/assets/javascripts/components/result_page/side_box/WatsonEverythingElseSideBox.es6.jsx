@@ -6,8 +6,7 @@ class WatsonEverythingElseSideBox extends React.Component {
 
   handleClick(event) {
     event.preventDefault()
-
-    this.props.onNewRender( <Watson data= {this.props.data}/> )
+    this.props.onNewRender( <Watson data={this.props.data}/> )
   }
 
   render(){

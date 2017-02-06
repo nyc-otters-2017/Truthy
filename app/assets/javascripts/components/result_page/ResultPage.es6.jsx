@@ -24,11 +24,13 @@ class ResultPage extends React.Component {
           </main>
         </div>
 
-        <SideBox
-          onNewRender={this.newRender}
-          fullContact={this.props.fullContact}
-          watson={this.props.watson}
-          />
+        <div className ="col-md-3">
+          <SideBox
+            onNewRender={this.newRender}
+            fullContact={this.props.fullContact}
+            watson={this.props.watson}
+            />
+        </div>
       </div>
     )
   }

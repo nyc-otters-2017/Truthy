@@ -2,7 +2,7 @@ class SideBox extends React.Component {
 
   render() {
     return (
-      <div className ="col-md-3">
+      <div>
         <div className="">
           <FullContactSideBox onNewRender={this.props.onNewRender} data={this.props.fullContact}/>
         </div>
@@ -14,7 +14,6 @@ class SideBox extends React.Component {
         <div className="">
           <WatsonEverythingElseSideBox onNewRender={this.props.onNewRender} data={this.props.watson}/>
         </div>
-
       </div>
     )
   }
