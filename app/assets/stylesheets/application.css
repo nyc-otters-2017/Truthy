@@ -163,3 +163,7 @@ html {
   background-position: center;
   background-size: cover;
 }
+
+img.related-article {
+  width: 200px;
+}
