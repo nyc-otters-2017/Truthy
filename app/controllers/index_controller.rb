@@ -14,7 +14,13 @@ class IndexController < ApplicationController
  "title"=>
   "Watch Jimmy Fallon's 'Tonight Show' pups predict the Super Bowl winner",
  "author"=>"Randee Dawn",
- "publicationDate"=>"20170204",
+ "publicationDate"=>PublicationDateHelper.convert_date("20170204"),
+ "docEmotions"=>
+   [{"emotion"=>"anger", "score"=>"0.112369"},
+   {"emotion"=>"disgust", "score"=>"0.175777"},
+   {"emotion"=>"fear", "score"=>"0.147617"},
+   {"emotion"=>"joy", "score"=>"0.53496"},
+   {"emotion"=>"sadness", "score"=>"0.260595"}],
  "taxonomy"=>
   [{"label"=>"/sports/football", "score"=>"0.510555"},
    {"label"=>"/pets/dogs", "score"=>"0.475452"},

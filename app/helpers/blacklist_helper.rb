@@ -50,14 +50,27 @@ module BlacklistHelper
   end
 
   def self.get_full_info(response)
+    not_provided = 'No record was found for this company.'
     company_info = {}
-    company_info['bio'] = response['socialProfiles'].last['bio'] || 'This company did not include a bio.'
-    company_info['website'] = response['website']
-    company_info['name'] = response['organization']['name'] || 'Company Name not found.'
-    company_info['founded'] = response['organization']['founded']
-    company_info['onlineSince'] = response['onlineSince']
-    company_info['socialMedia'] = response['socialProfiles'].to_json
-    company_info['email'] = response['organization']['contactInfo']['emailAddresses'].first['value'] if response['organization']['contactInfo']['emailAddresses']
+    company_info['website'] = response.fetch('website', not_provided)
+    company_info['name'] = response['organization']['name'] || not_provided
+    company_info['founded'] = response['organization']['founded'] || not_provided
+    company_info['onlineSince'] = response['onlineSince'] || not_provided
+
+    company_info['socialMedia'] = response['socialProfiles'].map do |profile|
+      { typeName: profile.fetch('typeName', not_provided),
+        url: profile.fetch('url', not_provided),
+        username: profile.fetch('username', not_provided),
+        bio: profile.fetch('bio', not_provided)
+       }
+    end
+
+    if response['organization']['contactInfo']['emailAddresses']
+      company_info['email'] = response['organization']['contactInfo']['emailAddresses'].first['value']
+    else
+      company_info['email'] = not_provided
+    end
+
     company_info
   end
 end
