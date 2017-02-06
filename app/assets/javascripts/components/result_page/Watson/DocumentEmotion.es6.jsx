@@ -1,6 +1,5 @@
 class DocumentEmotion extends React.Component {
   render() {
-    // debugger
     return(
       <div>
         <h3>Document Emotions</h3>
