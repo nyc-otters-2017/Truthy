@@ -29,6 +29,7 @@ class ResultPage extends React.Component {
             onNewRender={this.newRender}
             fullContact={this.props.fullContact}
             watson={this.props.watson}
+            quotes={this.props.quotes}
             />
         </div>
       </div>

@@ -14,6 +14,10 @@ class SideBox extends React.Component {
         <div className="side_box">
           <WatsonEverythingElseSideBox onNewRender={this.props.onNewRender} data={this.props.watson}/>
         </div>
+
+        <div className="side_box">
+          <QuotesSideBox onNewRender={this.props.onNewRender} data={this.props.quotes}/>
+        </div>
       </div>
     )
   }
