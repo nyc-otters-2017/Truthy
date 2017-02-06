@@ -8,6 +8,7 @@ class Body extends React.Component {
       <div>
         <h1>{this.props.data.title}</h1>
         <p>By {this.props.data.author}</p>
+        <p>Written on {this.props.data.publicationDate}</p>
         <p>{this.props.data.text}</p>
       </div>
     )
