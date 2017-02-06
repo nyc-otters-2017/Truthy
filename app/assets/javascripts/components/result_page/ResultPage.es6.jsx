@@ -21,7 +21,6 @@ class ResultPage extends React.Component {
         <div className="col-md-6">
           <main>
             <Main display={this.state.main}/>
-            <p>Written on {this.props.watson.publicationDate}</p>
           </main>
         </div>
 
