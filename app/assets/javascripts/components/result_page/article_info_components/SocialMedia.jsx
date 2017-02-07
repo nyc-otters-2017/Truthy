@@ -73,15 +73,13 @@ class SocialMedia extends React.Component {
             </ul>
         </section>
 
-        <section>
+        <section className="social_media_div">
           <h1>Social Media:</h1>
           <div>
-            {
-              socialMediaData.map(
-                (media, i)=>{
-                return checkCompanyName(media, i)}
-              )
-            }
+            { socialMediaData.map(
+              (media, i)=>{
+              return checkCompanyName(media, i)}
+            )}
           </div>
 
         </section>

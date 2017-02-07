@@ -20,13 +20,13 @@ class ResultPage extends React.Component {
           <Aylien aylien={this.props.aylien} />
         </div>
 
-        <div className="col-md-6">
+        <div className="col-md-8">
           <main>
             <Main display={this.state.main}/>
           </main>
         </div>
 
-        <div className ="col-md-3">
+        <div className ="col-md-1">
           <SideBox
             onNewRender={this.newRender}
             fullContact={this.props.fullContact}
