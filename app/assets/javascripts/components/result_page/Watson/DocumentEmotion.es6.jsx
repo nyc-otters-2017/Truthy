@@ -7,8 +7,10 @@ class DocumentEmotion extends React.Component {
 
         // data converted from TSV to JS array
         var data = this.props.docEmotions.map(emotion=>{
-          return { name: emotion.emotion, value: emotion.value }
+          return { name: emotion.emotion, value: (emotion.score * 100).toFixed(2) }
         })
+
+        console.log(data);
 
         // coerce to number
         data.forEach(function(d){
@@ -39,29 +41,22 @@ class DocumentEmotion extends React.Component {
         });
 
         bar.append("span")
-          .attr("class", 'emotion')
+          .attr("class", 'name')
           .text(function(d) {
           return d.name;
         });
 
-      })();
+      }).bind(this)();
     }
   render() {
     return(
       <div>
-        <h3>Document Emotions</h3>
+        <h2>Document Emotions</h2>
+        <h4>Detects anger, disgust, fear, joy, and sadness and returns a score that reflects the frequency of each emotion.</h4>
         <div className='chart'>
 
         </div>
-        <ul>
-          {
-            this.props.docEmotions.map((emotion, i) => {
-              return(
-                <li key={i}>{emotion.emotion}, {emotion.value*100 + "%"}</li>
-              )
-            })
-          }
-        </ul>
+
       </div>
     )
   }

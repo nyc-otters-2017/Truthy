@@ -33,7 +33,8 @@ class Keywords extends React.Component {
     return (
       <div>
         <div>
-          <a href="#" onClick={this.handleClick}>Keywords</a>
+          <h2><a href="#" onClick={this.handleClick}>Keywords</a></h2>
+          <h4>Determines important keywords in the text; ranks them by relevance.</h4>
         </div>
           { details }
       </div>

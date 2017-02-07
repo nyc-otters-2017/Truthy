@@ -2,7 +2,8 @@ class Subjectivity extends React.Component {
   render() {
     return(
       <div className="Subjectivity-container">
-        <h3>Subjectivity Analysis</h3>
+        <h2>Subjectivity Analysis</h2>
+        <h4>Determines whether the content is primarily objective or subjective.</h4>
         <ul>
           {this.props.subjectivity}
         </ul>

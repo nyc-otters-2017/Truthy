@@ -1,0 +1,27 @@
+.chart .bar {
+  position: relative;
+  background-color: steelblue;
+  height: 40px;
+  margin-top: 5px;
+}
+
+.chart .bar .label {
+  position: absolute;
+  top: 9px;
+  right: 15px;
+  color: orange;
+  font: 18px sans-serif;
+}
+
+.chart .bar .name {
+  position: absolute;
+  top: 9px;
+  left: 10px;
+  color: orange;
+  font: 18px sans-serif;
+  opacity: .8;
+}
+
+.chart {
+  width: 550px;
+}
