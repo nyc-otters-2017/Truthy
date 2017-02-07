@@ -5,25 +5,25 @@ class Watson extends React.Component {
     return (
       <div>
 
-        <div className="col-xs-6 col-sm-3">
+        <div className="">
           <Taxonomy labels={this.props.data.taxonomy} />
         </div>
-        <div className="col-xs-6 col-sm-3">
+        <div className="">
           <Concepts concepts={this.props.data.concepts} />
         </div>
-        <div className="col-xs-6 col-sm-3">
+        <div className="">
           <Entities entities={this.props.data.entities} />
         </div>
-        <div className="col-xs-6 col-sm-3">
+        <div className="">
           <Keywords keywords={this.props.data.keywords} />
         </div>
-        <div className="col-xs-6 col-sm-3">
+        <div className="">
           <Sentiment sentiment={this.props.data.sentiment} />
         </div>
-        <div className="col-xs-6 col-sm-3">
+        <div className="">
           <Subjectivity subjectivity={this.props.data.subjectivity} />
         </div>
-        <div className="col-xs-6 col-sm-3">
+        <div className="">
           <DocumentEmotion docEmotions={this.props.data.docEmotions} />
         </div>
 
