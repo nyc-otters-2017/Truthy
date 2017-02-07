@@ -8,6 +8,25 @@ class ResultPage extends React.Component {
     this.newRender = this.newRender.bind(this)
   }
 
+  componentDidMount() {
+    $(window).scroll(function() {
+
+  // get the variable of how far we've scrolled from the top
+  var offset = $(window).scrollTop();
+    offset     = offset * 10;
+
+  // add css transform with the offset variable
+  $('.material-icons.orange600').css({
+    '-moz-transform': 'rotate(' + offset + 'deg)',
+    '-webkit-transform': 'rotate(' + offset + 'deg)',
+    '-o-transform': 'rotate(' + offset + 'deg)',
+    '-ms-transform': 'rotate(' + offset + 'deg)',
+    'transform': 'rotate(' + offset + 'deg)',
+  });
+
+});
+  }
+
   newRender(newMain) {
    this.setState({main: newMain })
   }
