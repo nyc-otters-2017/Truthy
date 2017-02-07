@@ -23,13 +23,21 @@ class RelatedArticles extends React.Component {
       var articles = (
           this.props.articles.map((article, i)=>{
           return (
-            <a href={article.link} key={i}>
+            <ReactCSSTransitionGroup
+              transitionName="related"
+              transitionEnterTimeout={1000}
+              transitionLeaveTimeout={600}
+              key={i}>
               <div className='related-article' >
-              <img className='related-article' src={article.media}/>
-              <br/>
-              <span>{article.title}</span>
-            </div>
-            </a>
+                <div className='related-article-info'>
+                  <a href={article.link} >
+                    <img className='related-article' src={article.media}/>
+                    <br/>
+                    <span>{article.title}</span>
+                  </a>
+                </div>
+              </div>
+            </ReactCSSTransitionGroup>
           )
         })
       )
@@ -38,13 +46,8 @@ class RelatedArticles extends React.Component {
 
     return(
       <div>
-        <a href="#" onClick={this.handleClick}>Related articles</a>
-        <ReactCSSTransitionGroup
-          transitionName="related"
-          transitionEnterTimeout={500}
-          transitionLeaveTimeout={300}>
+        <a href="#" onClick={this.handleClick}><h1>Related Articles</h1></a>
           { articles }
-        </ReactCSSTransitionGroup>
       </div>
     )
   }
