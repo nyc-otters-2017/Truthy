@@ -1,0 +1,26 @@
+.related-enter {
+  opacity: 0.01;
+}
+
+.related-enter.related-enter-active {
+  opacity: 1;
+  transition: opacity 1000ms ease-in;
+}
+
+.related-leave {
+  opacity: 1;
+}
+
+.related-leave.related-leave-active {
+  opacity: 0.01;
+  transition: opacity 600ms ease-in;
+}
+
+.related-article {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.related-article-info {
+  width: 200px;
+}

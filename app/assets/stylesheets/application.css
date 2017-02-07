@@ -244,10 +244,6 @@ p {
 
 }
 
-section {
-  border-style: double;
-}
-
 body {
   background-color: rgba(242, 64, 77, 0);
   font-family: 'Ubuntu', sans-serif;
