@@ -9,7 +9,7 @@
   position: absolute;
   top: 9px;
   right: 15px;
-  color: white;
+  color: orange;
   font: 18px sans-serif;
 }
 
@@ -17,7 +17,11 @@
   position: absolute;
   top: 9px;
   left: 10px;
-  color: white;
+  color: orange;
   font: 18px sans-serif;
-  opacity: .5;
+  opacity: .8;
+}
+
+.chart {
+  width: 550px;
 }
