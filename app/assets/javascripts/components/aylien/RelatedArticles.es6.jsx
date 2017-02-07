@@ -1,34 +1,13 @@
 class RelatedArticles extends React.Component {
 
- constructor() {
-   super()
-   this.state = {
-     revealed: false,
-   }
-   this.handleClick = this.handleClick.bind(this)
- }
-
- handleClick(event) {
-   event.preventDefault()
-   let status = this.state.revealed
-   this.setState({revealed: !status})
- }
-
-
  render(){
-   const yourArticlesAreShowing = this.state.revealed
-   var ReactCSSTransitionGroup = React.addons.CSSTransitionGroup
-
-   if (yourArticlesAreShowing) {
-     var articles = (
+   return(
+     <div>
+       <h2>Related Articles</h2>
+       {
          this.props.articles.map((article, i)=>{
          return (
-           <ReactCSSTransitionGroup
-             transitionName="related"
-             transitionEnterTimeout={1000}
-             transitionLeaveTimeout={600}
-             key={i}>
-             <div className='related-articles' >
+             <div className='related-articles' key={i}>
                <div className='related-article-info'>
                  <a href={article.link} >
                    <div className='related-article'>
@@ -43,17 +22,9 @@ class RelatedArticles extends React.Component {
                  </a>
                </div>
              </div>
-           </ReactCSSTransitionGroup>
          )
        })
-     )
-   }
-
-
-   return(
-     <div>
-       <a href="#" onClick={this.handleClick}><h2>Related Articles</h2></a>
-         { articles }
+       }
      </div>
    )
  }

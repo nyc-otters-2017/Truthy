@@ -16,12 +16,13 @@ class ResultPage extends React.Component {
     return(
       <div className='result-container'>
 
-        <div className ="col-md-3">
+        <div className ="col-md-2">
           <Aylien aylien={this.props.aylien} />
         </div>
 
 
-        <div className="col-md-7">
+        <div className="col-md-8
+          ">
           <main>
             <Main display={this.state.main}/>
           </main>

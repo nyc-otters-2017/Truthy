@@ -18,6 +18,10 @@
   overflow-y: scroll;
 }
 
+main {
+  margin-left: 30px;
+}
+
 .social_media_div {
   margin-top: 10px;
 }
