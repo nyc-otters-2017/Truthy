@@ -15,16 +15,26 @@ class SocialMedia extends React.Component {
       email
     } = this.props.data
     let socialMediaData = JSON.parse(socialMedia)
+    function checkCompanyName(data, i) {
+      if (
+        data.typeName.toLowerCase() === "facebook" ||data.typeName.toLowerCase() === "linkedin"
+        ||data.typeName.toLowerCase() === "twitter"
+        ||data.typeName.toLowerCase() === "pinterest"
+      ){
+        var companyName = data.typeName.toLowerCase();
+        var locationHead = "/assets/companyinfo_"
+        var locationEnd = ".png"
+        var pictureLocation = [locationHead, companyName, locationEnd].join("");
 
-    function checkCompanyName(name) {
-      if (name == "Facebook") {
-
+        console.log(socialMediaData);
         var details = (
           <div className="hovereffect2">
-            <img className="img-responsive company_background" src="/assets/companyinfo_facebook.png" alt=""/>
+            <img className="img-responsive company_background" src={pictureLocation} alt=""/>
             <div className="overlay">
-              <h2>Hover effect 2</h2>
-              <a className="info" href="#">link here</a>
+              <h2 key={i}> {data.typeName}</h2>
+              <h3> {data.bio} </h3>
+              <h4 className="social_media_username"> {data.username} </h4>
+              <a className="info" href={data.url}>link here</a>
             </div>
           </div>
         )
@@ -34,8 +44,10 @@ class SocialMedia extends React.Component {
           <div className="hovereffect2">
             <img className="img-responsive company_background" src="/assets/companyinfo_default.png" alt=""/>
             <div className="overlay">
-              <h2>Hover effect 2</h2>
-              <a className="info" href="#">link here</a>
+              <h2 key={i}>{data.typeName}</h2>
+              <h3> {data.bio} </h3>
+              <h4 className="social_media_username"> {data.username} </h4>
+              <a className="info" href={data.url}>link here</a>
             </div>
           </div>
         )
@@ -67,7 +79,7 @@ class SocialMedia extends React.Component {
             {
               socialMediaData.map(
                 (media, i)=>{
-                return checkCompanyName(media.typeName)}
+                return checkCompanyName(media, i)}
               )
             }
           </div>
