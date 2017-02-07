@@ -229,8 +229,21 @@
 /*front page css*/
 .sidebar1 {
   height: 150px !important;
+  width: 100% !important;
 }
-
+.side_box_title{
+  top: -10px !important;
+  text-align: center;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.77);
+  padding: 10px;
+}
+.about_company{
+  font-size: 10px;
+  position: relative;
+  top: 31px;
+  color: white;
+}
 /*end of front page css */
 
 
