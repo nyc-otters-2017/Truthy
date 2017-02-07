@@ -3,7 +3,7 @@ class Entities extends React.Component {
   render() {
     return (
       <div>
-        <h3>Entities</h3>
+        <h2>Entities</h2>
         <ul>
           {
             this.props.entities.map((entity, i) => {

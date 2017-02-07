@@ -51,7 +51,7 @@ class DocumentEmotion extends React.Component {
   render() {
     return(
       <div>
-        <h3>Document Emotions</h3>
+        <h2>Document Emotions</h2>
         <div className='chart'>
 
         </div>

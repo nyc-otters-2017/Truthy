@@ -33,7 +33,7 @@ class Keywords extends React.Component {
     return (
       <div>
         <div>
-          <a href="#" onClick={this.handleClick}>Keywords</a>
+          <h2><a href="#" onClick={this.handleClick}>Keywords</a></h2>
         </div>
           { details }
       </div>
