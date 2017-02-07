@@ -108,10 +108,6 @@ class IndexController < ApplicationController
     MlEntry.predict
   end
 
-  # def publication_date
-  #   @publication_date = PublicationDateHelper.convert_date
-  # end
-
   private
 
   def index_params
