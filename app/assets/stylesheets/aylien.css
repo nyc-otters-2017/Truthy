@@ -2,6 +2,7 @@
   border-right: 2px solid grey;
   overflow: scroll;
   height: 800px;
+  padding: 0;
 }
 
 .aylien a {
@@ -9,11 +10,13 @@
 }
 
 .aylien blockquote {
-  padding: 10px 0 10px 10px
+  padding: 8px 0px 0px 8px
 }
 
 .related-article img {
   width: 200px;
+  margin: 0px;
+  padding-bottom: 0px;
 }
 
 .related-enter {
@@ -35,12 +38,20 @@
 }
 
 .related-article {
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 3px;
+  padding-bottom: 3px;
   border-bottom: 1px solid #666;
 }
 
 .related-article-info {
-  padding-right: 5px;
+  padding: 0px;
   width: 90%
+}
+
+.related-author {
+  font-size: 1em;
+}
+
+.related-body {
+  font-size: 1em;
 }
