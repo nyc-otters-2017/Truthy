@@ -15,7 +15,7 @@ class Watson extends React.Component {
 
         <div className="analysis-container">
           <div className="left">
-            <div className="col-sm-5">
+            <div className="col-sm-6">
               <Taxonomy labels={this.props.data.taxonomy} />
             </div>
           </div>
@@ -23,23 +23,15 @@ class Watson extends React.Component {
 
         <div className="analysis-container">
           <div className="right">
-            <div className="col-sm-5">
+            <div className="col-sm-6">
               <Concepts concepts={this.props.data.concepts} />
-            </div>
-          </div>
-        </div>
-
-        <div className="analysis-container">
-          <div className="left">
-            <div className="col-sm-2">
-              <Entities entities={this.props.data.entities} />
             </div>
           </div>
         </div>
 
         <div className="analysis-containert">
           <div className="right">
-            <div className="col-sm-4">
+            <div className="col-sm-6">
               <Sentiment sentiment={this.props.data.sentiment} />
             </div>
           </div>
@@ -47,8 +39,16 @@ class Watson extends React.Component {
 
         <div className="analysis-containertent">
           <div className="left">
-            <div className="col-sm-4">
+            <div className="col-sm-6">
               <Subjectivity subjectivity={this.props.data.subjectivity} />
+            </div>
+          </div>
+        </div>
+
+        <div className="analysis-container">
+          <div className="left">
+            <div className="col-sm-6">
+              <Entities entities={this.props.data.entities} />
             </div>
           </div>
         </div>
