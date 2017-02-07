@@ -28,12 +28,12 @@ class SocialMedia extends React.Component {
 
         console.log(socialMediaData);
         var details = (
-          <div className="hovereffect2">
+          <div className="hovereffect2 company_background_div">
             <img className="img-responsive company_background" src={pictureLocation} alt=""/>
             <div className="overlay">
               <h2 key={i}> {data.typeName}</h2>
               <h3> {data.bio} </h3>
-              <h4> {data.username} </h4>
+              <h4 className="social_media_username"> {data.username} </h4>
               <a className="info" href={data.url}>link here</a>
             </div>
           </div>
@@ -41,7 +41,7 @@ class SocialMedia extends React.Component {
       } else {
 
         var details = (
-          <div className="hovereffect2">
+          <div className="hovereffect2 company_background_div">
             <img className="img-responsive company_background" src="/assets/companyinfo_default.png" alt=""/>
             <div className="overlay">
               <h2 key={i}>{data.typeName}</h2>
@@ -60,29 +60,29 @@ class SocialMedia extends React.Component {
     return(
       <article className="blacklist">
 
-        <section>
-          <h1> Company Info: </h1>
+        <section className="company_info">
+          <h1>Company Info</h1>
           <h3>
             <a href={website}>{name}</a>
           </h3>
-            <ul>
+            <ul className="company_bio_list">
               <li>Founded: {founded}</li>
               <li>Email: {email}</li>
               <li>Online Since: {onlineSince}</li>
-              <li>Webpage Bio:  {this.props.data.bio}</li>
+              <li>Webpage Bio: {this.props.data.bio}</li>
             </ul>
         </section>
 
-        <section className="social_media_div">
-          <h1>Social Media:</h1>
-          <div>
+        <section className="social_media_section">
+          <h1>Social Media</h1>
+          <div className="social_media_div">
             { socialMediaData.map(
               (media, i)=>{
               return checkCompanyName(media, i)}
             )}
           </div>
-
         </section>
+
       </article>
     )
   }

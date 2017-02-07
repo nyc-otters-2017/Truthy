@@ -27,13 +27,16 @@ class ResultPage extends React.Component {
         </div>
 
         <div className ="col-md-1">
-          <SideBox
-            onNewRender={this.newRender}
-            fullContact={this.props.fullContact}
-            watson={this.props.watson}
-            quotes={this.props.quotes}
-            />
+          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            <SideBox
+              onNewRender={this.newRender}
+              fullContact={this.props.fullContact}
+              watson={this.props.watson}
+              quotes={this.props.quotes}
+              />
+          </div>
         </div>
+
       </div>
     )
   }

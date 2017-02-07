@@ -62,12 +62,38 @@
   top: 3px;
   left: 8px;
 }
-
+.blacklist {
+  text-align: center;
+}
+.company_background_div {
+  border-radius: 20px;
+  margin: 2px;
+}
 .company_background {
   width: 100%;
   height: 100%;
 }
 
+.company_info{
+  text-align: center;
+}
+
+.company_bio_list{
+  padding: 0;
+  list-style-type: none;
+}
+.social_media_section{
+  height: 75%;
+  width: 100%;
+}
+.social_media_div{
+  overflow-y: scroll;
+  width: 90%;
+  margin: 0 auto;
+  height: 300px;
+  margin-left: 7%;
+}
+.
 .header {
   border-bottom: 1px solid #eee;
 }
@@ -112,7 +138,7 @@
 }
 
 .box_discriptions{
-  
+
 }
 
 .hovereffect:hover .overlay {
@@ -224,13 +250,16 @@ img.related-article {
 
 /*hover type 2 */
 .hovereffect2 {
-  width: 33%;
-  height: 125px;
+  width: 32%;
+  height: 106px;
   float: left;
   overflow: hidden;
   position: relative;
   text-align: center;
   cursor: default;
+  border-radius: 20px;
+  display: inline-block;
+  margin: 2px;
 }
 
 .hovereffect2 .overlay {
