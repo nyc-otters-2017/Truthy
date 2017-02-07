@@ -52,7 +52,7 @@ class DocumentEmotion extends React.Component {
     return(
       <div>
         <h2>Document Emotions</h2>
-        <h4>Detects anger, disgust, fear, joy, and sadness and returns a score that reflects the frequency of each emotion.</h4>
+        <h4>Detects anger, disgust, fear, joy, and sadness in the content and returns a score that reflects the frequency of each emotion.</h4>
         <div className='chart'>
 
         </div>
