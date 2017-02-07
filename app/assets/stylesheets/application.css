@@ -107,7 +107,6 @@ main {
   width: 100%;
 }
 .social_media_div{
-  overflow-y: scroll;
   width: 90%;
   margin: 0 auto;
   height: 300px;
