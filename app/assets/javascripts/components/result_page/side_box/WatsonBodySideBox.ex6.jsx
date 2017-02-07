@@ -14,9 +14,9 @@ class WatsonBodySideBox extends React.Component {
 
   render(){
     return (
-      <div className="hovereffect">
+      <div className="hovereffect2 sidebar1">
 
-        <div className="overlay">
+        <div className="overlay ">
           <h4 className="side_box_title text-center">View the article</h4>
           <p>Go back to {'"' + this.props.data.title + '"'}</p>
           <p className="text-right padding botton_corner">

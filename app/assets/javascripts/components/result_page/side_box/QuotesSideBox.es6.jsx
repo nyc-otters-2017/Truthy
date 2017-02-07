@@ -13,7 +13,7 @@ class QuotesSideBox extends React.Component {
   render(){
     return (
       <div className="">
-        <div className="hovereffect">
+        <div className="hovereffect2 sidebar1">
           <div className="overlay">
             <h4 className="side_box_title text-center">See Quotes</h4>
             <p>View all the extracted quotes from article for verification</p>

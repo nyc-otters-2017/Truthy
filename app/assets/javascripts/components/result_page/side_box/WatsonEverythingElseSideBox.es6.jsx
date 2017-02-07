@@ -11,7 +11,7 @@ class WatsonEverythingElseSideBox extends React.Component {
 
   render(){
     return (
-      <div className="hovereffect">
+      <div className="hovereffect2 sidebar1">
 
         <div className="overlay">
           <h4 className="side_box_title text-center">Article Data</h4>
