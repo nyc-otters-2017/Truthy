@@ -226,6 +226,15 @@
   transition-delay: 0.3s;
 }
 
+/*front page css*/
+.sidebar1 {
+  height: 150px !important;
+}
+
+/*end of front page css */
+
+
+
 p {
     line-height: 220%;
     font-size: 1.2em;
@@ -259,7 +268,7 @@ html {
 /*hover type 2 */
 .hovereffect2 {
   width: 32%;
-  height: 106px;
+  height: 125px;
   float: left;
   overflow: hidden;
   position: relative;

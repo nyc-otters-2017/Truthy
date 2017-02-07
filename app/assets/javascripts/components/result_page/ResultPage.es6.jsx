@@ -20,14 +20,17 @@ class ResultPage extends React.Component {
           <Aylien aylien={this.props.aylien} />
         </div>
 
-        <div className="col-md-8">
+
+        <div className="col-md-7">
           <main>
             <Main display={this.state.main}/>
           </main>
         </div>
 
-        <div className ="col-md-1">
+
+        <div className ="col-md-2">
           <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
             <SideBox
               onNewRender={this.newRender}
               fullContact={this.props.fullContact}
