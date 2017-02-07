@@ -65,19 +65,19 @@ class SocialMedia extends React.Component {
           <h3>
             <a href={website}>{name}</a>
           </h3>
-            <ul className="company_bio_list">
+            <ul className="company_bio_list scroll-change">
               <li>Founded: {founded}</li>
               <li>Email: {email}</li>
               <li>Online Since: {onlineSince}</li>
               <li>Webpage Bio: {this.props.data.bio}</li>
             </ul>
         </section>
-        
+
         <div className="newspaper_line_small">
         </div>
 
         <section className="social_media_section">
-          <h1>Social Media</h1>
+          <h1 className="scroll-change">Social Media</h1>
           <div className="social_media_div">
             { socialMediaData.map(
               (media, i)=>{
