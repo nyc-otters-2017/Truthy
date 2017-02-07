@@ -19,7 +19,7 @@ class WatsonBodySideBox extends React.Component {
         <div className="overlay">
           <h4 className="side_box_title text-center">View the article</h4>
           <p>Go back to {'"' + this.props.data.title + '"'}</p>
-          <p className="text-right padding">
+          <p className="text-right padding botton_corner">
             <a onClick={this.handleClick} className="btn btn-primary btn-sm" href="#" role="button">View article</a>
           </p>
 

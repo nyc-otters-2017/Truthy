@@ -14,6 +14,16 @@
  *= require_self
  */
 
+.aylien{
+  max-height: 100%;
+  overflow-y: scroll;
+}
+
+.social_media_div {
+  margin-top: 10px;
+}
+
+
 .face-enter {
   right: 100px;
 }
@@ -41,22 +51,26 @@
 }
 
 .centerpage {
-
   margin: auto;
-  /*margin-top: -100px;*/
-  /*position: absolute;*/
-  /*top: 50%;*/
   width: 400px;
 }
+
 .home_logo {
   display: block;
   margin: auto;
-  /*font-family: 'Ubuntu', sans-serif;*/
 }
+
 .slider_div {
   position: relative;
   left: 17px;
 }
+
+.botton_corner{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
 #slider {
   width: 200px;
   display: inline-block;
@@ -65,11 +79,38 @@
   top: 3px;
   left: 8px;
 }
+.blacklist {
+  text-align: center;
+}
+.company_background_div {
+  border-radius: 20px;
+  margin: 2px;
+}
 .company_background {
-  width: 200px;
-  height: 100px;
+  width: 100%;
+  height: 100%;
 }
 
+.company_info{
+  text-align: center;
+}
+
+.company_bio_list{
+  padding: 0;
+  list-style-type: none;
+}
+.social_media_section{
+  height: 75%;
+  width: 100%;
+}
+.social_media_div{
+  overflow-y: scroll;
+  width: 90%;
+  margin: 0 auto;
+  height: 300px;
+  margin-left: 7%;
+}
+.
 .header {
   border-bottom: 1px solid #eee;
 }
@@ -97,14 +138,13 @@
 }
 
 .hovereffect .overlay {
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-  position: relative;
+  width: 300px;
+  height: 200px;
+  position: fixed;
   overflow: hidden;
-  left: 0;
+  right: 105px;
+  margin-top: 142px;
   background-color: rgba(255, 255, 255, 0.7);
-  top: -200px;
   opacity: 0;
   filter: alpha(opacity=0);
   -webkit-transition: all 0.1s ease-out 0.5s;
@@ -114,12 +154,16 @@
   border-radius: 15px;
 }
 
+.box_discriptions{
+
+}
+
 .hovereffect:hover .overlay {
   opacity: 1;
   filter: alpha(opacity=100);
   top: 0px;
   -webkit-transition-delay: 0s;
-  transition-delay: 0s;
+  transition-delay: .2s;
 }
 
 .hovereffect img {
@@ -182,6 +226,7 @@
   -webkit-transition-delay: 0.3s;
   transition-delay: 0.3s;
 }
+
 p {
     line-height: 220%;
     font-size: 1.2em;
@@ -222,18 +267,21 @@ img.related-article {
 
 /*hover type 2 */
 .hovereffect2 {
-  width: 200px;
-  height: 100px;
+  width: 32%;
+  height: 106px;
   float: left;
   overflow: hidden;
   position: relative;
   text-align: center;
   cursor: default;
+  border-radius: 20px;
+  display: inline-block;
+  margin: 2px;
 }
 
 .hovereffect2 .overlay {
-  width: 200px;
-  height: 100px;
+  width: 100%;
+  height: 100%;
   position: absolute;
   overflow: hidden;
   top: 0;
@@ -250,7 +298,7 @@ img.related-article {
 
 .hovereffect2 img {
   display: block;
-  position: relative;
+  /*position: relative;*/
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }
@@ -260,18 +308,36 @@ img.related-article {
   color: #fff;
   text-align: center;
   position: relative;
+  top: -19px;
   font-size: 17px;
   padding: 10px;
   background: rgba(0, 0, 0, 0.6);
 }
 
+.hovereffect2 h3 {
+  color: #fff;
+  position: relative;
+  top: -31px;
+  font-size: 84%;
+}
+
+.hovereffect2 h4 {
+  font-size: 11px;
+  position: fixed;
+  top: 94px;
+  color: white;
+  padding-left: 10px;
+}
+
 .hovereffect2 a.info {
-  display: inline-block;
+  position: fixed;
   text-decoration: none;
-  padding: 7px 14px;
+  top: 47px;
+  right: 12px;
+  border-radius: 5px;
+  padding: 2px;
   text-transform: uppercase;
   color: #fff;
-  border: 1px solid #fff;
   margin: 50px 0 0 0;
   background-color: transparent;
   -webkit-transform: translateY(-200px);

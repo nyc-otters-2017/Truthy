@@ -1,6 +1,6 @@
 class ResultPage extends React.Component {
  constructor(props) {
-   
+
    super(props)
    this.state = {
      main: <Body data={this.props.watson} />
@@ -20,20 +20,23 @@ class ResultPage extends React.Component {
           <Aylien aylien={this.props.aylien} />
         </div>
 
-        <div className="col-md-6">
+        <div className="col-md-8">
           <main>
             <Main display={this.state.main}/>
           </main>
         </div>
 
-        <div className ="col-md-3">
-          <SideBox
-            onNewRender={this.newRender}
-            fullContact={this.props.fullContact}
-            watson={this.props.watson}
-            quotes={this.props.quotes}
-            />
+        <div className ="col-md-1">
+          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            <SideBox
+              onNewRender={this.newRender}
+              fullContact={this.props.fullContact}
+              watson={this.props.watson}
+              quotes={this.props.quotes}
+              />
+          </div>
         </div>
+
       </div>
     )
   }
