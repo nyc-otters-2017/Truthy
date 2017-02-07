@@ -231,7 +231,7 @@ main {
 
 /*front page css*/
 .sidebar1 {
-  height: 150px !important;
+  height: 175px !important;
   width: 100% !important;
 }
 .side_box_title{
@@ -246,6 +246,13 @@ main {
   position: relative;
   top: 31px;
   color: white;
+  margin: 7px;
+}
+.side_bar_view{
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  right: 45px;
 }
 /*end of front page css */
 

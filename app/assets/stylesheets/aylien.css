@@ -12,6 +12,7 @@
 .aylien blockquote {
   padding: 8px 0px 0px 8px;
   margin: 0;
+  padding: 8px 0px 0px 8px
 }
 
 .related-article img {
@@ -42,5 +43,5 @@
 }
 
 .related-body {
-  font-size: 1em;
+  font-size: 1em; 
 }
