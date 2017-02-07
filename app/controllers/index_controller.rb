@@ -84,6 +84,7 @@ class IndexController < ApplicationController
   @quotes = QuotesHelper.extract_quotes(QuotesHelper::TEST)
   stage_aylien(@watson)
   @aylien = AylienHelper.aylien_call(@keyword, @entities)
+  binding.pry
     render :result
   end
 

@@ -61,7 +61,7 @@ module BlacklistHelper
       { typeName: profile.fetch('typeName', not_provided),
         url: profile.fetch('url', not_provided),
         username: profile.fetch('username', not_provided),
-        bio: profile.fetch('bio', not_provided)
+        bio: profile.fetch('bio', not_provided),
        }
     end
 
