@@ -29,7 +29,7 @@ class ResultPage extends React.Component {
         </div>
 
 
-        <div className ="col-md-2">
+        <div className="col-md-2">
           <div className="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 
             <SideBox
