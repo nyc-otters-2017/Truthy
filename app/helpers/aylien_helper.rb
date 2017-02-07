@@ -32,9 +32,11 @@ module AylienHelper
       result = api_instance.list_stories(opts)
       output = result.stories.map do |story|
         related = {}
+        related['author'] = story.author.name || 'Anonymous'
         related['link'] = story.links.permalink
         related['title'] = story.title
-        related['source'] = story.source.title.first,
+        related['body'] = story.body[0..200]+'...' || 'preview unavailable'
+        related['source'] = story.source.title.first
         if story.media.empty?
           related['media'] = DEFAULT_IMAGE
         else

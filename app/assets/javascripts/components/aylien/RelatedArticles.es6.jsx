@@ -28,12 +28,18 @@ class RelatedArticles extends React.Component {
               transitionEnterTimeout={1000}
               transitionLeaveTimeout={600}
               key={i}>
-              <div className='related-article' >
+              <div className='related-articles' >
                 <div className='related-article-info'>
                   <a href={article.link} >
-                    <img className='related-article' src={article.media}/>
+                    <div className='related-article'>
+                    <h3 className="related-title">{article.title}</h3>
+                    <p className="related-author"><em>-{article.author}</em></p>
+                    <blockquote className="related-body" cite={"http://"+article.source}>
+                      {article.body}
+                    </blockquote>
+
                     <br/>
-                    <span>{article.title}</span>
+                  </div>
                   </a>
                 </div>
               </div>
@@ -46,7 +52,7 @@ class RelatedArticles extends React.Component {
 
     return(
       <div>
-        <a href="#" onClick={this.handleClick}><h1>Related Articles</h1></a>
+        <a href="#" onClick={this.handleClick}><h2>Related Articles</h2></a>
           { articles }
       </div>
     )
