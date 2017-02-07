@@ -75,6 +75,9 @@ class SocialMedia extends React.Component {
               <li>Webpage Bio: {this.props.data.bio}</li>
             </ul>
         </section>
+        
+        <div className="newspaper_line_small">
+        </div>
 
         <div className="newspaper_line_small">
         </div>

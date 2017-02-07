@@ -255,6 +255,7 @@ main {
   right: 45px;
 }
 /*end of front page css */
+
 #text_indent{
   text-indent: 80px;
 }
@@ -264,9 +265,7 @@ main {
 .top_padding{
   padding-top: 30px;
 }
-/*.bottom_padding{
-  padding-bottom: 30px;
-}*/
+
 .newspaper_line_small {
   border-bottom: 2px solid rgba(51, 51, 51, 0.79);
     width: 358px;
