@@ -25,22 +25,20 @@
 }
 
 .centerpage {
-
   margin: auto;
-  /*margin-top: -100px;*/
-  /*position: absolute;*/
-  /*top: 50%;*/
   width: 400px;
 }
+
 .home_logo {
   display: block;
   margin: auto;
-  /*font-family: 'Ubuntu', sans-serif;*/
 }
+
 .slider_div {
   position: relative;
   left: 17px;
 }
+
 #slider {
   width: 200px;
   display: inline-block;
@@ -49,9 +47,10 @@
   top: 3px;
   left: 8px;
 }
+
 .company_background {
-  width: 200px;
-  height: 100px;
+  width: 100%;
+  height: 100%;
 }
 
 .header {
@@ -206,8 +205,8 @@ img.related-article {
 
 /*hover type 2 */
 .hovereffect2 {
-  width: 200px;
-  height: 100px;
+  width: 33%;
+  height: 125px;
   float: left;
   overflow: hidden;
   position: relative;
@@ -216,8 +215,8 @@ img.related-article {
 }
 
 .hovereffect2 .overlay {
-  width: 200px;
-  height: 100px;
+  width: 100%;
+  height: 100%;
   position: absolute;
   overflow: hidden;
   top: 0;
@@ -234,7 +233,7 @@ img.related-article {
 
 .hovereffect2 img {
   display: block;
-  position: relative;
+  /*position: relative;*/
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }
@@ -244,18 +243,36 @@ img.related-article {
   color: #fff;
   text-align: center;
   position: relative;
+  top: -19px;
   font-size: 17px;
   padding: 10px;
   background: rgba(0, 0, 0, 0.6);
 }
 
+.hovereffect2 h3 {
+  color: #fff;
+  position: relative;
+  top: -31px;
+  font-size: 84%;
+}
+
+.hovereffect2 h4 {
+  font-size: 11px;
+  position: fixed;
+  top: 94px;
+  color: white;
+  padding-left: 10px;
+}
+
 .hovereffect2 a.info {
-  display: inline-block;
+  position: fixed;
   text-decoration: none;
-  padding: 7px 14px;
+  top: 47px;
+  right: 12px;
+  border-radius: 5px;
+  padding: 2px;
   text-transform: uppercase;
   color: #fff;
-  border: 1px solid #fff;
   margin: 50px 0 0 0;
   background-color: transparent;
   -webkit-transform: translateY(-200px);
