@@ -40,6 +40,7 @@ class Concept extends React.Component {
     }
     return (
       <div>
+        <h2>Concept</h2>
         <div>
           <a href="#" onClick={this.handleClick}>{this.props.info.text}</a>
         </div>
