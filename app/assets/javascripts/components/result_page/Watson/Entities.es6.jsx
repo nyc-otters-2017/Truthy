@@ -4,7 +4,7 @@ class Entities extends React.Component {
     return (
       <div>
         <h2>Entities</h2>
-        <h4>Extracts people, companies, organizations, cities, geographic features, and more from the content.</h4>
+        <h4>Extracts people, organizations, cities, and more from the content.</h4>
         <ul>
           {
             this.props.entities.map((entity, i) => {
