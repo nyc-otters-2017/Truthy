@@ -33,8 +33,8 @@ class RelatedArticles extends React.Component {
                   <a href={article.link} >
                     <div className='related-article'>
                     <h3 className="related-title">{article.title}</h3>
-                    <p>-{article.author}</p>
-                    <blockquote cite={"http://"+article.source}>
+                    <p className="related-author"><em>-{article.author}</em></p>
+                    <blockquote className="related-body" cite={"http://"+article.source}>
                       {article.body}
                     </blockquote>
 
