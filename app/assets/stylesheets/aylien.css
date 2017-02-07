@@ -1,0 +1,46 @@
+.aylien {
+  border-right: 2px solid grey;
+  overflow: scroll;
+  height: 800px;
+}
+
+.aylien a {
+  color: #2f2f2f;
+}
+
+.aylien blockquote {
+  padding: 10px 0 10px 10px
+}
+
+.related-article img {
+  width: 200px;
+}
+
+.related-enter {
+  opacity: 0.01;
+}
+
+.related-enter.related-enter-active {
+  opacity: 1;
+  transition: opacity 1000ms ease-in;
+}
+
+.related-leave {
+  opacity: 1;
+}
+
+.related-leave.related-leave-active {
+  opacity: 0.01;
+  transition: opacity 600ms ease-in;
+}
+
+.related-article {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #666;
+}
+
+.related-article-info {
+  padding-right: 5px;
+  width: 90%
+}

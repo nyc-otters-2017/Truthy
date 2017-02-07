@@ -20,13 +20,16 @@ class ResultPage extends React.Component {
           <Aylien aylien={this.props.aylien} />
         </div>
 
+
         <div className="col-md-7">
           <main>
             <Main display={this.state.main}/>
           </main>
         </div>
 
+
         <div className ="col-md-2">
+          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 
             <SideBox
               onNewRender={this.newRender}
@@ -34,7 +37,7 @@ class ResultPage extends React.Component {
               watson={this.props.watson}
               quotes={this.props.quotes}
               />
-
+          </div>
         </div>
 
       </div>

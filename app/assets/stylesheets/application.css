@@ -9,7 +9,6 @@
  * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
- *
  *= require_tree .
  *= require_self
  */
@@ -226,13 +225,16 @@
   -webkit-transition-delay: 0.3s;
   transition-delay: 0.3s;
 }
+
 /*front page css*/
 .sidebar1 {
-  width: 100% !important;
   height: 150px !important;
 }
 
 /*end of front page css */
+
+
+
 p {
     line-height: 220%;
     font-size: 1.2em;
@@ -251,10 +253,6 @@ p {
 
 }
 
-section {
-  border-style: double;
-}
-
 body {
   background-color: rgba(242, 64, 77, 0);
   font-family: 'Ubuntu', sans-serif;
@@ -265,10 +263,6 @@ html {
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
-}
-
-img.related-article {
-  width: 200px;
 }
 
 /*hover type 2 */
@@ -381,4 +375,11 @@ img.related-article {
   transform: translateY(0px);
   -webkit-transition-delay: 0.3s;
   transition-delay: 0.3s;
+}
+
+body {
+    font-family: 'Droid Serif', serif;
+    font-size: 14px;
+    color: #2f2f2f;
+    background-color: #f9f7f1;
 }
