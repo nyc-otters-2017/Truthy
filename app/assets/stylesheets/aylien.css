@@ -10,7 +10,8 @@
 }
 
 .aylien blockquote {
-  padding: 8px 0px 0px 8px
+  padding: 8px 0px 0px 8px;
+  margin: 0;
 }
 
 .related-article img {
@@ -19,28 +20,15 @@
   padding-bottom: 0px;
 }
 
-.related-enter {
-  opacity: 0.01;
-}
-
-.related-enter.related-enter-active {
-  opacity: 1;
-  transition: opacity 1000ms ease-in;
-}
-
-.related-leave {
-  opacity: 1;
-}
-
-.related-leave.related-leave-active {
-  opacity: 0.01;
-  transition: opacity 600ms ease-in;
-}
-
 .related-article {
   padding-top: 3px;
   padding-bottom: 3px;
   border-bottom: 1px solid #666;
+}
+
+.related-title {
+  margin-right: 0;
+  padding-left: 8px;
 }
 
 .related-article-info {
@@ -50,6 +38,7 @@
 
 .related-author {
   font-size: 1em;
+  padding-left: 1em;
 }
 
 .related-body {
