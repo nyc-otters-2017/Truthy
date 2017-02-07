@@ -18,7 +18,7 @@ class ArticleBio extends React.Component {
   render() {
 
     return(
-      <section id="article-bio">
+      <section className="scroll-change" id="article-bio">
         <h1 id="article-header">Article Bio:</h1>
         <p>{this.state.articleBio}</p>
 

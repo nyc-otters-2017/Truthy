@@ -6,7 +6,7 @@ class Body extends React.Component {
   render() {
 
     return (
-      <div>
+      <div className="scroll-change">
         <h1>{this.props.data.title}</h1>
         <div className="newspaper_line_small">
         </div>

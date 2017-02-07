@@ -7,7 +7,7 @@ class Quotes extends React.Component {
         <h1>Quotes used in this Article:</h1>
           {
             this.props.data.map((quote, i)=>{
-              return <blockquote key={i}>{quote}</blockquote>
+              return <blockquote className="scroll-change" key={i}>{quote}</blockquote>
             })
           }
       </section>
