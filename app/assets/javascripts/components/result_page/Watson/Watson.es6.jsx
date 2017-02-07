@@ -11,7 +11,7 @@ class Watson extends React.Component {
 
         <div className="">
           <DocumentEmotion docEmotions={this.props.data.docEmotions} />
-        </div>
+        </div><br /> <br />
 
         <div className="analysis-container">
           <div className="left">
@@ -23,7 +23,7 @@ class Watson extends React.Component {
 
         <div className="analysis-container">
           <div className="right">
-            <div className="col-sm-5 border-right-width">
+            <div className="col-sm-5">
               <Concepts concepts={this.props.data.concepts} />
             </div>
           </div>
