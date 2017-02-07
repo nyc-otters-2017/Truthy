@@ -7,8 +7,10 @@ class DocumentEmotion extends React.Component {
 
         // data converted from TSV to JS array
         var data = this.props.docEmotions.map(emotion=>{
-          return { name: emotion.emotion, value: emotion.value }
+          return { name: emotion.emotion, value: (emotion.score * 100).toFixed(2) }
         })
+
+        console.log(data);
 
         // coerce to number
         data.forEach(function(d){
@@ -39,12 +41,12 @@ class DocumentEmotion extends React.Component {
         });
 
         bar.append("span")
-          .attr("class", 'emotion')
+          .attr("class", 'name')
           .text(function(d) {
           return d.name;
         });
 
-      })();
+      }).bind(this)();
     }
   render() {
     return(
@@ -57,7 +59,7 @@ class DocumentEmotion extends React.Component {
           {
             this.props.docEmotions.map((emotion, i) => {
               return(
-                <li key={i}>{emotion.emotion}, {emotion.value*100 + "%"}</li>
+                <li key={i}>{emotion.emotion}, {emotion.score*100 + "%"}</li>
               )
             })
           }
