@@ -1,3 +1,17 @@
+.aylien {
+  border-right: 2px solid grey;
+  overflow: scroll;
+  height: 800px;
+}
+
+.aylien blockquote {
+  padding: 10px 0 10px 10px
+}
+
+.related-article img {
+  width: 200px;
+}
+
 .related-enter {
   opacity: 0.01;
 }
@@ -22,5 +36,6 @@
 }
 
 .related-article-info {
-  width: 200px;
+  padding-right: 5px;
+  width: 90%
 }
