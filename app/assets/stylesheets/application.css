@@ -40,6 +40,7 @@ main {
   display: inline-block;
   color: #555;
   font-size: 36px;
+  z-index: -1;
 }
 
 .EnterUrl {
@@ -386,6 +387,7 @@ html {
   -webkit-transform: translate(0px, 0px);
   -ms-transform: translate(0px, 0px);
   transform: translate(0px, 0px);
+  z-index: 1;
 }
 
 .hovereffect2:hover h2 {
