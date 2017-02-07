@@ -8,13 +8,13 @@ class Body extends React.Component {
     return (
       <div>
         <h1>{this.props.data.title}</h1>
-        <div className="newspaper_line_small">
+        <div className="newspaper_line_small top_padding">
         </div>
-        <p className="text-center">By {this.props.data.author} | Written on {this.props.data.publicationDate}</p>
+        <p id="author_stuff" className="text-center">By {this.props.data.author} | Written on {this.props.data.publicationDate}</p>
         <div className="newspaper_line_small">
         </div>
         {/* <p>Written on {this.props.data.publicationDate}</p> */}
-        <p>{this.props.data.text}</p>
+        <p id="text_indent" className="top_padding" >{this.props.data.text}</p>
       </div>
     )
   }

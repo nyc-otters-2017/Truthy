@@ -65,7 +65,7 @@ module BlacklistHelper
        }
     end
 
-    if response['organization']['contactInfo']['emailAddresses']
+    if !!response['organization']['contactInfo']['emailAddresses']
       company_info['email'] = response['organization']['contactInfo']['emailAddresses'].first['value']
     else
       company_info['email'] = not_provided

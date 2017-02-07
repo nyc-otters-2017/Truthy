@@ -5,6 +5,11 @@ class SocialMedia extends React.Component {
   }
 
   render(){
+    function johnCheckIfNull(johnsWord) {
+        var answer = johnsWord === null ? 'No result was found' : johnsWord;
+        return answer
+    }
+
     let {
       name,
       website,
@@ -55,8 +60,6 @@ class SocialMedia extends React.Component {
       return details
     }
 
-
-
     return(
       <article className="blacklist">
 
@@ -72,7 +75,7 @@ class SocialMedia extends React.Component {
               <li>Webpage Bio: {this.props.data.bio}</li>
             </ul>
         </section>
-        
+
         <div className="newspaper_line_small">
         </div>
 
