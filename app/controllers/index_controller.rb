@@ -84,7 +84,6 @@ class IndexController < ApplicationController
   @quotes = QuotesHelper.extract_quotes(QuotesHelper::TEST)
   stage_aylien(@watson)
   @aylien = AylienHelper.aylien_call(@keyword, @entities)
-  binding.pry
     render :result
   end
 
@@ -98,6 +97,15 @@ class IndexController < ApplicationController
     # @watson['keywords'] and @watson['entities']
     @aylien = AylienHelper.aylien_call()
     render :aylien
+  end
+
+  def train
+    ml_entry = MlEntry.create(params[:user_input], params[:article_text])
+  end
+
+  def predict
+    MlEntry.train
+    MlEntry.predict
   end
 
   # def publication_date
