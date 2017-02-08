@@ -4,3 +4,7 @@ section.quotes {
   font-size: 1.2em;
   line-height: 1.7em;
 }
+
+.add_line_margin {
+  margin: 45px auto !important;
+}

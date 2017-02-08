@@ -16,14 +16,10 @@ class WatsonBodySideBox extends React.Component {
     return (
       <div className="hovereffect2 sidebar1">
 
-
-        <div className="overlay">
-          <h4 className="side_box_title">View the article</h4>
+        <div className="overlay side_bar_background">
+          <h4 className="side_box_title">View the Article</h4>
           <p className="about_company">Go back to {'"' + this.props.data.title + '"'}</p>
-          <p className="side_bar_view">
-            <a onClick={this.handleClick} className="btn btn-primary btn-sm" href="#" role="button">View</a>
-
-          </p>
+          <a onClick={this.handleClick} className="btn btn-primary btn-sm side_bar_view" href="#" role="button">View</a>
         </div>
         <i className="img-responsive material-icons orange600">donut_small</i>
 

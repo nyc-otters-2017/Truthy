@@ -33,33 +33,35 @@ class ResultPage extends React.Component {
 
   render() {
     return(
-      <div className='result-container'>
+      <div className='container-fluid'>
+        <div className="row">
 
-        <div className ="col-md-2">
-          <Aylien aylien={this.props.aylien} />
-        </div>
-
-
-        <div className="col-md-8
-          ">
-          <main>
-            <Main display={this.state.main}/>
-          </main>
-        </div>
-
-
-        <div className="col-md-2">
-          <div className="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-
-            <SideBox
-              onNewRender={this.newRender}
-              fullContact={this.props.fullContact}
-              watson={this.props.watson}
-              quotes={this.props.quotes}
-              />
+          <div className ="col-md-2">
+            <Aylien aylien={this.props.aylien} />
           </div>
-        </div>
 
+
+          <div className="col-md-8
+            ">
+            <main>
+              <Main display={this.state.main}/>
+            </main>
+          </div>
+
+
+          <div className="col-md-2">
+            <div className="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+              <SideBox
+                onNewRender={this.newRender}
+                fullContact={this.props.fullContact}
+                watson={this.props.watson}
+                quotes={this.props.quotes}
+                />
+            </div>
+          </div>
+
+        </div>
       </div>
     )
   }

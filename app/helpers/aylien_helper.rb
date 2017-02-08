@@ -37,11 +37,6 @@ module AylienHelper
         related['title'] = story.title
         related['body'] = story.body[0..200]+'...' || 'preview unavailable'
         related['source'] = story.source.title.first
-        if story.media.empty?
-          related['media'] = DEFAULT_IMAGE
-        else
-          related['media'] = eval(story.media[0].to_s).fetch(:url, DEFAULT_IMAGE)
-        end
         related
       end
   end
