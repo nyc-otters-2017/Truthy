@@ -11,6 +11,8 @@ class RelatedArticle extends React.Component {
       type: 'POST',
       url: '/analyze',
       data: {urlString: this.props.article.link}
+    }).done((r)=> {
+      window.open('/results')
     })
   }
 
