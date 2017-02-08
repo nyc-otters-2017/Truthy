@@ -3,8 +3,8 @@ class RelatedArticles extends React.Component {
  render(){
    return(
      <div>
-       <h2 className="result_left_column_title">Related Articles</h2>
        <div className="aylien">
+       <h2 className="result_left_column_title">Related Articles</h2>
          {
            this.props.articles.map((article, i)=>{
            return (

@@ -33,7 +33,7 @@ class ResultPage extends React.Component {
 
   render() {
     return(
-      <div className='container-fluid'>
+      <div className=''>
 
         <div className="header">
           <Clock />
@@ -41,7 +41,7 @@ class ResultPage extends React.Component {
             <img className="header_logo" src="/assets/148653868433366.png" alt="Logo"/>
             <h1 className="header_title"><a href="/">TRUTHY</a></h1>
           </div>
-          <div className="about-button">
+          <div className="about-button ">
             <AboutButton onNewRender={this.newRender}/>
           </div>
         </div>

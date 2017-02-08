@@ -184,29 +184,6 @@ p {
     font-size: 1.2em;
 }
 
-.logo-title {
-  display: inline-block;
-  position: relative;
-  top: -35px;
-  margin-left: 2%;
-}
-
-.header_logo {
-  display: inline-block;
-  width: 180px;
-  top: -5px;
-  align-items: center;
-}
-
-.header_title {
-  font-family: 'Slabo', serif;
-  font-weight: bold;
-  display: inline-block;
-  font-size: 72pt;
-  vertical-align: bottom;
-}
-
-
 /*hover type 2 */
 .hovereffect2 {
   width: 32%;
@@ -335,24 +312,4 @@ body {
 
 .Result-Page {
   margin-top: 0;
-}
-
-.about-button {
-  position: relative;
-  display: inline-block;
-  width: 180px;
-  height: 150px;
-  padding: 20px 10px 10px 10px;
-  border: 2px solid rgba(51, 51, 51, 0.79);
-  margin: 25px 20px 10px 80px;
-  font-size: 10pt;
-  text-align: center;
-}
-
-.about-button a {
-  color: rgba(51, 51, 51, 0.79);
-}
-
-.about-button a:hover {
-  color: rgba(51, 51, 51, 0.79);
 }
