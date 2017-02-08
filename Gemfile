@@ -27,7 +27,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'aylien_news_api'
 # ML learning model
 gem 'classifier-reborn'
-gem 'd3-rails'
+gem 'd3-rails', '<= 3.9'
 
 gem 'react-rails'
 
