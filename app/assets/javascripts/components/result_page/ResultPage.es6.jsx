@@ -33,7 +33,7 @@ class ResultPage extends React.Component {
 
   render() {
     return(
-      <div>
+      <div className='container-fluid'>
 
         <div className="header">
           <Clock />
@@ -47,15 +47,14 @@ class ResultPage extends React.Component {
         </div>
 
         <div className='container-fluid'>
-          <div class="row">
+          <div className="row">
 
             <div className ="col-md-2">
               <Aylien aylien={this.props.aylien} />
             </div>
 
 
-            <div className="col-md-8
-              ">
+            <div className="col-md-8">
               <main>
                 <Main display={this.state.main}/>
               </main>
