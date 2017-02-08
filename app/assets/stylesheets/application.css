@@ -39,10 +39,6 @@
   overflow-y: scroll;
 }
 
-.social_media_div {
-  margin-top: 10px;
-}
-
 
 .face-enter {
   right: 100px;
@@ -105,36 +101,6 @@
   text-align: center;
 }
 
-.company_background_div {
-  border-radius: 20px;
-  margin: 2px;
-}
-
-.company_background {
-  width: 100%;
-  height: 100%;
-}
-
-.company_info{
-  text-align: center;
-}
-
-.company_bio_list{
-  padding: 0;
-  list-style-type: none;
-}
-
-.social_media_section{
-  height: 75%;
-  width: 100%;
-}
-
-.social_media_div{
-  width: 90%;
-  margin: 0 auto;
-  height: 300px;
-  margin-left: 7%;
-}
 
 .header {
   position: relative;
