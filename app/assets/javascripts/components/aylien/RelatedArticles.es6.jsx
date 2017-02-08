@@ -3,10 +3,11 @@ class RelatedArticles extends React.Component {
  render(){
    return(
      <div>
-       <h2>Related Articles</h2>
-       {
-         this.props.articles.map((article, i)=>{
-         return (
+       <div className="aylien">
+       <h2 className="result_left_column_title">Related Articles</h2>
+         {
+           this.props.articles.map((article, i)=>{
+           return (
              <div className='related-articles' key={i}>
                <div className='related-article-info'>
                  <a href={article.link} >
@@ -22,10 +23,11 @@ class RelatedArticles extends React.Component {
                  </a>
                </div>
              </div>
-         )
-       })
-       }
-     </div>
+           )
+         })
+         }
+       </div>
+      </div>
    )
  }
 }

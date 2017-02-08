@@ -39,10 +39,6 @@
   overflow-y: scroll;
 }
 
-.social_media_div {
-  margin-top: 10px;
-}
-
 
 .face-enter {
   right: 100px;
@@ -105,36 +101,6 @@
   text-align: center;
 }
 
-.company_background_div {
-  border-radius: 20px;
-  margin: 2px;
-}
-
-.company_background {
-  width: 100%;
-  height: 100%;
-}
-
-.company_info{
-  text-align: center;
-}
-
-.company_bio_list{
-  padding: 0;
-  list-style-type: none;
-}
-
-.social_media_section{
-  height: 75%;
-  width: 100%;
-}
-
-.social_media_div{
-  width: 90%;
-  margin: 0 auto;
-  height: 300px;
-  margin-left: 7%;
-}
 
 .header {
   position: relative;
@@ -216,25 +182,6 @@
 p {
     line-height: 220%;
     font-size: 1.2em;
-}
-
-.header_logo {
-  position: relative;
-  display: inline-block;
-  width: 180px;
-  top: -5px;
-  align-items: center;
-  right: -11%;
-}
-
-.header_title {
-  font-family: 'Slabo', serif;
-  font-weight: bold;
-  position: relative;
-  display: inline-block;
-  font-size: 72pt;
-  right: -10%;
-  vertical-align: bottom;
 }
 
 
@@ -355,12 +302,13 @@ p {
   transition-delay: 0.3s;
 }
 
-.date-time {
-  position: relative;
-  left: 85%;
-  vertical-align: bottom;
-  font-size: 20pt;
-  font-family: 'Droid Serif', serif;
+body {
+    font-family: 'Droid Serif', serif;
+    font-size: 14px;
+    color: #2f2f2f;
+    background-color: #f9f7f1;
+    height: 180px;
+    margin-bottom: 0;
 }
 
 .Result-Page {

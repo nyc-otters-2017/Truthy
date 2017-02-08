@@ -23,10 +23,6 @@ class Watson extends React.Component {
 
             <div className="col-sm-6">
               <div className="">
-                <Concepts concepts={this.props.data.concepts} />
-              </div>
-
-              <div className="">
                 <Sentiment sentiment={this.props.data.sentiment} />
               </div>
             </div>
@@ -37,6 +33,12 @@ class Watson extends React.Component {
                 <Subjectivity subjectivity={this.props.data.subjectivity} />
               </div>
 
+            </div>
+
+            <div className="col-sm-12">
+              <div className="">
+                <Concepts concepts={this.props.data.concepts} />
+              </div>
             </div>
 
           </div>
