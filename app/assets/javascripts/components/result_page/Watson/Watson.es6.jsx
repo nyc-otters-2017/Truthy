@@ -34,16 +34,9 @@ class Watson extends React.Component {
             <div className="col-sm-6 line_and_padding_left">
 
               <div className="">
-                <Taxonomy labels={this.props.data.taxonomy} />
-              </div>
-
-              <div className="">
                 <Subjectivity subjectivity={this.props.data.subjectivity} />
               </div>
 
-              <div className="">
-                <Entities entities={this.props.data.entities} />
-              </div>
             </div>
 
           </div>
