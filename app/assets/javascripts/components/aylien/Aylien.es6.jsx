@@ -6,7 +6,16 @@ class Aylien extends React.Component {
   render(){
     return(
       <section className='aylien'>
-        <RelatedArticles articles={this.props.aylien} />
+        <div>
+          <h2>Related Articles</h2>
+          {
+            this.props.aylien.map((article, i)=>{
+            return (
+              <RelatedArticle article={article} key={i} />
+            )
+          })
+          }
+        </div>
       </section>
     )
   }
