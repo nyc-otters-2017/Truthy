@@ -17,7 +17,7 @@ class WatsonBodySideBox extends React.Component {
       <div className="hovereffect2 sidebar1">
 
         <div className="overlay side_bar_background">
-          <h4 className="side_box_title">View the article</h4>
+          <h4 className="side_box_title">View the Article</h4>
           <p className="about_company">Go back to {'"' + this.props.data.title + '"'}</p>
           <a onClick={this.handleClick} className="btn btn-primary btn-sm side_bar_view" href="#" role="button">View</a>
         </div>

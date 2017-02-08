@@ -58,12 +58,11 @@ class SocialMedia extends React.Component {
       }
       return details
     }
-    debugger
     return(
       <article className="blacklist">
 
         <section className="company_info">
-          <h1>Company Info</h1>
+          <h1>Company Information</h1>
           <h3>
             <a href={website}>{name}</a>
           </h3>

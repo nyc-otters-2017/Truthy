@@ -1,19 +1,8 @@
 class ArticleBio extends React.Component {
   constructor(props) {
     super(props)
-
-    // this.handleMouseOver = this.handleMouseOver.bind(this)
-    // this.handleMouseLeave = this.handleMouseLeave.bind(this)
     this.state = { articleBio: this.props.bio }
   }
-
-  // handleMouseOver() {
-  //   this.setState({articleBio: this.props.bio})
-  // }
-  //
-  // handleMouseLeave() {
-  //   this.setState({articleBio: ""})
-  // }
 
   render() {
 
