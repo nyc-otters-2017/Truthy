@@ -3,14 +3,16 @@ class Keywords extends React.Component {
     super()
     this.state = {
       details: false,
+      bubbleGraph: ''
     }
     this.handleClick = this.handleClick.bind(this)
+    this.graph = this.graph.bind(this)
   }
 
-  componentDidMount(){
+  graph() {
     (function(){
       var contentKeywords = this.props.keywords.map(keyword=>{
-        return {name: keyword.text, size: (Math.pow(keyword.relevance, 8) * 100).toFixed(2) }
+        return {name: keyword.text, size: (Math.pow(keyword.relevance, 5)).toFixed(2) }
       });
       var root = {
        "name": "flare",
@@ -34,8 +36,8 @@ class Keywords extends React.Component {
           .sort(null)
           .size([diameter, diameter])
           .padding(1.5);
-      var svg = d3.select("body").append("svg")
-          .attr("viewBox","0 0 960 960")
+      var svg = d3.select(".bubblechart").append("svg")
+          .attr("viewBox","0 0 700 700")
           .attr("perserveAspectRatio","xMinYMid")
           .attr("width", diameter)
           .attr("height", diameter)
@@ -52,11 +54,16 @@ class Keywords extends React.Component {
           .text(function(d) { return d.className + ": " + format(d.value); });
       node.append("circle")
           .attr("r", function(d) { return d.r; })
-          .style("fill", function(d) { return color(d.packageName); });
+          .style("fill", "lightblue")
       node.append("text")
-          .attr("dy", ".3em")
+          .attr("dy", ".1em")
+          .attr("font-size", "0.8em")
+          .attr('class', 'bubble-text')
           .style("text-anchor", "middle")
-          .text(function(d) { return d.className.substring(0, d.r / 3); });
+          .style("fill", "#444")
+          .text(
+            function(d){ return d.className }
+          );
       //});
       // Returns a flattened hierarchy containing all leaf nodes under the root.
       function classes(root) {
@@ -85,20 +92,11 @@ class Keywords extends React.Component {
     let status = this.state.details
     this.setState({details: !status})
   }
+
   render() {
     const yourDetailsAreShowing = this.state.details
     if (yourDetailsAreShowing) {
-      var details = (
-        <div>
-          {
-            this.props.keywords.map((keyword, i ) => {
-              return (
-                <Keyword key={i} data={keyword} />
-              )
-            })
-          }
-        </div>
-      )
+      var details = (this.graph())
     }
     return (
       <div>
@@ -106,7 +104,9 @@ class Keywords extends React.Component {
           <h2><a href="#" onClick={this.handleClick}>Keywords</a></h2>
           <h4>Determines important keywords in the text and ranks them by relevance.</h4>
         </div>
+        <div className="bubblechart">
           { details }
+        </div>
       </div>
     )
   }
