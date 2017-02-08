@@ -36,6 +36,9 @@ class ResultPage extends React.Component {
       <div>
 
         <div className="header">
+          <div className="about-us">
+            <About />
+          </div>
           <div className="logo-title">
             <img className="header_logo" src="/assets/148653868433366.png" alt="Logo"/>
             <h1 className="header_title"><a href="/">TRUTHY</a></h1>
