@@ -83,13 +83,16 @@ main {
   top: 3px;
   left: 8px;
 }
+
 .blacklist {
   text-align: center;
 }
+
 .company_background_div {
   border-radius: 20px;
   margin: 2px;
 }
+
 .company_background {
   width: 100%;
   height: 100%;
@@ -103,26 +106,27 @@ main {
   padding: 0;
   list-style-type: none;
 }
+
 .social_media_section{
   height: 75%;
   width: 100%;
 }
+
 .social_media_div{
   width: 90%;
   margin: 0 auto;
   height: 300px;
   margin-left: 7%;
 }
-.
+
 .header {
   border-bottom: 1px solid #eee;
 }
-.inline_block {
 
-}
 .bs-example{
   margin: 150px 350px;
 }
+
 .padding {
   padding-right: 10px;
 }
@@ -235,6 +239,7 @@ main {
   height: 175px !important;
   width: 100% !important;
 }
+
 .side_box_title{
   top: -10px !important;
   text-align: center;
@@ -242,6 +247,7 @@ main {
   background: rgba(0, 0, 0, 0.77);
   padding: 10px;
 }
+
 .about_company{
   font-size: 10px;
   position: relative;
@@ -249,6 +255,7 @@ main {
   color: white;
   margin: 7px;
 }
+
 .side_bar_view{
   position: fixed;
   bottom: 0;
@@ -260,17 +267,24 @@ main {
 #text_indent{
   text-indent: 80px;
 }
+
 #author_stuff{
       margin-bottom: 0px;
 }
+
 .top_padding{
   padding-top: 30px;
 }
 
-.newspaper_line_small {
+.newspaper_bottom_small_line {
   border-bottom: 2px solid rgba(51, 51, 51, 0.79);
     width: 358px;
     margin: 0 auto;
+}
+.newspaper_left_small_line {
+  border-bottom: 2px solid rgba(51, 51, 51, 0.79);
+  width: 358px;
+  margin: 0 auto;
 }
 
 p {
@@ -291,10 +305,7 @@ p {
 
 }
 
-body {
-  background-color: rgba(242, 64, 77, 0);
-  font-family: 'Ubuntu', sans-serif;
-}
+
 html {
   /*background-image: url(/assets/_1tk8g4pfsg-zach-woolf.jpg);*/
   background-repeat: no-repeat;

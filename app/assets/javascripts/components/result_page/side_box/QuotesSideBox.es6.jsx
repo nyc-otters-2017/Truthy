@@ -23,7 +23,7 @@ class QuotesSideBox extends React.Component {
             </p>
 
           </div>
-          <i className="img-responsive material-icons orange600">language</i>
+          <i className="img-responsive material-icons orange600">polymer</i>
 
         </div>
     )

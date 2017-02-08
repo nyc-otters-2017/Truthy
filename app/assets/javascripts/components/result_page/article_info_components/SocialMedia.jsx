@@ -76,10 +76,10 @@ class SocialMedia extends React.Component {
             </ul>
         </section>
 
-        <div className="newspaper_line_small">
+        <div className="newspaper_bottom_small_line">
         </div>
 
-        <div className="newspaper_line_small">
+        <div className="newspaper_bottom_small_line">
         </div>
 
         <section className="social_media_section">
