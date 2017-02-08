@@ -24,7 +24,7 @@ class FullContactSideBox extends React.Component {
             <a onClick={this.handleClick} className="btn btn-primary btn-sm" href="#" role="button">View</a>
           </p>
         </div>
-        <i className="img-responsive material-icons orange600">donut_large</i>
+        <i className="img-responsive material-icons orange600">blur_on</i>
 
       </div>
     )

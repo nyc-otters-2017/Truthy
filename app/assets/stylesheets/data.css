@@ -1,3 +1,13 @@
-.analysis-container {
-  border-style: solid;
+.top_half {
+  padding-bottom: 20px;
+}
+.just_a_line_on_top {
+  width: 50%;
+  height: 2px;
+  margin: 25px auto;
+  border-bottom: 2px solid rgba(51, 51, 51, 0.79);
+}
+.line_and_padding_left {
+  border-left: 2px solid rgba(51, 51, 51, 0.79);
+  padding-left: 30px;
 }
