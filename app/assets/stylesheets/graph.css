@@ -27,3 +27,16 @@
 .chart {
   width: 550px;
 }
+
+svg.bubble {
+}
+
+.bubble-text {
+  color: white;
+}
+
+.bubble-text:hover {
+  z-index: 10;
+  color: #F00;
+  font-size: 1em
+}
