@@ -1,3 +1,15 @@
 .analysis-container {
   border-style: solid;
 }
+
+div#subjectivity-line {
+  width: 380px;
+}
+
+.grid-item {
+  border: 5px solid;
+  padding: 5px;
+}
+div.right {
+  border: 2px solid;  
+}

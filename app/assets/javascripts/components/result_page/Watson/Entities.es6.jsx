@@ -3,17 +3,17 @@ class Entities extends React.Component {
   render() {
     return (
       <div>
-        <h2>Entities</h2>
-        <h4>Extracts people, organizations, cities, and more from the content.</h4>
+        <h4><strong>Entities</strong></h4>
         <ul>
-          {
-            this.props.entities.map((entity, i) => {
-              return (
-                <li key={i}>{entity.text}</li>
-              )
-            })
-          }
+        {
+          this.props.entities.map((entity, i) => {
+            return (
+              <h1><li key={i}>{entity.text}</li></h1>
+            )
+          })
+        }
         </ul>
+        <h5>Extracts people, organizations, cities, and more from the content.</h5>
       </div>
     )
   }
