@@ -5,7 +5,7 @@ class Aylien extends React.Component {
 
   render(){
     return(
-      <section className='aylien'>
+      <section className="">
         <RelatedArticles articles={this.props.aylien} />
       </section>
     )

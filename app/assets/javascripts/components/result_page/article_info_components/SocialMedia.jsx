@@ -22,9 +22,14 @@ class SocialMedia extends React.Component {
     let socialMediaData = JSON.parse(socialMedia)
     function checkCompanyName(data, i) {
       if (
-        data.typeName.toLowerCase() === "facebook" ||data.typeName.toLowerCase() === "linkedin"
+        data.typeName.toLowerCase() === "facebook"
+        ||data.typeName.toLowerCase() === "linkedin"
         ||data.typeName.toLowerCase() === "twitter"
         ||data.typeName.toLowerCase() === "pinterest"
+        ||data.typeName.toLowerCase() === "crunchbase"
+        ||data.typeName.toLowerCase() === "foursquare"
+        ||data.typeName.toLowerCase() === "instagram"
+        ||data.typeName.toLowerCase() === "klout"
       ){
         var companyName = data.typeName.toLowerCase();
         var locationHead = "/assets/companyinfo_"
@@ -60,33 +65,39 @@ class SocialMedia extends React.Component {
     }
     return(
       <article className="blacklist">
+        <div className="row">
+          <div className ="col-md-6">
 
-        <section className="company_info">
-          <h1>Company Information</h1>
-          <h3>
-            <a href={website}>{name}</a>
-          </h3>
-            <ul className="company_bio_list scroll-change">
-              <li>Founded: {johnCheckIfNull(founded)}</li>
-              <li>Email: {johnCheckIfNull(email)}</li>
-              <li>Online Since: {johnCheckIfNull(onlineSince)}</li>
-              <li>Webpage Bio: {johnCheckIfNull(bio)}</li>
-            </ul>
-        </section>
+            <section className="company_info">
+              <h1 className="company_info_title">Company Information</h1>
+              <div className ="newspaper_bottom_small_line company_info_padding"></div>
+              <h3>
+                <a href={website}>{name}</a>
+              </h3>
+                <ul className="company_bio_list scroll-change">
+                  <li>Founded: {johnCheckIfNull(founded)}</li>
+                  <li>Email: {johnCheckIfNull(email)}</li>
+                  <li>Online Since: {johnCheckIfNull(onlineSince)}</li>
+                  <li>Webpage Bio: {johnCheckIfNull(bio)}</li>
+                </ul>
+            </section>
 
-        <div className="newspaper_bottom_small_line company_info_padding">
-        </div>
-
-        <section className="social_media_section">
-          <h1 className="scroll-change">Social Media</h1>
-          <div className="social_media_div">
-            { socialMediaData.map(
-              (media, i)=>{
-              return checkCompanyName(media, i)}
-            )}
           </div>
-        </section>
 
+          <div className ="col-md-6 company_info_add_left_line">
+            <section className="social_media_section">
+              <h1 className="company_info_title">Social Media</h1>
+              <div className ="newspaper_bottom_small_line company_info_padding"></div>
+              <div className="social_media_div">
+                { socialMediaData.map(
+                  (media, i)=>{
+                  return checkCompanyName(media, i)}
+                )}
+              </div>
+            </section>
+          </div>
+
+        </div>
       </article>
     )
   }
