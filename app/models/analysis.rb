@@ -34,11 +34,9 @@ class Analysis < ApplicationRecord
    @response['text'] = @opened_uri[:text]['text'] # article body
    @response['title'] = @opened_uri[:info]['title']
    @response['author'] = author_check(@opened_uri[:info]['author'])
-   @response['taxonomy'] = @opened_uri[:data]['taxonomy'] # topics of article
    @response['sentiment'] = @datum['sentiment']['output']['result'] #sentiment from response
    @response['subjectivity'] = @datum['subjectivity']['output']['result'] #subjectivity from response
    @response['concepts'] = keep_relevant_concepts(@opened_uri[:data]['concepts'])
-   @response['entities'] = keep_relevant_entities(@opened_uri[:data]['entities'])
    @response['keywords'] = keep_relevant_keywords(@opened_uri[:data]['keywords'])
  end
 
@@ -48,16 +46,6 @@ class Analysis < ApplicationRecord
    backup = result
    result.keep_if do |r|
      r['relevance'].to_f >= 0.8
-   end
-   return backup[0..2] if result.length < 3
- end
-
- # keeps entities if their relevance is above 70%, unless that results in keeping
- # two or less entities. Then it grabs the first three
- def self.keep_relevant_entities(result)
-   backup = result
-   result.keep_if do |r|
-     r['relevance'].to_f >= 0.7
    end
    return backup[0..2] if result.length < 3
  end
