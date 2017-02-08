@@ -13,13 +13,6 @@ class Watson extends React.Component {
           <DocumentEmotion docEmotions={this.props.data.docEmotions} />
         </div><br /> <br />
 
-        <div className="analysis-container">
-          <div className="left">
-            <div className="col-sm-6">
-              <Taxonomy labels={this.props.data.taxonomy} />
-            </div>
-          </div>
-        </div>
 
         <div className="analysis-container">
           <div className="right">
@@ -37,22 +30,33 @@ class Watson extends React.Component {
           </div>
         </div>
 
-        <div className="analysis-containertent">
-          <div className="left">
-            <div className="col-sm-6">
-              <Subjectivity subjectivity={this.props.data.subjectivity} />
+        <div className="left_side">
+
+          <div className="analysis-container">
+            <div className="left">
+              <div className="col-sm-6">
+                <Taxonomy labels={this.props.data.taxonomy} />
+              </div>
             </div>
           </div>
-        </div>
 
-        <div className="analysis-container">
-          <div className="left">
-            <div className="col-sm-6">
-              <Entities entities={this.props.data.entities} />
+          <div className="analysis-containertent">
+            <div className="left">
+              <div className="col-sm-6">
+                <Subjectivity subjectivity={this.props.data.subjectivity} />
+              </div>
             </div>
           </div>
-        </div>
 
+          <div className="analysis-container">
+            <div className="left">
+              <div className="col-sm-6">
+                <Entities entities={this.props.data.entities} />
+              </div>
+            </div>
+          </div>
+
+        </div>
 
       </div>
     )
