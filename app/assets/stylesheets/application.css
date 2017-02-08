@@ -294,22 +294,22 @@ p {
     font-size: 1.2em;
 }
 
+.logo-title {
+  display: inline-block;
+}
+
 .header_logo {
-  position: relative;
   display: inline-block;
   width: 180px;
   top: -5px;
   align-items: center;
-  right: -11%;
 }
 
 .header_title {
   font-family: 'Slabo', serif;
   font-weight: bold;
-  position: relative;
   display: inline-block;
   font-size: 72pt;
-  right: -10%;
   vertical-align: bottom;
 }
 

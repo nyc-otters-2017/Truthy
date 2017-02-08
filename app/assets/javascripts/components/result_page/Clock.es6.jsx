@@ -71,7 +71,18 @@ class Clock extends React.Component {
 
 			return (
 					<div className="clock-container">
-					<p className="date">
+					<span className="hour">
+						<span className="clock-pieces">
+							{this.state.h}:
+						</span>
+						<span className="clock-pieces">
+							{this.state.m}:
+						</span>
+						<span className="clock-pieces">
+							{this.state.s}
+						</span>
+					</span>
+					<span className="date">
 						<span className="clock-pieces">
 							{this.state.day}
 						</span>
@@ -81,18 +92,7 @@ class Clock extends React.Component {
 						<span className="clock-pieces">
 							{this.state.year}
 						</span>
-					</p>
-					<p className="hour">
-						<span className="clock-pieces">
-							{this.state.h}
-						</span>
-						<span className="clock-pieces">
-							{this.state.m}
-						</span>
-						<span className="clock-pieces">
-							{this.state.s}
-						</span>
-					</p>
+					</span>
 				</div>
 			)
 		}

@@ -1,11 +1,17 @@
 .clock-container {
+  display: inline-block;
 	font-size: 20px;
+  vertical-align: bottom;
+  margin-left: 25px;
 }
 
 .clock-pieces {
 	margin-right: 5px;
-	background-color: rgba(#000, .2);
 	padding: 0;
 	text-align: center;
 	border-radius: 4px;
+}
+
+.date {
+  margin-left: 15px;
 }
