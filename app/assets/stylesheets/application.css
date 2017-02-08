@@ -13,13 +13,30 @@
  *= require_self
  */
 
+ main {
+   margin-left: 30px;
+ }
+
+ body {
+   font-family: 'Droid Serif', serif;
+   font-size: 14px;
+   color: #2f2f2f;
+   background-color: #f9f7f1;
+   height: 180px;
+   margin-bottom: 0;
+ }
+
+ html {
+   /*background-image: url(/assets/_1tk8g4pfsg-zach-woolf.jpg);*/
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-position: center;
+   background-size: cover;
+ }
+ 
 .aylien{
   max-height: 100%;
   overflow-y: scroll;
-}
-
-main {
-  margin-left: 30px;
 }
 
 .social_media_div {
@@ -224,14 +241,6 @@ p {
   text-decoration: none;
 }
 
-html {
-  /*background-image: url(/assets/_1tk8g4pfsg-zach-woolf.jpg);*/
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-}
-
 /*hover type 2 */
 .hovereffect2 {
   width: 32%;
@@ -347,15 +356,6 @@ html {
   transform: translateY(0px);
   -webkit-transition-delay: 0.3s;
   transition-delay: 0.3s;
-}
-
-body {
-    font-family: 'Droid Serif', serif;
-    font-size: 14px;
-    color: #2f2f2f;
-    background-color: #f9f7f1;
-    height: 180px;
-    margin-bottom: 0;
 }
 
 .date-time {

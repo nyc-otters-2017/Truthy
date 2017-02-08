@@ -19,7 +19,7 @@ class Watson extends React.Component {
         <div className="just_a_line_on_top"></div>
 
         <section className="bottom_half">
-          <div class="row">
+          <div className="row">
 
             <div className="col-sm-6">
               <div className="">

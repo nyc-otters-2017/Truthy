@@ -34,7 +34,7 @@ class ResultPage extends React.Component {
   render() {
     return(
       <div className='container-fluid'>
-        <div class="row">
+        <div className="row">
 
           <div className ="col-md-2">
             <Aylien aylien={this.props.aylien} />
