@@ -11,3 +11,10 @@
   border-left: 2px solid rgba(51, 51, 51, 0.79);
   padding-left: 30px;
 }
+
+.data-container h1 {
+  font-size: 50pt;
+  margin-top: 5px;
+  border-bottom: 2px solid rgba(51, 51, 51, 0.79);
+  display: inline-block;
+}
