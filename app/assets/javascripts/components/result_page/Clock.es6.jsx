@@ -12,7 +12,6 @@ class Clock extends React.Component {
 		}
 	}
 
-
 	monthAsWord(number) {
 		switch (number) {
 			case 0:
@@ -54,16 +53,16 @@ class Clock extends React.Component {
 			year: p.getFullYear()
 			})
 
-			if (s < 10) {
-				this.setState({ s: '0'+s})
+			if (this.state.s < 10) {
+				this.setState({ s: '0'+this.state.s})
 			}
 
-			if (m < 10) {
-				this.setState({m: '0'+m})
+			if (this.state.m < 10) {
+				this.setState({m: '0'+this.state.m})
 			}
 
-			if (h < 10) {
-				this.setState({h: '0'+h})
+			if (this.state.h < 10) {
+				this.setState({h: '0'+this.state.h})
 			};
 		}, 500);
 	}
