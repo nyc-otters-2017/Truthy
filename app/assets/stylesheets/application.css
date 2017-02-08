@@ -121,6 +121,7 @@ main {
   width: 95%;
   margin-left: 2%;
   border-bottom: 2px solid #808080;
+  margin-bottom: 0;
 }
 
 .bs-example{
@@ -281,16 +282,18 @@ p {
   position: relative;
   display: inline-block;
   width: 180px;
-  top: -10px;
+  top: -5px;
   align-items: center;
-  right: -19%;
+  right: -11%;
 }
 
 .header_title {
+  font-family: 'Slabo', serif;
+  font-weight: bold;
   position: relative;
   display: inline-block;
   font-size: 72pt;
-  right: -18%;
+  right: -10%;
   vertical-align: bottom;
 }
 
@@ -432,4 +435,16 @@ body {
     background-color: #f9f7f1;
     height: 180px;
     margin-bottom: 0;
+}
+
+.date-time {
+  position: relative;
+  left: 85%;
+  vertical-align: bottom;
+  font-size: 20pt;
+  font-family: 'Droid Serif', serif;
+}
+
+.Result-Page {
+  margin-top: 0;
 }
