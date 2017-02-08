@@ -37,3 +37,23 @@
   font-style: italic;
   margin-bottom: 0;
 }
+
+.concepts-container h1 {
+  font-size: 111pt;
+}
+
+.concepts-container h4 {
+  text-align: center;
+  font-style: italic;
+}
+
+.concept {
+  font-size: 20pt;
+  text-align: center;
+}
+
+.concept-details {
+  list-style: none;
+  font-size: 15pt;
+  text-align: center;
+}

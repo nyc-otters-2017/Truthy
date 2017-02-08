@@ -31,7 +31,7 @@ class Concept extends React.Component {
           {
             links.map((link, i) => {
               return (
-              <li key={i}><a href={link[1]}>{link[0]}</a></li>
+              <li className="concept-details" key={i}><a href={link[1]}>{link[0]}</a></li>
               )
             })
           }
@@ -40,7 +40,7 @@ class Concept extends React.Component {
     }
     return (
       <div>
-        <div>
+        <div className="concept">
           <a href="#" onClick={this.handleClick}>{this.props.info.text}</a>
         </div>
         <div>
