@@ -14,7 +14,7 @@ class QuotesSideBox extends React.Component {
     return (
         <div className="hovereffect2 sidebar1">
 
-          <div className="overlay">
+          <div className="overlay side_bar_background">
 
             <h4 className="side_box_title">See Quotes</h4>
             <p className="about_company">View all the extracted quotes from article for verification</p>

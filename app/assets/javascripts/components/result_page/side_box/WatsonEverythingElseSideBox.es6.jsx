@@ -13,7 +13,7 @@ class WatsonEverythingElseSideBox extends React.Component {
     return (
       <div className="hovereffect2 sidebar1">
 
-        <div className="overlay">
+        <div className="overlay side_bar_background">
 
           <h4 className="side_box_title">Article Data</h4>
           <p className="about_company">View the sentiment, subjectivity, emotions, and other important data about the article.</p>
