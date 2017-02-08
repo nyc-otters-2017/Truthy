@@ -37,10 +37,10 @@ class ResultPage extends React.Component {
 
         <div className="header">
           <div className="logo-title">
-            <Clock />
             <img className="header_logo" src="/assets/148653868433366.png" alt="Logo"/>
             <h1 className="header_title"><a href="/">TRUTHY</a></h1>
           </div>
+          <Clock />
         </div>
 
         <div className='container-fluid'>

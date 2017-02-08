@@ -47,7 +47,7 @@ class Clock extends React.Component {
 			this.setState ({
 			m: p.getMinutes(),
 			s: p.getSeconds(),
-			h: p.getHours(),
+			h: p.getHours() % 12,
 			month: this.monthAsWord(p.getMonth()),
 			day: p.getDate(),
 			year: p.getFullYear()
@@ -70,30 +70,30 @@ class Clock extends React.Component {
 	  render() {
 
 			return (
-					<h1>
+					<div className="clock-container">
 					<p className="date">
-						<span>
-							{this.state.month}
-						</span>
-						<span>
+						<span className="clock-pieces">
 							{this.state.day}
 						</span>
-						<span>
+						<span className="clock-pieces">
+							{this.state.month}
+						</span>
+						<span className="clock-pieces">
 							{this.state.year}
 						</span>
 					</p>
 					<p className="hour">
-						<span>
+						<span className="clock-pieces">
 							{this.state.h}
 						</span>
-						<span>
+						<span className="clock-pieces">
 							{this.state.m}
 						</span>
-						<span>
+						<span className="clock-pieces">
 							{this.state.s}
 						</span>
 					</p>
-				</h1>
+				</div>
 			)
 		}
 
