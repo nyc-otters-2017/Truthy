@@ -20,17 +20,17 @@ class HomePage extends React.Component {
 
   render(){
     return(
-
       <div className="centerpage">
-        <img className="home_logo" src="logo2.png" alt="Logo"/>
+        <header id='main-logo'>
+          <h1 className='text-center'>Truthy</h1>
+          <img className="home_logo" src="148653868433366.png" alt="Logo"/>
+        </header>
         <form className="form-group text-center" onSubmit={this.handleSubmit}>
           <input className="form-control" ref='urlString' type='text' name='urlString' placeholder="Enter Url"/>
-
-          <br/>
           <input className="btn btn-info" type='submit'/>
         </form>
         <div>
-          <p> -Our mission is to promote responsible consumption of news material. -Master Tony Sensei </p>
+          <p></p>
         </div>
       </div>
     )
