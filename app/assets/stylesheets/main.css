@@ -1,0 +1,43 @@
+#main-logo {
+  display: block;
+  margin: 10px auto;
+  width: 60%;
+}
+
+#main-logo *{
+  display: inline-block;
+}
+
+#main-logo h1 {
+  font-family: ;;
+  color: #555;
+  font-size: 5.5em;
+  font-weight: 800;
+}
+
+.home_logo{
+  width: 170px;
+  position: relative;
+}
+
+input.form-control {
+  display: inline-block;
+  font-size: 1.5em;
+  margin: 0px;
+  padding: 25px;
+  width: 80%;
+  top: -125px;
+  opacity: 0.6;
+  vertical-align: top;
+}
+
+input.form-control:focus {
+  opacity: 1
+}
+
+.form-group input.btn {
+  display: inline-block;
+  padding: 14px 20px;
+  vertical-align: top
+
+}

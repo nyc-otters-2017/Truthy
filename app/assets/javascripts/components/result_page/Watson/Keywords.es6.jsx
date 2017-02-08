@@ -32,8 +32,9 @@ class Keywords extends React.Component {
     }
     return (
       <div>
-        <div>
-          <a href="#" onClick={this.handleClick}>Keywords</a>
+        <div className="scroll-change">
+          <h2><a href="#" onClick={this.handleClick}>Keywords</a></h2>
+          <h4>Determines important keywords in the text and ranks them by relevance.</h4>
         </div>
           { details }
       </div>

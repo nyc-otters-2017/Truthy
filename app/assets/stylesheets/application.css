@@ -1,3 +1,32 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *= require_tree .
+ *= require_self
+ */
+
+.aylien{
+  max-height: 100%;
+  overflow-y: scroll;
+}
+
+main {
+  margin-left: 30px;
+}
+
+.social_media_div {
+  margin-top: 10px;
+}
+
+
 .face-enter {
   right: 100px;
 }
@@ -9,8 +38,9 @@
 
 .material-icons.orange600 {
   display: inline-block;
-  color: rgba(76, 222, 32, 0.74);
+  color: #555;
   font-size: 36px;
+  z-index: -1;
 }
 
 .EnterUrl {
@@ -25,22 +55,26 @@
 }
 
 .centerpage {
-
   margin: auto;
-  /*margin-top: -100px;*/
-  /*position: absolute;*/
-  /*top: 50%;*/
-  width: 400px;
+  width: 70%;
 }
+
 .home_logo {
   display: block;
   margin: auto;
-  /*font-family: 'Ubuntu', sans-serif;*/
 }
+
 .slider_div {
   position: relative;
   left: 17px;
 }
+
+.botton_corner{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
 #slider {
   width: 200px;
   display: inline-block;
@@ -49,11 +83,37 @@
   top: 3px;
   left: 8px;
 }
+.blacklist {
+  text-align: center;
+}
+.company_background_div {
+  border-radius: 20px;
+  margin: 2px;
+}
 .company_background {
-  width: 200px;
-  height: 100px;
+  width: 100%;
+  height: 100%;
 }
 
+.company_info{
+  text-align: center;
+}
+
+.company_bio_list{
+  padding: 0;
+  list-style-type: none;
+}
+.social_media_section{
+  height: 75%;
+  width: 100%;
+}
+.social_media_div{
+  width: 90%;
+  margin: 0 auto;
+  height: 300px;
+  margin-left: 7%;
+}
+.
 .header {
   border-bottom: 1px solid #eee;
 }
@@ -81,14 +141,13 @@
 }
 
 .hovereffect .overlay {
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-  position: relative;
+  width: 300px;
+  height: 200px;
+  position: fixed;
   overflow: hidden;
-  left: 0;
+  right: 105px;
+  margin-top: 142px;
   background-color: rgba(255, 255, 255, 0.7);
-  top: -200px;
   opacity: 0;
   filter: alpha(opacity=0);
   -webkit-transition: all 0.1s ease-out 0.5s;
@@ -98,12 +157,16 @@
   border-radius: 15px;
 }
 
+.box_discriptions{
+
+}
+
 .hovereffect:hover .overlay {
   opacity: 1;
   filter: alpha(opacity=100);
   top: 0px;
   -webkit-transition-delay: 0s;
-  transition-delay: 0s;
+  transition-delay: .2s;
 }
 
 .hovereffect img {
@@ -166,6 +229,50 @@
   -webkit-transition-delay: 0.3s;
   transition-delay: 0.3s;
 }
+
+/*front page css*/
+.sidebar1 {
+  height: 175px !important;
+  width: 100% !important;
+}
+.side_box_title{
+  top: -10px !important;
+  text-align: center;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.77);
+  padding: 10px;
+}
+.about_company{
+  font-size: 10px;
+  position: relative;
+  top: 31px;
+  color: white;
+  margin: 7px;
+}
+.side_bar_view{
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  right: 45px;
+}
+/*end of front page css */
+
+#text_indent{
+  text-indent: 80px;
+}
+#author_stuff{
+      margin-bottom: 0px;
+}
+.top_padding{
+  padding-top: 30px;
+}
+
+.newspaper_line_small {
+  border-bottom: 2px solid rgba(51, 51, 51, 0.79);
+    width: 358px;
+    margin: 0 auto;
+}
+
 p {
     line-height: 220%;
     font-size: 1.2em;
@@ -184,10 +291,6 @@ p {
 
 }
 
-section {
-  border-style: double;
-}
-
 body {
   background-color: rgba(242, 64, 77, 0);
   font-family: 'Ubuntu', sans-serif;
@@ -200,24 +303,23 @@ html {
   background-size: cover;
 }
 
-img.related-article {
-  width: 200px;
-}
-
 /*hover type 2 */
 .hovereffect2 {
-  width: 200px;
-  height: 100px;
+  width: 32%;
+  height: 125px;
   float: left;
   overflow: hidden;
   position: relative;
   text-align: center;
   cursor: default;
+  border-radius: 20px;
+  display: inline-block;
+  margin: 2px;
 }
 
 .hovereffect2 .overlay {
-  width: 200px;
-  height: 100px;
+  width: 100%;
+  height: 100%;
   position: absolute;
   overflow: hidden;
   top: 0;
@@ -230,11 +332,12 @@ img.related-article {
   transform: translate(460px, -100px) rotate(180deg);
   -webkit-transition: all 0.2s 0.4s ease-in-out;
   transition: all 0.2s 0.4s ease-in-out;
+  z-index: 1;
 }
 
 .hovereffect2 img {
   display: block;
-  position: relative;
+  /*position: relative;*/
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }
@@ -244,18 +347,36 @@ img.related-article {
   color: #fff;
   text-align: center;
   position: relative;
+  top: -19px;
   font-size: 17px;
   padding: 10px;
   background: rgba(0, 0, 0, 0.6);
 }
 
+.hovereffect2 h3 {
+  color: #fff;
+  position: relative;
+  top: -31px;
+  font-size: 84%;
+}
+
+.hovereffect2 h4 {
+  font-size: 11px;
+  position: fixed;
+  top: 94px;
+  color: white;
+  padding-left: 10px;
+}
+
 .hovereffect2 a.info {
-  display: inline-block;
+  position: fixed;
   text-decoration: none;
-  padding: 7px 14px;
+  top: 47px;
+  right: 12px;
+  border-radius: 5px;
+  padding: 2px;
   text-transform: uppercase;
   color: #fff;
-  border: 1px solid #fff;
   margin: 50px 0 0 0;
   background-color: transparent;
   -webkit-transform: translateY(-200px);
@@ -277,6 +398,7 @@ img.related-article {
   -webkit-transform: translate(0px, 0px);
   -ms-transform: translate(0px, 0px);
   transform: translate(0px, 0px);
+  z-index: 1;
 }
 
 .hovereffect2:hover h2 {
@@ -293,4 +415,11 @@ img.related-article {
   transform: translateY(0px);
   -webkit-transition-delay: 0.3s;
   transition-delay: 0.3s;
+}
+
+body {
+    font-family: 'Droid Serif', serif;
+    font-size: 14px;
+    color: #2f2f2f;
+    background-color: #f9f7f1;
 }

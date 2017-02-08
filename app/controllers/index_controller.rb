@@ -99,9 +99,14 @@ class IndexController < ApplicationController
     render :aylien
   end
 
-  # def publication_date
-  #   @publication_date = PublicationDateHelper.convert_date
-  # end
+  def train
+    ml_entry = MlEntry.create(params[:user_input], params[:article_text])
+  end
+
+  def predict
+    MlEntry.train
+    MlEntry.predict
+  end
 
   private
 

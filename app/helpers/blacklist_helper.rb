@@ -61,11 +61,11 @@ module BlacklistHelper
       { typeName: profile.fetch('typeName', not_provided),
         url: profile.fetch('url', not_provided),
         username: profile.fetch('username', not_provided),
-        bio: profile.fetch('bio', not_provided)
+        bio: profile.fetch('bio', not_provided),
        }
     end
 
-    if response['organization']['contactInfo']['emailAddresses']
+    if !!response['organization']['contactInfo']['emailAddresses']
       company_info['email'] = response['organization']['contactInfo']['emailAddresses'].first['value']
     else
       company_info['email'] = not_provided

@@ -1,0 +1,47 @@
+.aylien {
+  border-right: 2px solid grey;
+  overflow: scroll;
+  height: 800px;
+  padding: 0;
+}
+
+.aylien a {
+  color: #2f2f2f;
+}
+
+.aylien blockquote {
+  padding: 8px 0px 0px 8px;
+  margin: 0;
+  padding: 8px 0px 0px 8px
+}
+
+.related-article img {
+  width: 200px;
+  margin: 0px;
+  padding-bottom: 0px;
+}
+
+.related-article {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  border-bottom: 1px solid #666;
+}
+
+.related-title {
+  margin-right: 0;
+  padding-left: 8px;
+}
+
+.related-article-info {
+  padding: 0px;
+  width: 90%
+}
+
+.related-author {
+  font-size: 1em;
+  padding-left: 1em;
+}
+
+.related-body {
+  font-size: 1em; 
+}
