@@ -16,41 +16,65 @@ class Keywords extends React.Component {
 
   componentDidMount() {
     (function() {
-      var frequency_list = [{"text":"study","size":40},{"text":"motion","size":15}]
+      console.log("props", this.props.keywords)
+      var diameter = 960,
+          format = d3.format(",d"),
+          color = d3.scaleOrdinal(d3.schemeCategory20c);
 
+      var bubble = d3.pack()
+          .size([diameter, diameter])
+          .padding(1.5);
 
-          var color = d3.scale.linear()
-                  .domain([0,1,2,3,4,5,6,10,15,20,100])
-                  .range(["#ddd", "#ccc", "#bbb", "#aaa", "#999", "#888", "#777", "#666", "#555", "#444", "#333", "#222"]);
+      var svg = d3.select("body").append("svg")
+          .attr("width", diameter)
+          .attr("height", diameter)
+          .attr("class", "bubble");
 
-          d3.layout.cloud().size([800, 300])
-                  .words(frequency_list)
-                  .rotate(0)
-                  .fontSize(function(d) { return d.size; })
-                  .on("end", draw)
-                  .start();
+      d3.json("flare.json", function(error, data) {
+        if (error) throw error;
 
-          function draw(words) {
-              d3.select(".cloud").append("svg")
-                      .attr("width", 850)
-                      .attr("height", 350)
-                      .attr("class", "wordcloud")
-                      .append("g")
-                      // without the transform, words words would get cutoff to the left and top, they would
-                      // appear outside of the SVG area
-                      .attr("transform", "translate(320,200)")
-                      .selectAll("text")
-                      .data(words)
-                      .enter().append("text")
-                      .style("font-size", function(d) { return d.size + "px"; })
-                      .style("fill", function(d, i) { return color(i); })
-                      .attr("transform", function(d) {
-                          return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
-                      })
-                      .text(function(d) { return d.text; });
-          }
+        var root = d3.hierarchy(classes(data))
+            .sum(function(d) { return d.value; })
+            .sort(function(a, b) { return b.value - a.value; });
 
-    })()
+        bubble(root);
+        var node = svg.selectAll(".node")
+            .data(root.children)
+          .enter().append("g")
+            .attr("class", "node")
+            .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
+
+        node.append("title")
+            .text(function(d) { return d.data.className + ": " + format(d.value); });
+
+        node.append("circle")
+            .attr("r", function(d) { return d.r; })
+            .style("fill", function(d) {
+              return color(d.data.packageName);
+            });
+
+        node.append("text")
+            .attr("dy", ".3em")
+            .style("text-anchor", "middle")
+            .text(function(d) { return d.data.className.substring(0, d.r / 3); });
+      });
+
+      // Returns a flattened hierarchy containing all leaf nodes under the root.
+      function classes(root) {
+        var classes = [];
+
+        function recurse(name, node) {
+          if (node.children) node.children.forEach(function(child) { recurse(node.name, child); });
+          else classes.push({packageName: name, className: node.name, value: node.size});
+        }
+
+        recurse(null, root);
+        return {children: classes};
+      }
+
+      d3.select(self.frameElement).style("height", diameter + "px");
+
+    }.bind(this))()
   }
 
   render() {
@@ -71,20 +95,11 @@ class Keywords extends React.Component {
     }
     return (
       <div>
-      
+
         <div className="scroll-change">
           <h2><a href="#" onClick={this.handleClick}>Keywords</a></h2>
           <h4>Determines important keywords in the text and ranks them by relevance.</h4>
-          <div>
-              <div className="legend">
-                  Commonly used words are larger and slightly faded in color.  Less common words are smaller and darker.
-              </div>
-              <div className="cloud"></div>
-
-          </div>
-
         </div>
-          { details }
       </div>
 
     )
