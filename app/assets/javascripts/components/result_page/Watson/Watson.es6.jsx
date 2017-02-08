@@ -23,11 +23,11 @@ class Watson extends React.Component {
 
             <div className="col-sm-6">
               <div className="">
-                <Concepts concepts={this.props.data.concepts} />
+                <Sentiment sentiment={this.props.data.sentiment} />
               </div>
 
               <div className="">
-                <Sentiment sentiment={this.props.data.sentiment} />
+                <Concepts concepts={this.props.data.concepts} />
               </div>
             </div>
 

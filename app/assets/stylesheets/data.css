@@ -2,7 +2,7 @@
   padding-bottom: 20px;
 }
 .just_a_line_on_top {
-  width: 50%;
+  width: 103%;
   height: 2px;
   margin: 25px auto;
   border-bottom: 2px solid rgba(51, 51, 51, 0.79);
@@ -17,4 +17,23 @@
   margin-top: 5px;
   border-bottom: 2px solid rgba(51, 51, 51, 0.79);
   display: inline-block;
+}
+
+.data-container h4 {
+  font-style: italic;
+}
+
+.doc-emotion-header {
+  border-bottom: 2px solid rgba(51, 51, 51, 0.79);
+  padding-bottom: 15px;
+}
+
+.chart {
+  padding-top: 10px;
+}
+
+.chart-info {
+  padding-top: 10px;
+  font-style: italic;
+  margin-bottom: 0;
 }
