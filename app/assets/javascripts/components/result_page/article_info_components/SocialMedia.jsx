@@ -6,8 +6,8 @@ class SocialMedia extends React.Component {
 
   render(){
     function johnCheckIfNull(johnsWord) {
-        var answer = johnsWord === null ? 'No result was found' : johnsWord;
-        return answer
+        var answer = (johnsWord === null || johnsWord === undefined) ? 'No result was found.' : johnsWord;
+      return answer
     }
 
     let {
@@ -31,12 +31,11 @@ class SocialMedia extends React.Component {
         var locationEnd = ".png"
         var pictureLocation = [locationHead, companyName, locationEnd].join("");
 
-        console.log(socialMediaData);
         var details = (
-          <div className="hovereffect2 company_background_div">
+          <div key={i} className="hovereffect2 company_background_div">
             <img className="img-responsive company_background" src={pictureLocation} alt=""/>
             <div className="overlay">
-              <h2 key={i}> {data.typeName}</h2>
+              <h2> {data.typeName}</h2>
               <h3> {data.bio} </h3>
               <h4 className="social_media_username"> {data.username} </h4>
               <a className="info" href={data.url}>link here</a>
@@ -46,11 +45,11 @@ class SocialMedia extends React.Component {
       } else {
 
         var details = (
-          <div className="hovereffect2 company_background_div">
+          <div key={i} className="hovereffect2 company_background_div">
             <img className="img-responsive company_background" src="/assets/companyinfo_default.png" alt=""/>
             <div className="overlay">
-              <h2 key={i}>{data.typeName}</h2>
-              <h3> {data.bio} </h3>
+              <h2 >{data.typeName}</h2>
+              <h3 > {data.bio} </h3>
               <h4 className="social_media_username"> {data.username} </h4>
               <a className="info" href={data.url}>link here</a>
             </div>
@@ -59,27 +58,23 @@ class SocialMedia extends React.Component {
       }
       return details
     }
-
     return(
       <article className="blacklist">
 
         <section className="company_info">
-          <h1>Company Info</h1>
+          <h1>Company Information</h1>
           <h3>
             <a href={website}>{name}</a>
           </h3>
             <ul className="company_bio_list scroll-change">
-              <li>Founded: {founded}</li>
-              <li>Email: {email}</li>
-              <li>Online Since: {onlineSince}</li>
-              <li>Webpage Bio: {this.props.data.bio}</li>
+              <li>Founded: {johnCheckIfNull(founded)}</li>
+              <li>Email: {johnCheckIfNull(email)}</li>
+              <li>Online Since: {johnCheckIfNull(onlineSince)}</li>
+              <li>Webpage Bio: {johnCheckIfNull(bio)}</li>
             </ul>
         </section>
 
-        <div className="newspaper_bottom_small_line">
-        </div>
-
-        <div className="newspaper_bottom_small_line">
+        <div className="newspaper_bottom_small_line company_info_padding">
         </div>
 
         <section className="social_media_section">
