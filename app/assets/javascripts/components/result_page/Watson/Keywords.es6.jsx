@@ -17,6 +17,33 @@ class Keywords extends React.Component {
   componentDidMount() {
     (function() {
       console.log("props", this.props.keywords)
+
+      var contentKeywords = this.props.keywords.map(keyword=>{
+        return {className: keyword.text, value: (keyword.relevance * 100).toFixed(2) + '%'}
+      })
+
+      var root = {
+         "name": "flare",
+         "children": [
+          {
+           "name": "animate",
+           "children": [
+            {"name": "Easing", "size": 17010},
+            {"name": "FunctionSequence", "size": 5842},
+            {"name": "ISchedulable", "size": 1041},
+            {"name": "Parallel", "size": 5176},
+            {"name": "Pause", "size": 449},
+            {"name": "Scheduler", "size": 5593},
+            {"name": "Sequence", "size": 5534},
+            {"name": "Transition", "size": 9201},
+            {"name": "Transitioner", "size": 19975},
+            {"name": "TransitionEvent", "size": 1116},
+            {"name": "Tween", "size": 6006}
+           ]
+          }
+         ]
+        };
+
       var diameter = 960,
           format = d3.format(",d"),
           color = d3.scaleOrdinal(d3.schemeCategory20c);
@@ -30,8 +57,14 @@ class Keywords extends React.Component {
           .attr("height", diameter)
           .attr("class", "bubble");
 
-      d3.json("flare.json", function(error, data) {
-        if (error) throw error;
+      contentKeywords.forEach(function(error, data) {
+        // if (error) throw error;
+
+
+      // contentKeywords.forEach(function(k) {
+      //   k.relevance = +k.relevance;
+      // })
+      console.log("keywords", contentKeywords[0].text)
 
         var root = d3.hierarchy(classes(data))
             .sum(function(d) { return d.value; })
@@ -74,7 +107,7 @@ class Keywords extends React.Component {
 
       d3.select(self.frameElement).style("height", diameter + "px");
 
-    }.bind(this))()
+    }).bind(this)()
   }
 
   render() {
