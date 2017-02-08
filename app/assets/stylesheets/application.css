@@ -330,6 +330,7 @@ html {
   -ms-transform: translate(0px, 0px);
   transform: translate(0px, 0px);
   z-index: 1;
+  border-radius: 20px;
 }
 
 .hovereffect2:hover h2 {
