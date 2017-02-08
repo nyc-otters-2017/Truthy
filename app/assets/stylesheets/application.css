@@ -113,13 +113,16 @@ main {
   height: 300px;
   margin-left: 7%;
 }
-.
-.header {
-  border-bottom: 1px solid #eee;
-}
-.inline_block {
 
+.header {
+  position: relative;
+  top: -30pt;
+  height: 190px;
+  width: 95%;
+  margin-left: 2%;
+  border-bottom: 2px solid #808080;
 }
+
 .bs-example{
   margin: 150px 350px;
 }
@@ -155,10 +158,6 @@ main {
   border-style: outset;
   box-shadow: 10px 10px 3px rgba(3, 74, 10, 0.35);
   border-radius: 15px;
-}
-
-.box_discriptions{
-
 }
 
 .hovereffect:hover .overlay {
@@ -281,20 +280,29 @@ p {
 .header_logo {
   position: relative;
   display: inline-block;
-  width: 68px;
-  top: -12px;
-  right: -14px;
+  width: 180px;
+  top: -10px;
+  align-items: center;
+  right: -19%;
 }
 
 .header_title {
+  position: relative;
   display: inline-block;
+  font-size: 72pt;
+  right: -18%;
+  vertical-align: bottom;
+}
 
+.header_title a:hover {
+  text-decoration: none;
 }
 
 body {
   background-color: rgba(242, 64, 77, 0);
   font-family: 'Ubuntu', sans-serif;
 }
+
 html {
   /*background-image: url(/assets/_1tk8g4pfsg-zach-woolf.jpg);*/
   background-repeat: no-repeat;
@@ -422,4 +430,6 @@ body {
     font-size: 14px;
     color: #2f2f2f;
     background-color: #f9f7f1;
+    height: 180px;
+    margin-bottom: 0;
 }
