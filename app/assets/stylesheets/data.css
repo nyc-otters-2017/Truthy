@@ -11,5 +11,16 @@ div#subjectivity-line {
   padding: 5px;
 }
 div.right {
-  border: 2px solid;  
+  border: 2px solid;
 }
+
+.legend {
+       border: 1px solid #555555;
+       border-radius: 5px 5px 5px 5px;
+       font-size: 0.8em;
+       margin: 10px;
+       padding: 8px;
+   }
+   .bld {
+       font-weight: bold;
+   }
