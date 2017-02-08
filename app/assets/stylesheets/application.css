@@ -296,6 +296,9 @@ p {
 
 .logo-title {
   display: inline-block;
+  position: relative;
+  top: -35px;
+  margin-left: 2%;
 }
 
 .header_logo {
@@ -448,14 +451,26 @@ body {
     margin-bottom: 0;
 }
 
-.date-time {
-  position: relative;
-  left: 85%;
-  vertical-align: bottom;
-  font-size: 20pt;
-  font-family: 'Droid Serif', serif;
-}
-
 .Result-Page {
   margin-top: 0;
+}
+
+.about-button {
+  position: relative;
+  display: inline-block;
+  width: 180px;
+  height: 150px;
+  padding: 20px 10px 10px 10px;
+  border: 2px solid rgba(51, 51, 51, 0.79);
+  margin: 25px 20px 10px 80px;
+  font-size: 10pt;
+  text-align: center;
+}
+
+.about-button a {
+  color: rgba(51, 51, 51, 0.79);
+}
+
+.about-button a:hover {
+  color: rgba(51, 51, 51, 0.79);
 }
