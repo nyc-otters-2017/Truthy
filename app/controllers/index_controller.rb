@@ -1,5 +1,4 @@
 class IndexController < ApplicationController
-
   def index
   end
 
@@ -121,12 +120,20 @@ class IndexController < ApplicationController
   end
 
   def train
-    ml_entry = MlEntry.create(params[:user_input], params[:article_text])
+    ml_entry = MlEntry.create(
+      user_input: params[:user_input], article_text: params[:article_text]
+    )
   end
 
   def predict
     MlEntry.train
-    MlEntry.predict
+    votes = {
+      'truthiness' => MlEntry.predict(params[:article_text]),
+      'truthy' => MlEntry.where("user_input LIKE ? AND article_text LIKE ?", "truthy", "#{params[:article_text]}").count,
+      'falsey' => MlEntry.where("user_input LIKE ? AND article_text LIKE ?", "falsey", "#{params[:article_text]}").count,
+      'total' => MlEntry.where("article_text LIKE ?", "#{params[:article_text]}").count
+    }
+    render status: 200, json: votes.to_json
   end
 
   private

@@ -1,7 +1,5 @@
 class Watson extends React.Component {
-
   render() {
-    console.log(this.props.data) // for testing and styling
     return (
       <div className="scroll-change">
 
