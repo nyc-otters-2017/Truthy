@@ -102,7 +102,9 @@ class Keywords extends React.Component {
       <div>
         <div className="scroll-change">
           <h2><a href="#" onClick={this.handleClick}>Keywords</a></h2>
-          <h4>Determines important keywords in the text and ranks them by relevance.</h4>
+          <section id="keyword-description">
+            <h4>Determines important keywords in the text and ranks them by relevance.</h4>
+          </section>
         </div>
         <div className="bubblechart">
           { details }
