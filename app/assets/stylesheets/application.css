@@ -314,3 +314,8 @@ body {
 .Result-Page {
   margin-top: 0;
 }
+
+.blacklist {
+  margin-left: 20%;
+  color: maroon;
+}

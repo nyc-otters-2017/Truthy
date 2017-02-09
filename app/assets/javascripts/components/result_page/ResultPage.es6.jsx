@@ -46,6 +46,10 @@ class ResultPage extends React.Component {
           </div>
         </div>
 
+        <div>
+          <span className="blacklist">{this.props.blackList}</span>
+        </div>
+
         <div className='container-fluid'>
           <div className="row">
 
