@@ -41,7 +41,8 @@
   overflow-y: scroll;
 }
 .social_media_bio {
-  max-height: 40%;
+
+  max-height: 35%;
   overflow-y: scroll;
 }
 .social_media_username {
