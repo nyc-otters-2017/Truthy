@@ -17,10 +17,12 @@
   margin-top: 5px;
   border-bottom: 2px solid rgba(51, 51, 51, 0.79);
   display: inline-block;
+  text-align: center;
 }
 
 .data-container h4 {
   font-style: italic;
+  text-align: center;
 }
 
 .doc-emotion-header {
