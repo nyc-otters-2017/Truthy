@@ -19,7 +19,6 @@ class SocialMedia extends React.Component {
       bio,
       email
     } = this.props.data
-    let socialMediaData = JSON.parse(socialMedia)
     function checkCompanyName(data, i) {
       if (
         data.typeName.toLowerCase() === "facebook"
@@ -89,7 +88,7 @@ class SocialMedia extends React.Component {
               <h1 className="company_info_title">Social Media</h1>
               <div className ="newspaper_bottom_small_line company_info_padding"></div>
               <div className="social_media_div">
-                { socialMediaData.map(
+                { socialMedia.map(
                   (media, i)=>{
                   return checkCompanyName(media, i)}
                 )}
