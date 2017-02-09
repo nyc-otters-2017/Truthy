@@ -13,15 +13,14 @@ class WatsonEverythingElseSideBox extends React.Component {
     return (
       <div className="hovereffect2 sidebar1">
 
-        <div className="overlay">
+        <div className="overlay side_bar_background">
 
           <h4 className="side_box_title">Article Data</h4>
           <p className="about_company">View the sentiment, subjectivity, emotions, and other important data about the article.</p>
-          <p className="side_bar_view">
-            <a onClick={this.handleClick} className="btn btn-primary btn-sm" href="#" role="button">View</a></p>
+          <a onClick={this.handleClick} className="btn btn-primary btn-sm side_bar_view" href="#" role="button">View</a>
 
         </div>
-        <i className="img-responsive material-icons orange600">donut_large</i>
+        <i className="img-responsive material-icons orange600">toys</i>
 
       </div>
     )

@@ -1,0 +1,19 @@
+.result_left_column_title {
+  border-bottom: 2px solid rgba(51, 51, 51, 0.79);
+  margin-bottom: 30px;
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+::-webkit-scrollbar {
+width: 5px;
+
+}
+::-webkit-scrollbar-track-piece {
+  background: rgba(255, 255, 255, 0);
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  background: rgba(0, 0, 0, 0.58);
+
+}

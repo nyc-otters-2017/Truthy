@@ -5,54 +5,44 @@ class Watson extends React.Component {
     return (
       <div className="scroll-change">
 
-        <div className="">
-          <Keywords keywords={this.props.data.keywords} />
-        </div>
+        <section className="top_half">
 
-        <div className="">
-          <DocumentEmotion docEmotions={this.props.data.docEmotions} />
-        </div><br /> <br />
-
-        <div className="analysis-container">
-          <div className="left">
-            <div className="col-sm-6">
-              <Taxonomy labels={this.props.data.taxonomy} />
-            </div>
+          <div className="">
+            <Keywords keywords={this.props.data.keywords} />
           </div>
-        </div>
-
-        <div className="analysis-container">
-          <div className="right">
-            <div className="col-sm-6">
-              <Concepts concepts={this.props.data.concepts} />
-            </div>
+          <div className="">
+            <DocumentEmotion docEmotions={this.props.data.docEmotions} />
           </div>
-        </div>
 
-        <div className="analysis-containert">
-          <div className="right">
+        </section>
+
+        <div className="just_a_line_on_top"></div>
+
+        <section className="bottom_half">
+          <div className="row">
+
             <div className="col-sm-6">
-              <Sentiment sentiment={this.props.data.sentiment} />
+              <div className="">
+                <Sentiment sentiment={this.props.data.sentiment} />
+              </div>
             </div>
-          </div>
-        </div>
 
-        <div className="analysis-containertent">
-          <div className="left">
-            <div className="col-sm-6">
-              <Subjectivity subjectivity={this.props.data.subjectivity} />
+            <div className="col-sm-6 line_and_padding_left">
+
+              <div className="">
+                <Subjectivity subjectivity={this.props.data.subjectivity} />
+              </div>
+
             </div>
-          </div>
-        </div>
 
-        <div className="analysis-container">
-          <div className="left">
-            <div className="col-sm-6">
-              <Entities entities={this.props.data.entities} />
+            <div className="col-sm-12">
+              <div className="">
+                <Concepts concepts={this.props.data.concepts} />
+              </div>
             </div>
-          </div>
-        </div>
 
+          </div>
+        </section>
 
       </div>
     )

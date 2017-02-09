@@ -1,10 +1,3 @@
-<div class="header">
-  <img class="header_logo" src="/assets/148653868433366.png" alt="Logo"/>
-  <h1 class="header_title"><a href="/">TRUTHY</a></h1>
+<div class="Result-Page">
+  <%= react_component 'ResultPage', {blackList: @blacklist, fullContact: @fullcontact, watson: @watson, quotes: @quotes, aylien: @aylien} %>
 </div>
-<div class="slider_div">
-  <span> Text Size: </span>
-  <input type="range" min="12" max="42" id="slider"/>
-</div>
-
-<%= react_component 'ResultPage', {blackList: @blacklist, fullContact: @fullcontact, watson: @watson, quotes: @quotes, aylien: @aylien} %>

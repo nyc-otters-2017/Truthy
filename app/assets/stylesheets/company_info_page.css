@@ -1,0 +1,42 @@
+.company_info_padding {
+  margin: 45px auto !important;
+}
+
+.company_info_title {
+  margin-bottom: 30px;
+}
+
+
+.company_background_div {
+  width: 49% !important;
+
+}
+
+.company_background {
+  width: 100%;
+  height: 100%;
+}
+
+.company_info{
+  text-align: center;
+}
+
+.company_bio_list{
+  padding: 0;
+  list-style-type: none;
+}
+
+.social_media_section{
+  height: 75%;
+  width: 100%;
+}
+.company_info_add_left_line {
+  border-left: 2px solid rgba(51, 51, 51, 0.79);
+}
+
+.social_media_div{
+  width: 100%;
+  margin: auto;
+  max-height: 750px;
+  overflow-y: scroll;
+}
