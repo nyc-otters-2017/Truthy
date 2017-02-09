@@ -52,16 +52,16 @@ class ResultPage extends React.Component {
   }
 
   trainModel(event){
-    // $.ajax({
-    //   url: '/train',
-    //   method: 'POST',
-    //   data: {
-    //     user_input: event.target.value,
-    //     article_text: this.props.watson.text
-    //   }
-    // })
-    //  .done(response=>{
-    //  })
+    $.ajax({
+      url: '/train',
+      method: 'POST',
+      data: {
+        user_input: event.target.value,
+        article_text: this.props.watson.text
+      }
+    })
+     .done(response=>{
+     })
     this.setState({trained: true})
   }
 
