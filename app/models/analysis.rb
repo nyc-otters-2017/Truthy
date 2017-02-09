@@ -16,7 +16,7 @@ class Analysis < ApplicationRecord
    data = WATSON_DATA + url + WATSON_CLOSING + ENV['WATSON_KEY']
    text = WATSON_TEXT + url + WATSON_CLOSING + ENV['WATSON_KEY']
    info = WATSON_DATA + url + WATSON_INFO + WATSON_CLOSING + ENV['WATSON_KEY']
-   emotion = WATSON_EMOTION + url + WATSON_CLOSING = ENV['WATSON_KEY']
+   emotion = WATSON_EMOTION + url + WATSON_CLOSING + ENV['WATSON_KEY']
    # API calls
    @opened_uri[:data] = JSON.parse(open(data, 'Accept-Encoding' => '') {|f| f.read })
    @opened_uri[:text] = JSON.parse(open(text, 'Accept-Encoding' => '') {|f| f.read })
@@ -50,13 +50,17 @@ class Analysis < ApplicationRecord
    result.keep_if do |r|
      r['relevance'].to_f >= 0.5
    end
-   return backup[0..2] if result.length < 3
+   if result.length < 3
+     return backup[0..2]
+   else
+     return result
+   end
  end
 
  # keeps keywords if their relevance is above 70%
  def self.keep_relevant_keywords(result)
    result.keep_if do |r|
-     r['relevance'].to_f >= 0.7
+     r['relevance'].to_f >= 0.6
    end
  end
 

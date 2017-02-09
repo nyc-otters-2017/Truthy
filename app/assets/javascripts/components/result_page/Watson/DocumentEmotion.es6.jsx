@@ -4,10 +4,11 @@ class DocumentEmotion extends React.Component {
         var width = 0, widthScale, barHeight = 30, gutter = 15;
 
         var chart = d3.select(".chart");
-
+        var entries = Object.entries(this.props.docEmotions)
+        debugger
         // data converted from TSV to JS array
-        var data = this.props.docEmotions.map(emotion=>{
-          return { name: emotion.emotion, value: (emotion.score * 100).toFixed(2) }
+        var data = entries.map(emotion=>{
+          return { name: emotion[0], value: (emotion[1] * 100).toFixed(2) }
         })
 
         console.log(data);

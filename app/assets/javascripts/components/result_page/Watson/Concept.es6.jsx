@@ -9,7 +9,6 @@ class Concept extends React.Component {
   }
 
   handleClick(event) {
-    debugger
     event.preventDefault()
     let status = this.state.details
     this.setState({details: !status})
@@ -25,7 +24,6 @@ class Concept extends React.Component {
     }
 
     var links = Object.entries(this.props.info).filter(isLink)
-    debugger
     if (yourDetailsAreShowing) {
       var details = (
         <ul>
