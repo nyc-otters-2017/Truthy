@@ -2,6 +2,10 @@ module PublicationDateHelper
   require 'date'
 
   def self.convert_date(publication_date)
-    date = Date.strptime(publication_date, "%Y%m%d")
+    if publication_date.length > 0
+      Date.strptime(publication_date, "%Y%m%d")
+    else
+      'No date is listed'
+    end
   end
 end
