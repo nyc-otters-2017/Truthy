@@ -11,7 +11,7 @@ class Watson extends React.Component {
             <Keywords keywords={this.props.data.keywords} />
           </div>
           <div className="">
-            <DocumentEmotion docEmotions={this.props.data.docEmotions} />
+            <DocumentEmotion docEmotions={this.props.data.emotion} />
           </div>
 
         </section>
