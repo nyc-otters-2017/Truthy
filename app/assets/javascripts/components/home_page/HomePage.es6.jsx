@@ -13,7 +13,6 @@ class HomePage extends React.Component {
       data: {urlString: this.refs.urlString.value}
     })
      .done(response=>{
-       console.log('sending...', this.refs.urlString.value)
        location.href = `/results`
      })
   }
@@ -29,9 +28,6 @@ class HomePage extends React.Component {
           <input className="form-control" ref='urlString' type='text' name='urlString' placeholder="Enter Url"/>
           <input className="btn btn-info" type='submit'/>
         </form>
-        <div>
-          <p></p>
-        </div>
       </div>
     )
   }

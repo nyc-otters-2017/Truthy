@@ -4,7 +4,13 @@
   padding-bottom: 40px;
   text-align: center;
 }
-
+.left_cloumn_title_margin {
+  width: 75% !important;
+  margin-top: 20px !important;
+}
+.nopadding_right {
+  padding-right: 0px !important;
+}
 ::-webkit-scrollbar {
 width: 5px;
 

@@ -6,5 +6,7 @@ Rails.application.routes.draw do
   get '/results' => 'index#result'
   get '/quotes' => 'index#quote'
   get '/aylien' => 'index#aylien'
+  post '/train' => 'index#train'
+  post '/predict' => 'index#predict'
 
 end

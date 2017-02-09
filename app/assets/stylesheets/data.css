@@ -40,8 +40,9 @@
   margin-bottom: 0;
 }
 
-.concepts-container h1 {
-  font-size: 111pt;
+.concepts-container h3 {
+  font-size: 100pt;
+  text-align: center;
 }
 
 .concepts-container h4 {
@@ -58,4 +59,8 @@
   list-style: none;
   font-size: 15pt;
   text-align: center;
+}
+
+#keyword-description {
+  font-style: italic
 }

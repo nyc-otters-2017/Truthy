@@ -1,5 +1,4 @@
 class IndexController < ApplicationController
-
   def index
   end
 
@@ -15,12 +14,12 @@ class IndexController < ApplicationController
  #  "Watch Jimmy Fallon's 'Tonight Show' pups predict the Super Bowl winner",
  # "author"=>"Randee Dawn",
  # "publicationDate"=>PublicationDateHelper.convert_date("20170204"),
- # "docEmotions"=>
- #   [{"emotion"=>"anger", "score"=>"0.112369"},
- #   {"emotion"=>"disgust", "score"=>"0.175777"},
- #   {"emotion"=>"fear", "score"=>"0.147617"},
- #   {"emotion"=>"joy", "score"=>"0.53496"},
- #   {"emotion"=>"sadness", "score"=>"0.260595"}],
+ # "emotion"=>
+ #   {"anger" => "0.112369",
+ #   "disgust" => "0.175777",
+ #   "fear" => "0.147617",
+ #   "joy" => "0.53496",
+ #   "sadness" => "0.260595"},
  # "taxonomy"=>
  #  [{"label"=>"/sports/football", "score"=>"0.510555"},
  #   {"label"=>"/pets/dogs", "score"=>"0.475452"},
@@ -73,14 +72,24 @@ class IndexController < ApplicationController
  #   {"relevance"=>"0.602368", "text"=>"grand slam"},
  #   {"relevance"=>"0.601466", "text"=>"Atlanta hospital"},
  #   {"relevance"=>"0.600551", "text"=>"actual results"}]}
- #    @blacklist = BlacklistHelper.check_domain(session[:url])
+ #    @blacklist = BlacklistHelper.check_domain('http://www.crunchbase.com/company/national-football-league')
  #    @fullcontact = {"bio"=>"This company did not include a bio.",
  # "website"=>"http://today.com",
  # "name"=>"Today Show",
  # "founded"=>nil,
  # "onlineSince"=>"1998-04-07",
  # "socialMedia"=>
- #  "[{\"typeId\":\"facebook\",\"typeName\":\"Facebook\",\"url\":\"https://www.facebook.com/today\"},{\"bio\":\"America's favorite morning show\",\"followers\":2950317,\"following\":8171,\"typeId\":\"twitter\",\"typeName\":\"Twitter\",\"url\":\"https://twitter.com/TODAYshow\",\"username\":\"TODAYshow\",\"id\":\"7744592\"},{\"bio\":\"words and music. associate lifestyle editor @todayshow @nbcnews.\",\"followers\":273,\"following\":1139,\"typeId\":\"twitter\",\"typeName\":\"Twitter\",\"url\":\"https://twitter.com/rebekahlowin\",\"username\":\"rebekahlowin\",\"id\":\"2861086083\"},{\"bio\":\"Today is a daily American morning television show that airs on NBC.\",\"typeId\":\"crunchbasecompany\",\"typeName\":\"CrunchBase\",\"url\":\"http://www.crunchbase.com/organization/today\",\"username\":\"today\"},{\"bio\":\"Tips and tidbits from America's favorite morning show. Visit anytime at TODAY.com.\",\"followers\":2079,\"following\":14,\"typeId\":\"pinterest\",\"typeName\":\"Pinterest\",\"url\":\"http://www.pinterest.com/todayshow/\",\"username\":\"todayshow\"},{\"typeId\":\"klout\",\"typeName\":\"Klout\",\"url\":\"http://klout.com/TODAYshow\",\"username\":\"TODAYshow\",\"id\":\"46161900947201452\"},{\"typeId\":\"klout\",\"typeName\":\"Klout\",\"url\":\"http://klout.com/rebekahlowin\",\"username\":\"rebekahlowin\",\"id\":\"198721357132438420\"},{\"typeId\":\"foursquare\",\"typeName\":\"Foursquare\",\"url\":\"https://foursquare.com/user/1223577\",\"id\":\"1223577\"},{\"bio\":\"Today Foods is a Restaurants company located in 2839 Nansen St Ste B1, Medford, Oregon, United States.\",\"typeId\":\"linkedincompany\",\"typeName\":\"LinkedIn\",\"url\":\"https://www.linkedin.com/company/today-foods\",\"username\":\"today-foods\",\"id\":\"4745610\"},{\"typeId\":\"instagram\",\"typeName\":\"Instagram\",\"url\":\"https://instagram.com/todayshow\"}]"}
+ #  [{"typeId" => "facebook","typeName" => "Facebook","url" => "https://www.facebook.com/today"},
+ #    {"bio" => "America's favorite morning show","followers" => 2950317,"following" => 8171,"typeId" => "twitter","typeName" => "Twitter","url" => "https://twitter.com/TODAYshow","username" => "TODAYshow", "id" => "7744592"},
+ #    {"bio" => "words and music. associate lifestyle editor @todayshow @nbcnews.","followers" => 273,"following" => 1139,"typeId" => "twitter","typeName" => "Twitter","url" => "https://twitter.com/rebekahlowin","username" => "rebekahlowin","id" => "2861086083"},
+ #    {"bio" => "Today is a daily American morning television show that airs on NBC.","typeId" => "crunchbasecompany","typeName" => "CrunchBase","url" => "http://www.crunchbase.com/organization/today","username" => "today"},
+ #    {"bio" => "Tips and tidbits from America's favorite morning show. Visit anytime at TODAY.com.","followers" => 2079,"following" => 14,"typeId" => "pinterest","typeName" => "Pinterest","url" => "http://www.pinterest.com/todayshow/","username" => "todayshow"},
+ #    {"typeId" => "klout","typeName" => "Klout","url" => "http://klout.com/TODAYshow","username" => "TODAYshow","id" => "46161900947201452"},
+ #    {"typeId" => "klout","typeName" => "Klout","url" => "http://klout.com/rebekahlowin","username" => "rebekahlowin","id" => "198721357132438420"},
+ #    {"typeId" => "foursquare","typeName" => "Foursquare","url" => "https://foursquare.com/user/1223577","id" => "1223577"},
+ #    {"bio" => "Today Foods is a Restaurants company located in 2839 Nansen St Ste B1, Medford, Oregon, United States.","typeId" => "linkedincompany","typeName" => "LinkedIn","url" => "https://www.linkedin.com/company/today-foods","username" => "today-foods","id" => "4745610"},
+ #    {"typeId" => "instagram","typeName" => "Instagram","url" => "https://instagram.com/todayshow"}
+ #  ]}
  #  @quotes = QuotesHelper.extract_quotes(QuotesHelper::TEST)
  #  stage_aylien(@watson)
  #  # @aylien = AylienHelper.aylien_call(@keyword, @entities)
@@ -98,25 +107,21 @@ class IndexController < ApplicationController
     render :result
   end
 
-  def quote
-    @quotes = QuotesHelper.extract_quotes(QuotesHelper::TEST)
-    render :quote
-  end
-
-  def aylien
-    # when combined with other api, aylien should incorporate
-    # @watson['keywords'] and @watson['entities']
-    @aylien = AylienHelper.aylien_call()
-    render :aylien
-  end
-
   def train
-    ml_entry = MlEntry.create(params[:user_input], params[:article_text])
+    ml_entry = MlEntry.create(
+      user_input: params[:user_input], article_text: params[:article_text]
+    )
   end
 
   def predict
     MlEntry.train
-    MlEntry.predict
+    votes = {
+      'truthiness' => MlEntry.predict(params[:article_text]),
+      'truthy' => MlEntry.where("user_input LIKE ? AND article_text LIKE ?", "truthy", "#{params[:article_text]}").count,
+      'falsey' => MlEntry.where("user_input LIKE ? AND article_text LIKE ?", "falsey", "#{params[:article_text]}").count,
+      'total' => MlEntry.where("article_text LIKE ?", "#{params[:article_text]}").count
+    }
+    render status: 200, json: votes.to_json
   end
 
   private
