@@ -40,6 +40,7 @@ class ResultPage extends React.Component {
           <div className="logo-title">
             <img className="header_logo" src="/assets/148653868433366.png" alt="Logo"/>
             <h1 className="header_title"><a href="/">TRUTHY</a></h1>
+            <span>{this.props.blackList}</span>
           </div>
           <div className="about-button ">
             <AboutButton onNewRender={this.newRender}/>
