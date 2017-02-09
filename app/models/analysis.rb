@@ -77,5 +77,4 @@ class Analysis < ApplicationRecord
      input
    end
  end
-
 end

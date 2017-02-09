@@ -4,7 +4,6 @@ class Body extends React.Component {
     this.state = {display: true}
   }
   render() {
-    debugger
 
     return (
       <div className="scroll-change">
