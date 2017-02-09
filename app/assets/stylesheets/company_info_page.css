@@ -40,3 +40,15 @@
   max-height: 750px;
   overflow-y: scroll;
 }
+.social_media_bio {
+  max-height: 40%;
+  overflow-y: scroll;
+}
+.social_media_username {
+  top: 89px !important;
+  max-width: 50%;
+}
+.nopadding {
+  padding: 0 !important;
+  margin: 0 !important;
+}

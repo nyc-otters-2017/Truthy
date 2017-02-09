@@ -49,7 +49,7 @@ class ResultPage extends React.Component {
         <div className='container-fluid'>
           <div className="row">
 
-            <div className ="col-md-2">
+            <div className ="col-md-2 nopadding_right">
               <Aylien aylien={this.props.aylien} />
             </div>
 
@@ -61,7 +61,7 @@ class ResultPage extends React.Component {
             </div>
 
 
-            <div className="col-md-2">
+            <div className="col-md-2 right_column_top_margin">
               <div className="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 
                 <SideBox
