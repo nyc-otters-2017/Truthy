@@ -26,11 +26,11 @@ class Concept extends React.Component {
     var links = Object.entries(this.props.info).filter(isLink)
     if (yourDetailsAreShowing) {
       var details = (
-            links.map((link, i) => {
-              return (
-              <span className="concept-details" key={i}><a href={link[1]}>{link[0]}</a></span>
-              )
-            })
+        links.map((link, i) => {
+          return (
+          <span className="concept-details" key={i}><a href={link[1]}>{link[0]}</a></span>
+          )
+        })
       )
     }
     return (
