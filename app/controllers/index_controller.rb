@@ -104,6 +104,7 @@ class IndexController < ApplicationController
     @quotes = QuotesHelper.extract_quotes(@watson['text'])
     stage_aylien(@watson)
     @aylien = AylienHelper.aylien_call(@keyword, @entities)
+    @publication_date = PublicationDateHelper.convert_date(@watson['publicationDate']['date'])
     render :result
   end
 
