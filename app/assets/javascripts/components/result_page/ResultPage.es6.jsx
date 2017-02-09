@@ -3,7 +3,7 @@ class ResultPage extends React.Component {
 
    super(props)
    this.state = {
-     main: <Body data={this.props.watson} /> ,
+     main: <Body data={this.props.watson} publicationDate={this.props.publicationDate} /> ,
      truthiness: '',
      trained: false,
      predicted: false
