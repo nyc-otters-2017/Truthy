@@ -12,6 +12,10 @@
   padding-left: 30px;
 }
 
+.data-container {
+  text-align: center;
+}
+
 .data-container h1 {
   font-size: 50pt;
   margin-top: 5px;
