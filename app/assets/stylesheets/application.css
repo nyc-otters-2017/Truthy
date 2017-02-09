@@ -97,19 +97,15 @@
   left: 8px;
 }
 
-.blacklist {
-  text-align: center;
-}
-
-
 .header {
-  position: relative;
-  top: -30pt;
-  height: 190px;
-  width: 95%;
-  margin-left: 2%;
   border-bottom: 2px solid #808080;
+  /*height: 190px;*/
+  margin-left: 2%;
   margin-bottom: 0;
+  position: relative;
+  padding: 10px 0 20px;
+  width: 95%;
+  top: -30pt;
 }
 
 .bs-example{
