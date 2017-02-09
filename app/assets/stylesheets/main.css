@@ -1,3 +1,13 @@
+.header {
+  border-bottom: 2px solid #808080;
+  /*height: 190px;*/
+  margin: 0 auto;
+  position: relative;
+  padding: 10px 0 20px;
+  width: 97%;
+  top: -30pt;
+}
+
 #main-logo {
   display: block;
   margin: 10px auto;
@@ -39,4 +49,40 @@ input.form-control:focus {
   padding: 14px 20px;
   vertical-align: top
 
+}
+
+.sub-header {
+  padding: 15px 0;
+  padding-bottom: 30px;
+}
+
+.sub-header * {
+ margin-right: 5px;
+}
+
+button {
+  border-radius: 5px;
+  color: white;
+  margin-right: 5px;
+  background: #687894
+}
+
+button:hover {
+}
+
+.right-header {
+  display: inline-block;
+  width: 20%;
+  vertical-align: middle;
+}
+
+
+.blacklist-tag {
+  border-bottom: 2px solid grey;
+  padding: 10px 0;
+  margin-top: -35px;
+}
+
+.blacklist-tag div {
+  margin: 0 20px;
 }

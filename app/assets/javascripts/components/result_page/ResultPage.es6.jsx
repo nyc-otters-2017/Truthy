@@ -44,11 +44,19 @@ class ResultPage extends React.Component {
      .done(response=>{
        console.log(response)
        let { truthiness, truthy, falsey, total } = response
-       let message = `Machine Prediction: ${truthiness}\n` +
-                     `| ${truthy} users found this article truthy\n` +
-                     `| ${falsey} users found this article falsey\n`
+       let message = this.predictionMessage(truthiness, truthy, falsey)
        this.setState({truthiness: message, predicted: true})
      })
+  }
+
+  predictionMessage(machine, userTrue, userFalse){
+    return(
+      <p className="returnMessage">Machine Prediction: <strong>{machine}</strong>
+      <br/>
+      <strong>{userTrue}</strong> users found this article truthy
+      | <strong>{userFalse}</strong> users found this article falsey
+      </p>
+    )
   }
 
   trainModel(event){
@@ -71,11 +79,11 @@ class ResultPage extends React.Component {
 
   trainerButtons(){
     return (
-      <span className='blacklist'>
+      <div>
         <span>Did you find this article to be Truthy or Falsey?</span>
         <button onClick={this.trainModel} type="submit" value="truthy">Truthy</button>
         <button onClick={this.trainModel} type="submit" value="falsey">Falsey</button>
-      </span>
+      </div>
     )
   }
 
@@ -88,7 +96,9 @@ class ResultPage extends React.Component {
       <div className=''>
 
         <div className="header">
-          <Clock />
+          <div className="right-header">
+            <Clock />
+          </div>
           <div className="logo-title">
             <img className="header_logo" src="/assets/148653868433366.png" alt="Logo"/>
             <h1 className="header_title"><a href="/">TRUTHY</a></h1>
@@ -97,21 +107,17 @@ class ResultPage extends React.Component {
             <AboutButton onNewRender={this.newRender}/>
           </div>
         </div>
-
-        <div>
-          { this.state.trained ? <span className="blacklist">Thank You!</span> : this.trainerButtons() }
-          <br/>
-          <span className="blacklist">Truthiness: </span>
+        <div className="blacklist-tag">
+          <div>
           { this.state.predicted ? this.state.truthiness : this.predictButton() }
-        </div>
-        <div>
-          <span className="blacklist">{this.props.blackList}</span>
+          <p>{this.props.blackList}</p>
+          </div>
         </div>
 
         <div className='container-fluid'>
           <div className="row">
 
-            <div className ="col-md-2 nopadding_right">
+            <div className ="col-md-2 nopadding_right aylien-parent">
               <Aylien aylien={this.props.aylien} />
             </div>
 
@@ -119,6 +125,9 @@ class ResultPage extends React.Component {
             <div className="col-md-8">
               <main>
                 <Main display={this.state.main}/>
+                <div className="sub-header">
+                  { this.state.trained ? <span>Thank You!</span> : this.trainerButtons() }
+                </div>
               </main>
             </div>
 

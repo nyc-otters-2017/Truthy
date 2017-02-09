@@ -4,8 +4,6 @@ Rails.application.routes.draw do
   root 'index#index'
   post '/analyze' => 'index#analyze'
   get '/results' => 'index#result'
-  get '/quotes' => 'index#quote'
-  get '/aylien' => 'index#aylien'
   post '/train' => 'index#train'
   post '/predict' => 'index#predict'
 
