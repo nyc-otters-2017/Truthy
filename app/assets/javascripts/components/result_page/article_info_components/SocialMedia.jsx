@@ -40,9 +40,11 @@ class SocialMedia extends React.Component {
             <img className="img-responsive company_background" src={pictureLocation} alt=""/>
             <div className="overlay">
               <h2> {data.typeName}</h2>
-              <h3> {data.bio} </h3>
-              <h4 className="social_media_username"> {data.username} </h4>
-              <a className="info" href={data.url}>link here</a>
+              <h3 className="social_media_bio"> {data.bio} </h3>
+              <div>
+                <h4 className="social_media_username"> {data.username} </h4>
+                <a className="info" href={data.url}>link here</a>
+              </div>
             </div>
           </div>
         )
@@ -65,7 +67,7 @@ class SocialMedia extends React.Component {
     return(
       <article className="blacklist">
         <div className="row">
-          <div className ="col-md-6">
+          <div className ="col-md-6 nopadding">
 
             <section className="company_info">
               <h1 className="company_info_title">Company Information</h1>
@@ -83,7 +85,7 @@ class SocialMedia extends React.Component {
 
           </div>
 
-          <div className ="col-md-6 company_info_add_left_line">
+          <div className ="col-md-6 company_info_add_left_line nopadding">
             <section className="social_media_section">
               <h1 className="company_info_title">Social Media</h1>
               <div className ="newspaper_bottom_small_line company_info_padding"></div>

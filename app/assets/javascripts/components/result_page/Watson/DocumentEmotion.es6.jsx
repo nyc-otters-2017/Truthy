@@ -5,6 +5,7 @@ class DocumentEmotion extends React.Component {
 
         var chart = d3.select(".chart");
         var entries = Object.entries(this.props.docEmotions)
+
         // data converted from TSV to JS array
         var data = entries.map(emotion=>{
           return { name: emotion[0], value: (emotion[1] * 100).toFixed(2) }
