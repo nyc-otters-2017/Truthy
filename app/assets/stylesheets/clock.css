@@ -2,6 +2,7 @@
   position: relative;
   display: inline-block;
 	font-size: 20px;
+  vertical-align: bottom;
 }
 
 .clock-pieces {

@@ -20,8 +20,7 @@ class WatsonEverythingElseSideBox extends React.Component {
           <a onClick={this.handleClick} className="btn btn-primary btn-sm side_bar_view" href="#" role="button">View</a>
 
         </div>
-        <i className="img-responsive material-icons orange600">toys</i>
-
+        <i className="img-responsive material-icons fa fa-pie-chart fa-4x orange600"></i>
       </div>
     )
   }

@@ -12,6 +12,10 @@
   padding-left: 30px;
 }
 
+.data-container {
+  text-align: center;
+}
+
 .data-container h1 {
   font-size: 50pt;
   margin-top: 5px;
@@ -52,13 +56,18 @@
 
 .concept {
   font-size: 20pt;
-  text-align: center;
+  display: inline-block;
 }
 
 .concept-details {
   list-style: none;
   font-size: 15pt;
-  text-align: center;
+  margin-left: 3%;
+}
+
+.details-for-concepts {
+  display: inline-block;
+  margin-left: 3%
 }
 
 #keyword-description {
