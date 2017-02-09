@@ -57,20 +57,27 @@ module BlacklistHelper
     company_info['founded'] = response['organization']['founded'] || not_provided
     company_info['onlineSince'] = response['onlineSince'] || not_provided
 
-    company_info['socialMedia'] = response['socialProfiles'].map do |profile|
-      { typeName: profile.fetch('typeName', not_provided),
-        url: profile.fetch('url', not_provided),
-        username: profile.fetch('username', not_provided),
-        bio: profile.fetch('bio', not_provided),
-       }
+    if response['socialProfiles']
+      company_info['socialMedia'] = response['socialProfiles'].map do |profile|
+        { typeName: profile.fetch('typeName', not_provided),
+          url: profile.fetch('url', not_provided),
+          username: profile.fetch('username', not_provided),
+          bio: profile.fetch('bio', not_provided),
+         }
+      end
+    else
+      company_info['socialMedia'] = []
     end
 
-    if !!response['organization']['contactInfo']['emailAddresses']
-      company_info['email'] = response['organization']['contactInfo']['emailAddresses'].first['value']
+    if !!response['organization']['contactInfo']
+      if !!response['organization']['contactInfo']['emailAddresses']
+        company_info['email'] = response['organization']['contactInfo']['emailAddresses'].first['value']
+      else
+        company_info['email'] = not_provided
+      end
     else
       company_info['email'] = not_provided
     end
-
     company_info
   end
 end
