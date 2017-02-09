@@ -40,3 +40,7 @@
   max-height: 750px;
   overflow-y: scroll;
 }
+.social_media_bio {
+  max-height: 35%;
+  overflow-y: scroll;
+}

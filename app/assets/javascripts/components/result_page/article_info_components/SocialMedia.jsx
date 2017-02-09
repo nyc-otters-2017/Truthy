@@ -53,7 +53,7 @@ class SocialMedia extends React.Component {
             <img className="img-responsive company_background" src="/assets/companyinfo_default.png" alt=""/>
             <div className="overlay">
               <h2 >{data.typeName}</h2>
-              <h3 > {data.bio} </h3>
+              <h3 className="social_media_bio"> {data.bio} </h3>
               <h4 className="social_media_username"> {data.username} </h4>
               <a className="info" href={data.url}>link here</a>
             </div>
