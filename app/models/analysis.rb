@@ -4,6 +4,7 @@ class Analysis < ApplicationRecord
  WATSON_DATA = "https://gateway-a.watsonplatform.net/calls/url/URLGetCombinedData?url="
  WATSON_TEXT = "https://gateway-a.watsonplatform.net/calls/url/URLGetText?url="
  WATSON_EMOTION = "https://gateway-a.watsonplatform.net/calls/url/URLGetEmotion?url="
+ WATSON_DATE = "https://gateway-a.watsonplatform.net/calls/url/URLGetPubDate?url="
  WATSON_INFO = "/&outputMode=json&extract=title,author=1&maxRetrieve=3&"
  WATSON_CLOSING = "&outputMode=json&extract&apikey="
 
@@ -17,14 +18,15 @@ class Analysis < ApplicationRecord
    text = WATSON_TEXT + url + WATSON_CLOSING + ENV['WATSON_KEY']
    info = WATSON_DATA + url + WATSON_INFO + WATSON_CLOSING + ENV['WATSON_KEY']
    emotion = WATSON_EMOTION + url + WATSON_CLOSING + ENV['WATSON_KEY']
+   date = WATSON_DATE + url + WATSON_CLOSING + ENV['WATSON_KEY']
    # API calls
    @opened_uri[:data] = JSON.parse(open(data, 'Accept-Encoding' => '') {|f| f.read })
    @opened_uri[:text] = JSON.parse(open(text, 'Accept-Encoding' => '') {|f| f.read })
    @opened_uri[:info] = JSON.parse(open(info, 'Accept-Encoding' => '') {|f| f.read })
    @opened_uri[:emotion] = JSON.parse(open(emotion, 'Accept-Encoding' => '') {|f| f.read })
+   @opened_uri[:date] = JSON.parse(open(date, 'Accept-Encoding' => '') {|f| f.read })
    @datum['sentiment'] = JSON.parse(datum.sentiment_analysis(text: @opened_uri[:text]['text']))
    @datum['subjectivity'] = JSON.parse(datum.subjectivity_analysis(text: @opened_uri[:text]['text']))
-
    stage_render # method call to grab only necessary data from calls
    @response # final output to controller
  end
@@ -41,6 +43,7 @@ class Analysis < ApplicationRecord
    @response['subjectivity'] = @datum['subjectivity']['output']['result'] #subjectivity from response
    @response['concepts'] = keep_relevant_concepts(@opened_uri[:data]['concepts'])
    @response['keywords'] = keep_relevant_keywords(@opened_uri[:data]['keywords'])
+   @response['publicationDate'] = @opened_uri[:date]['publicationDate']
  end
 
 # keeps concepts if their relevance is above 50%, unless that results in keeping
@@ -74,5 +77,4 @@ class Analysis < ApplicationRecord
      input
    end
  end
-
 end

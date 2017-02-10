@@ -4,33 +4,40 @@ class About extends React.Component {
     return (
       <div>
         <h1>About Truthy</h1>
-        <p>First, thank you for using this site to learn more about your news sources,
-          while also teaching our algorithm about reliable news sources!</p>
-        <p>Truthy works by collecting data about a news article from the url
-        you enter into the search bar. Our server will aggregate data from the internet and
-        present you with valuable information you can use to determine whether or not the article is
-        fake news (Truthy or Falsey).
+        <p>
+          Thank you for using Truthy to learn more about your news sources,
+          while also training our algorithm.
         </p>
         <p>
-          Our custom machine learning model relies on people like you to read the article,
-          assess its source (the author who wrote it and the company that published it),
-          review the data we've gathered about the article, and ensure that the quotes extracted from
-          the article provide accurate and reliable information.
+          Truthy works by collecting data about a news article from the url
+          entered into the search bar. Our program will aggregate data from the internet and
+          present information that can be used to determine whether or not the article is
+          fake news (Truthy or Falsey).
+        </p>
+        <p>
+          Because our machine learning model relies on accurate classification of news.
+          Use resources like what we have provided for the news verification.
+        </p>
+        <p>
+          Please do not teach our machine learning model about your own bias. Teach Truthy how to
+          distinguish fabrication from fact.
         </p>
         <h1>Navigating Truthy</h1>
         <p>
           On the left you will see articles that our algorithm believes to be similar to the piece
-          you are reading, which is based on keywords and concepts. This is important because fake news
-          is often completely unique in its content. Just be aware that there are exceptions to this rule.
-        </p>
-        <p>
-          On the right you will see little spinning buttons that will guide you to
-          information about article data, company info, and extracted quotes.
+          you are reading, which is based on keywords and concepts.
+          These relevant articles are important because fake news
+          is often completely unique in its content.
         </p>
         <p>
           Fake news often has little information about the company, or is listed as
           an advertising agency.
           Take note of social media presence, and how long the company has been around.
+        </p>
+        <p>
+          Be aware of the emotional data in articles. While keywords and concepts can help guide you to article content,
+          pay attention to the sentiment and objectivity. Blogs are often opinion, whereas a news source
+          is often fact driven.
         </p>
       </div>
     )

@@ -65,9 +65,9 @@ class SocialMedia extends React.Component {
       return details
     }
     return(
-      <article className="blacklist">
+      <article className="">
         <div className="row">
-          <div className ="col-md-6 nopadding">
+          <div className ="col-xs-8 col-sm-6 nopadding">
 
             <section className="company_info">
               <h1 className="company_info_title">Company Information</h1>
@@ -85,7 +85,7 @@ class SocialMedia extends React.Component {
 
           </div>
 
-          <div className ="col-md-6 company_info_add_left_line nopadding">
+          <div className ="col-xs-4 col-sm-6 company_info_add_left_line nopadding">
             <section className="social_media_section">
               <h1 className="company_info_title">Social Media</h1>
               <div className ="newspaper_bottom_small_line company_info_padding"></div>

@@ -1,7 +1,11 @@
+.aylien-parent {
+  height: 1000px;
+}
+
 .aylien {
   border-right: 2px solid grey;
-  overflow: scroll;
-  height: 800px;
+  overflow: hidden;
+  height: inherit;
   padding: 0;
 }
 
@@ -43,5 +47,5 @@
 }
 
 .related-body {
-  font-size: 1em; 
+  font-size: 1em;
 }

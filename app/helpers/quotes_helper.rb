@@ -36,6 +36,6 @@ Seen as a one-time, ceremonial holiday declaration, the official designation of 
 )
 
   def self.extract_quotes(text)
-    text.scan(/"([^"]*)"|'([^']*)'|“([^”]*)”/).flatten.compact
+    text.scan(/"([^"]*)"|“([^”]*)”/).flatten.compact
   end
 end

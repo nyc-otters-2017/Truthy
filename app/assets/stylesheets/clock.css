@@ -1,7 +1,8 @@
 .clock-container {
-  position: relative;
-  display: inline-block;
+  display: block;
 	font-size: 20px;
+  padding: 10px 0;
+  position: relative
 }
 
 .clock-pieces {
@@ -39,7 +40,7 @@
   display: inline-block;
   position: relative;
   width: 55%;
-  margin-left: 5%;
+  margin-left: 2%;
   text-align: center;
 }
 
@@ -55,5 +56,9 @@
   font-weight: bold;
   display: inline-block;
   font-size: 72pt;
-  vertical-align: bottom;
+  vertical-align: bottom
+}
+
+.header_title a {
+  color: #687894;
 }
